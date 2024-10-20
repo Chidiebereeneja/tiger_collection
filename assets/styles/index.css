@@ -1,0 +1,183 @@
+@font-face {
+	src: url(/assets/fonts/Montserrat/static/Montserrat-Light.ttf);
+	font-family: Montserrat;
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	src: url(/assets/fonts/Sora/static/Sora-Bold.ttf);
+	font-family: sora;
+	font-weight: bold;
+	font-style: normal;
+}
+
+:root {
+	--primary-color: #fff;
+	--secondry-color: #fff;
+	--teritary-color: #fff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+main {
+	width: 100%;
+	margin-top: 13vh;
+}
+
+main section.landing_page-con {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+
+main section.landing_page-con button.btn-select {
+	position: absolute;
+	top: 40%;
+	margin-inline: 1rem;
+	font-size: 2rem;
+	font-weight: 200;
+	color: #fff;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+main section.landing_page-con article {
+	position: absolute;
+	top: 30%;
+	transform: translateY(-50%);
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: Montserrat, sans-serif;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	letter-spacing: 0.6px;
+}
+
+main section.landing_page-con article h5 {
+	color: #fff;
+	font-weight: 100;
+	font-size: calc(0.7rem + 1vw);
+}
+
+main section.landing_page-con article h1 {
+	color: #fff;
+	font-weight: 800;
+	font-size: calc(1.5rem + 1vw);
+	display: flex;
+	flex-direction: column;
+}
+
+main section.landing_page-con article h4 {
+	color: #fff;
+	font-weight: 100;
+	font-size: calc(0.9rem + 1vw);
+}
+
+main section.landing_page-con article h1 span {
+	font-size: 1rem;
+}
+
+main section.landing_page-con article button {
+	width: fit-content;
+	background-color: #fff;
+	color: #3c4242;
+	padding-block: 6px;
+	padding-inline: 1.5rem;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+main section.landing_page-con button.caro_left_btn {
+	left: 0;
+}
+
+main section.landing_page-con button.caro_right_btn {
+	right: 0;
+}
+
+main section.landing_page-con figure {
+	height: 100%;
+	width: 100%;
+}
+
+main section.landing_page-con figure img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+main section.landing_page-con div.carousel_track {
+	background-color: red;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	left: 50%;
+	bottom: 5rem;
+}
+
+section.landing_page-con div.carousel_track span {
+	width: 30px;
+	height: 3px;
+	background-color: #fff;
+}
+section.landing_page-con div.carousel_track span:nth-last-child(1) {
+	background-color: #878989;
+}
+
+main section.deals_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	margin-block: 2.5rem;
+	margin-inline: 2rem;
+}
+
+main section.deals_container figure.coziness,
+main section.deals_container figure.breezy {
+	width: 50%;
+	height: 290px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+}
+
+main section.deals_container figure img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 5px;
+}
+
+main section.deals_container figure figcaption {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-left: 1rem;
+	color: #fff;
+	font-family: Montserrat, sans-serif;
+}
+
+main section.deals_container figure figcaption button {
+	width: fit-content;
+	background-color: transparent;
+	color: #fff;
+	border: none;
+	text-decoration: underline;
+}

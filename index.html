@@ -4,73 +4,137 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<link rel="stylesheet" href="/assets/styles/nav.css" />
+		<link rel="stylesheet" href="/assets/styles/index.css" />
+		<script src="/scripts/index.js" defer></script>
+		<script
+			src="https://kit.fontawesome.com/29a7ea893b.js"
+			crossorigin="anonymous"
+			defer
+		></script>
 	</head>
 	<body>
 		<header>
-			<nav>
-				<ul>
-					<li>
-						<img
-							src="/assets/images/tiger_collection_logo.png"
-							alt="Tiger Collection Logo"
-							width="50px"
-						/>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						<a
-							href="/home"
-							title="Tiger Collection Home - Premium Fashion and Accessories"
-							>Home</a
-						>
-					</li>
-					<li>
-						<a
-							href="/men"
-							title="Men's Fashion - Tiger Collection - Trendy Men's Clothing & Accessories"
-							>Men</a
-						>
-					</li>
-					<li>
-						<a
-							href="/women"
-							title="Women's Fashion - Tiger Collection - Stylish Women's Clothing & Accessories"
-							>Women</a
-						>
-					</li>
-					<li>
-						<a
-							href="/unisex"
-							title="Unisex Fashion - Tiger Collection - Fashion for Everyone"
-							>Unisex</a
-						>
-					</li>
-					<li>
-						<a
-							href="/collections"
-							title="Explore Tiger Collection - Exclusive Designer Catergories"
-							>Catergories</a
-						>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						<input type="text" placeholder="Search..." aria-label="Search" />
-					</li>
-					<li>
-						<a href="/wishlist" title="Your Wishlist - Tiger Collection"
-							>Wish List</a
-						>
-					</li>
-					<li>
-						<a href="/account" title="Your Account - Tiger Collection"
-							>Account</a
-						>
-					</li>
-					<li><a href="/cart" title="Your Cart - Tiger Collection">Cart</a></li>
-				</ul>
+			<nav class="navbar">
+				<div class="navbar-container container">
+					<input type="checkbox" name="" id="" />
+					<div class="hamburger-lines">
+						<span class="line line1"></span>
+						<span class="line line2"></span>
+						<span class="line line3"></span>
+					</div>
+
+					<ul class="menu-items">
+						<li>
+							<a
+								href="/home"
+								title="Tiger Collection Home - Premium Fashion and Accessories"
+								>Home</a
+							>
+						</li>
+
+						<li>
+							<a
+								href="/men"
+								title="Men's Fashion - Tiger Collection - Trendy Men's Clothing & Accessories"
+								>Men</a
+							>
+						</li>
+						<li>
+							<a
+								href="/women"
+								title="Women's Fashion - Tiger Collection - Stylish Women's Clothing & Accessories"
+								>Women
+							</a>
+						</li>
+						<li>
+							<a
+								href="/unisex"
+								title="Unisex Fashion - Tiger Collection - Fashion for Everyone"
+								>Unisex</a
+							>
+						</li>
+						<li>
+							<a
+								href="/collections"
+								title="Explore Tiger Collection - Exclusive Designer Catergories"
+								>Catergories</a
+							>
+						</li>
+					</ul>
+					<div class="logo">
+						<a href="./">
+							<img
+								src="/assets/images/tiger_collection_logo.png"
+								width="60px"
+							/>
+						</a>
+					</div>
+
+					<ul class="filter_container">
+						<li>
+							<input type="text" placeholder="Search..." aria-label="Search" />
+						</li>
+						<li>
+							<a href="/wishlist" title="Your Wishlist - Tiger Collection"
+								><i class="fa-regular fa-heart"></i></i
+							></a>
+						</li>
+						<li>
+							<a href="/account" title="Your Account - Tiger Collection"
+								><i class="fa-regular fa-user"></i></a
+							>
+						</li>
+						<li>
+							<a href="/cart" title="Your Cart - Tiger Collection"><i class="fa-solid fa-cart-shopping"></i></a>
+						</li>
+					</ul>
+				</div>
 			</nav>
 		</header>
+
+		<main>
+			<section class="landing_page-con">
+				<figure>
+					<img src="/assets/images/background_carousel.png" alt="Trendy Summer T-shirts and Tops Background Carousel">
+				</figure>
+				<article>
+					<h5>T-shirt / Tops</h5>
+					<h1>Summer Value Pack <span>Cool / Colorful / Comfy</span></h1>
+					<h4>Exclusive Summer Collection</h4>
+					<button>Shop Now</button>
+				</article>
+
+				<div class="carousel_track">
+					<span></span>
+					<span></span>
+				</div>
+				<button class="caro_right_btn btn-select">&gt;</button>
+				<button class="caro_left_btn btn-select">&lt;</button>
+				
+			</section>
+			
+			<section class="deals_container">
+				<figure class="coziness">
+					<img src="/assets/images/cooziness_background.jpeg" alt="" width="100">
+					<figcaption>
+                        <h6>Low Price</h6>
+						<h2>High Coziness</h2>
+						<h3>UPTO 50% OFF</h3>
+						<button>Explore Items</button>
+                    </figcaption>
+				</figure>
+				<figure class="breezy">
+					<img src="/assets/images/breezy _background.jpeg" alt="" width="100">
+
+					<figcaption>
+						<h6>Beyoung Presents</h6>
+						<h2>Breezy Summer Style</h2>
+						<h3>UPTO 50% OFF</h3>
+						<button>Explore Items</button>
+					</figcaption>
+				</figure>
+			</section>
+		</main>
 	</body>
 </html>
