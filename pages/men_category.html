@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/assets/styles/nav.css" />
+		<link rel="stylesheet" href="/assets/styles/men_category.css" />
+		<link rel="stylesheet" href="/assets/styles/footer.css" />
+
+		<title>Document</title>
+
+		<script src="/scripts/men_category.js" defer></script>
+		<script
+			src="https://kit.fontawesome.com/29a7ea893b.js"
+			crossorigin="anonymous"
+			defer
+		></script>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar">
+				<div class="navbar-container container">
+					<input type="checkbox" name="" id="" />
+					<div class="hamburger-lines">
+						<span class="line line1"></span>
+						<span class="line line2"></span>
+						<span class="line line3"></span>
+					</div>
+
+					<ul class="menu-items">
+						<li>
+							<a
+								href="/home"
+								title="Tiger Collection Home - Premium Fashion and Accessories"
+								>Home</a
+							>
+						</li>
+
+						<li>
+							<a
+								href="/men"
+								title="Men's Fashion - Tiger Collection - Trendy Men's Clothing & Accessories"
+								>Men</a
+							>
+						</li>
+						<li>
+							<a
+								href="/women"
+								title="Women's Fashion - Tiger Collection - Stylish Women's Clothing & Accessories"
+								>Women
+							</a>
+						</li>
+						<li>
+							<a
+								href="/unisex"
+								title="Unisex Fashion - Tiger Collection - Fashion for Everyone"
+								>Unisex</a
+							>
+						</li>
+						<li>
+							<a
+								href="/collections"
+								title="Explore Tiger Collection - Exclusive Designer Catergories"
+								>Catergories</a
+							>
+						</li>
+					</ul>
+					<div class="logo">
+						<a href="./">
+							<img src="/assets/images/tiger-logo.png" width="60px" />
+						</a>
+					</div>
+
+					<ul class="filter_container">
+						<li>
+							<input type="text" placeholder="Search..." aria-label="Search" />
+						</li>
+						<li>
+							<a href="/wishlist" title="Your Wishlist - Tiger Collection"
+								><i class="fa-regular fa-heart"></i
+							></a>
+						</li>
+
+						<li>
+							<a href="/account" title="Your Account - Tiger Collection">
+								<i class="fa-regular fa-user"></i>
+							</a>
+						</li>
+						<li>
+							<a href="/cart" title="Your Cart - Tiger Collection"
+								><i class="fa-solid fa-cart-shopping"></i
+							></a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<aside>
+				<div class="filter">
+					<h2>
+						<strong>Filter</strong>
+						<img src="/assets/images/filter.png" width="20" alt="Filter icon" />
+					</h2>
+				</div>
+
+				<section class="men_category">
+					<p><span>Tops</span><i class="fa-solid fa-angle-right"></i></p>
+					<p>
+						<span>Printed T-shirts</span><i class="fa-solid fa-angle-right"></i>
+					</p>
+					<p>
+						<span>Plain T-shirts</span><i class="fa-solid fa-angle-right"></i>
+					</p>
+					<p><span>Kurti</span><i class="fa-solid fa-angle-right"></i></p>
+					<p><span>Boxers</span><i class="fa-solid fa-angle-right"></i></p>
+					<p>
+						<span>Full sleeve T-Shirts</span
+						><i class="fa-solid fa-angle-right"></i>
+					</p>
+					<p><span>Joggers</span><i class="fa-solid fa-angle-right"></i></p>
+					<p><span>Payjamas</span><i class="fa-solid fa-angle-right"></i></p>
+					<p><span>Jeans</span><i class="fa-solid fa-angle-right"></i></p>
+				</section>
+
+				<section class="price_category">
+					<h2><span>Price</span><i class="fa-solid fa-angle-up"></i></h2>
+
+					<div class="range_slider">
+						<input type="range" min="0" value="0" id="price_range" />
+						<p><span>3000</span><span>16000</span></p>
+					</div>
+				</section>
+
+				<section class="color_category">
+					<h2><span>Color</span><i class="fa-solid fa-angle-up"></i></h2>
+					<div class="canvas_color">
+						<figure>
+							<canvas id="purple"></canvas>
+							<figcaption>Purple</figcaption>
+						</figure>
+						<figure>
+							<canvas id="navy"></canvas>
+							<figcaption>Navy</figcaption>
+						</figure>
+						<figure>
+							<canvas id="yellow"></canvas>
+							<figcaption>Yellow</figcaption>
+						</figure>
+						<figure>
+							<canvas id="black"></canvas>
+							<figcaption>Black</figcaption>
+						</figure>
+						<figure>
+							<canvas id="white"></canvas>
+							<figcaption>White</figcaption>
+						</figure>
+						<figure>
+							<canvas id="grey"></canvas>
+							<figcaption>Grey</figcaption>
+						</figure>
+						<figure>
+							<canvas id="red"></canvas>
+							<figcaption>Red</figcaption>
+						</figure>
+						<figure>
+							<canvas id="brown"></canvas>
+							<figcaption>Broom</figcaption>
+						</figure>
+						<figure>
+							<canvas id="pink"></canvas>
+							<figcaption>Purple</figcaption>
+						</figure>
+						<figure>
+							<canvas id="orange"></canvas>
+							<figcaption>Orange</figcaption>
+						</figure>
+						<figure>
+							<canvas id="green"></canvas>
+							<figcaption>Green</figcaption>
+						</figure>
+						<figure>
+							<canvas id="blue"></canvas>
+							<figcaption>Blue</figcaption>
+						</figure>
+					</div>
+				</section>
+
+				<section class="size_category">
+					<h2><span>Size</span><i class="fa-solid fa-angle-up"></i></h2>
+
+					<div>
+						<span>XXS</span><span>XL</span><span>XS</span><span>S</span>
+						<span>M</span><span>L</span><span>XXL</span><span>3XL</span>
+						<span>4XL</span>
+					</div>
+				</section>
+
+				<section class="style_category">
+					<h2><span>Dress Style</span><i class="fa-solid fa-angle-up"></i></h2>
+					<div>
+						<p><span>Classic</span><i class="fa-solid fa-angle-right"></i></p>
+						<p><span>Casual</span><i class="fa-solid fa-angle-right"></i></p>
+						<p><span>Business</span><i class="fa-solid fa-angle-right"></i></p>
+						<p><span>Sport</span><i class="fa-solid fa-angle-right"></i></p>
+						<p><span>Elegant</span><i class="fa-solid fa-angle-right"></i></p>
+						<p>
+							<span>Formal (evening)</span
+							><i class="fa-solid fa-angle-right"></i>
+						</p>
+					</div>
+				</section>
+			</aside>
+
+			<article class="product_container">
+				<div class="product_header">
+					<h1>Men’s Clothing</h1>
+					<p><span>New</span><span>Recommended</span></p>
+				</div>
+
+				<section class="product_card_container">
+					<figure>
+						<img
+							src="/assets/images/Recommended-sweater.png"
+							width="200"
+							alt="Black Sweatshirt by Jhanvi’s Brand"
+						/>
+						<figcaption>
+							<p>
+								<strong>Black Sweatshirt with Comfort</strong
+								><span>Jhanvi’s Brand</span>
+							</p>
+							<strong> <i class="fa-solid fa-naira-sign"></i> 3000 </strong>
+						</figcaption>
+						<span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+					</figure>
+
+					<figure>
+						<img
+							src="/assets/images/white-shirt.png"
+							width="200"
+							alt="White Shirt by Priya’s Brand"
+						/>
+						<figcaption>
+							<p><strong>White Shirt</strong><span>Priya’s Brand</span></p>
+							<strong> <i class="fa-solid fa-naira-sign"></i> 3000 </strong>
+						</figcaption>
+						<span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+					</figure>
+
+					<figure>
+						<img
+							src="/assets/images/Product-1.png"
+							width="200"
+							alt="Printed T-shirt by Priya’s Brand"
+						/>
+						<figcaption>
+							<p><strong>Printed T-shirt</strong><span>Priya’s Brand</span></p>
+							<strong> <i class="fa-solid fa-naira-sign"></i> 3000 </strong>
+						</figcaption>
+						<span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+					</figure>
+
+					<figure>
+						<img
+							src="/assets/images/Product-2.png"
+							width="200"
+							alt="White T-shirt by Helen’s Brand"
+						/>
+						<figcaption>
+							<p><strong>White T-shirt</strong><span>Helen’s Brand</span></p>
+							<strong> <i class="fa-solid fa-naira-sign"></i> 3000 </strong>
+						</figcaption>
+						<span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+					</figure>
+
+					<figure>
+						<img
+							src="/assets/images/Product-3.png"
+							width="200"
+							alt="Wine-red T-shirt by Woden’s Brand"
+						/>
+						<figcaption>
+							<p><strong>Wine-red T-shirt</strong><span>Woden’s Brand</span></p>
+							<strong> <i class="fa-solid fa-naira-sign"></i> 3000 </strong>
+						</figcaption>
+						<span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+					</figure>
+					<figure>
+						<img
+							src="/assets/images/Recommended-sweater.png"
+							width="200"
+							alt="Black Sweatshirt by Jhanvi’s Brand"
+						/>
+						<figcaption>
+							<p>
+								<strong>Black Sweatshirt with Comfort</strong
+								><span>Jhanvi’s Brand</span>
+							</p>
+							<strong> <i class="fa-solid fa-naira-sign"></i> 3000 </strong>
+						</figcaption>
+						<span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+					</figure>
+
+					<figure>
+						<img
+							src="/assets/images/white-shirt.png"
+							width="200"
+							alt="White Shirt by Priya’s Brand"
+						/>
+						<figcaption>
+							<p><strong>White Shirt</strong><span>Priya’s Brand</span></p>
+							<strong> <i class="fa-solid fa-naira-sign"></i> 3000 </strong>
+						</figcaption>
+						<span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+					</figure>
+
+					<figure>
+						<img
+							src="/assets/images/Product-1.png"
+							width="200"
+							alt="Printed T-shirt by Priya’s Brand"
+						/>
+						<figcaption>
+							<p><strong>Printed T-shirt</strong><span>Priya’s Brand</span></p>
+							<strong> <i class="fa-solid fa-naira-sign"></i> 3000 </strong>
+						</figcaption>
+						<span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+					</figure>
+
+					<figure>
+						<img
+							src="/assets/images/Product-2.png"
+							width="200"
+							alt="White T-shirt by Helen’s Brand"
+						/>
+						<figcaption>
+							<p><strong>White T-shirt</strong><span>Helen’s Brand</span></p>
+							<strong> <i class="fa-solid fa-naira-sign"></i> 3000 </strong>
+						</figcaption>
+						<span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+					</figure>
+
+					<figure>
+						<img
+							src="/assets/images/Product-3.png"
+							width="200"
+							alt="Wine-red T-shirt by Woden’s Brand"
+						/>
+						<figcaption>
+							<p><strong>Wine-red T-shirt</strong><span>Woden’s Brand</span></p>
+							<strong> <i class="fa-solid fa-naira-sign"></i> 3000 </strong>
+						</figcaption>
+						<span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+					</figure>
+					<figure>
+						<img
+							src="/assets/images/Recommended-sweater.png"
+							width="200"
+							alt="Black Sweatshirt by Jhanvi’s Brand"
+						/>
+						<figcaption>
+							<p>
+								<strong>Black Sweatshirt with Comfort</strong
+								><span>Jhanvi’s Brand</span>
+							</p>
+							<strong> <i class="fa-solid fa-naira-sign"></i> 3000 </strong>
+						</figcaption>
+						<span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+					</figure>
+
+					<figure>
+						<img
+							src="/assets/images/white-shirt.png"
+							width="200"
+							alt="White Shirt by Priya’s Brand"
+						/>
+						<figcaption>
+							<p><strong>White Shirt</strong><span>Priya’s Brand</span></p>
+							<strong> <i class="fa-solid fa-naira-sign"></i> 3000 </strong>
+						</figcaption>
+						<span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+					</figure>
+
+					<figure>
+						<img
+							src="/assets/images/Product-1.png"
+							width="200"
+							alt="Printed T-shirt by Priya’s Brand"
+						/>
+						<figcaption>
+							<p><strong>Printed T-shirt</strong><span>Priya’s Brand</span></p>
+							<strong> <i class="fa-solid fa-naira-sign"></i> 3000 </strong>
+						</figcaption>
+						<span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+					</figure>
+
+					<figure>
+						<img
+							src="/assets/images/Product-2.png"
+							width="200"
+							alt="White T-shirt by Helen’s Brand"
+						/>
+						<figcaption>
+							<p><strong>White T-shirt</strong><span>Helen’s Brand</span></p>
+							<strong> <i class="fa-solid fa-naira-sign"></i> 3000 </strong>
+						</figcaption>
+						<span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+					</figure>
+
+					<figure>
+						<img
+							src="/assets/images/white-shirt.png"
+							width="200"
+							alt="White Shirt by Priya’s Brand"
+						/>
+						<figcaption>
+							<p><strong>White Shirt</strong><span>Priya’s Brand</span></p>
+							<strong> <i class="fa-solid fa-naira-sign"></i> 3000 </strong>
+						</figcaption>
+						<span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+					</figure>
+				</section>
+			</article>
+
+			<article class="our_collection">
+				<div class="description">
+					<h3>Clothing for Men Online in Nigeria</h3>
+					<strong
+						>Reexplore Men's Clothing Collection Online at Tiger
+						Collection</strong
+					>
+				</div>
+
+				<p>
+					Men's Clothing – Are you searching for the best website to buy
+					Clothing for men online in Nigeria? Well, your search for the coolest
+					and most stylish men’s clothing ends here. From trendy Casual men’s
+					Wear Online shopping to premium quality cotton men's apparel,
+					<strong>Tiger Collection</strong> has closet of men collection covered
+					with the latest and best designs of men's Clothing Online.
+				</p>
+
+				<p>
+					Our collection of clothes for men will make you the trendsetter with
+					an iconic resemblance of choice in men’s Wear. It is quite evident to
+					say that there are very few men’s Clothing online stores where you can
+					buy Western Wear for men comprising the premium material and handsome
+					design that you are always seeking for
+				</p>
+
+				<p>
+					One-Stop Destination to Shop Every Clothing for Men:
+					<strong>Tiger Collection</strong>
+				</p>
+
+				<p>
+					Today, Clothing for Men is gaining more popularity above all. This is
+					because gone are the days when Men were used to carrying uncomfortable
+					fashion. Today, a lady looks prettier when she is in Casual Men’s Wear
+					which is a comfortable outfit. Concerning this, Tiger Collection has a
+					big fat range of Stylish Men's Clothing that would make him stand out
+					wherever he goes.
+				</p>
+			</article>
+
+			<article class="buy-men-clothing">
+				<div class="description">
+					<h3>Buy Men’s Clothing at Best Price</h3>
+				</div>
+
+				<table>
+					<tr>
+						<th>Buy Men’s Clothing at Best Price</th>
+						<th>Best Price</th>
+					</tr>
+
+					<tr>
+						<td>Pick Any 4- Men Plain T-shirt Combo</td>
+						<td>₦3,000</td>
+					</tr>
+
+					<tr>
+						<td>Pick Any 4- Plain Men Boxers Combo</td>
+						<td>₦3,000</td>
+					</tr>
+
+					<tr>
+						<td>Pick Any 4- Men Plain T-shirt Sleeve Combo</td>
+						<td>₦3,000</td>
+					</tr>
+
+					<tr>
+						<td>Multicolor Checkered Long Casual Shirts for Men</td>
+						<td>₦3,000</td>
+					</tr>
+
+					<tr>
+						<td>Pick Any 2: Plain Boxy Casual Shirt for Men Combo</td>
+						<td>₦3,000</td>
+					</tr>
+
+					<tr>
+						<td>Blue Floral Anarkali Kurti</td>
+						<td>₦3,000</td>
+					</tr>
+
+					<tr>
+						<td>Jade Black Narrow Cut Flexible Men Shorts</td>
+						<td>₦3,000</td>
+					</tr>
+
+					<tr>
+						<td>Mustard-yellow Solid straight-fit Men pant</td>
+						<td>₦3,000</td>
+					</tr>
+
+					<tr>
+						<td>Men Pant Combo - Pick Any 2</td>
+						<td>₦3,000</td>
+					</tr>
+
+					<tr>
+						<td>Pista Green Solid Boxy Casual Shirt for Men</td>
+						<td>₦3,000</td>
+					</tr>
+
+					<tr>
+						<td>Plain Burgundy Men Boxer</td>
+						<td>₦3,000</td>
+					</tr>
+
+					<tr>
+						<td>Strip Front Tie Casual Shirts for Men</td>
+						<td>₦3,000</td>
+					</tr>
+				</table>
+			</article>
+		</main>
+
+		<footer>
+			<section class="need_help_container">
+				<div class="need_help">
+					<h2>Need Help</h2>
+					<a href="#">Contact Us</a>
+					<a href="#">Track Order</a>
+					<a href="#">Returns & Refunds</a>
+					<a href="#">FAQ's</a>
+					<a href="#">Career</a>
+				</div>
+
+				<div class="company">
+					<h2>Company</h2>
+					<a href="#">About Us</a>
+					<a href="#">Products</a>
+					<a href="#">Terms & Conditions</a>
+					<a href="#">Collaboration</a>
+					<a href="#">Media</a>
+				</div>
+
+				<div class="more_info">
+					<h2>More Info</h2>
+					<a href="#">Term and Conditions</a>
+					<a href="#">Privacy Policy</a>
+					<a href="#">Shipping Policy</a>
+					<a href="#">Sitemap</a>
+				</div>
+
+				<div class="location">
+					<h2>Location</h2>
+					<p>
+						support@tigercollecction.in <br />
+						No 13 Enugu Road Nsukka, Enugu State, Nigeria
+					</p>
+					<a href="#">View on Map</a>
+				</div>
+			</section>
+
+			<figure>
+				<img src="/assets/images/logos_facebook.png" width="100" alt="" />
+
+				<img src="/assets/images/logos_tiktok-icon.png" width="100" alt="" />
+
+				<img src="/assets/images/instagram.png" width="100" alt="" />
+			</figure>
+
+			<hr />
+
+			<section class="popular_category">
+				<h2>Popular Categories <span>&#x276E;</span></h2>
+			</section>
+
+			<hr />
+			<p>Copyright © 2024 Tiger Collection Ltd. All rights reserved.</p>
+		</footer>
+	</body>
+</html>

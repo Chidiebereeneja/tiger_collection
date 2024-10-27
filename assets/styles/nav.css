@@ -36,7 +36,6 @@
 }
 header {
 	background-color: var(--white-color);
-	max-width: 1250px;
 	width: var(--full-width);
 	height: 13vh;
 	display: flex;
@@ -62,6 +61,7 @@ header {
 
 .navbar {
 	position: fixed;
+	max-width: 1200px;
 	width: 100%;
 	opacity: 0.85;
 	z-index: 100;
@@ -271,12 +271,5 @@ ul.filter_container {
 @media (max-width: 500px) {
 	.navbar-container input[type="checkbox"]:checked ~ .logo {
 		display: none;
-	}
-}
-
-@media (min-width: 1250px) {
-	header {
-		max-width: 1250px;
-		left: auto;
 	}
 }
