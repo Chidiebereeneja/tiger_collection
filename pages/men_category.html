@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="/assets/styles/nav.css" />
-		<link rel="stylesheet" href="/assets/styles/men_category.css" />
+		<link rel="stylesheet" href="/assets/styles/gender_category.css" />
 		<link rel="stylesheet" href="/assets/styles/footer.css" />
 		<link rel="icon" href="/assets/images/Tiger_favicon.png" />
 
@@ -12,7 +12,7 @@
 			Tiger Collection - Premium Men's Clothing & Accessories | Shop Now
 		</title>
 
-		<script src="/scripts/men_category.js" defer></script>
+		<script src="/scripts/men_category.js" type="module" defer></script>
 		<script
 			src="https://kit.fontawesome.com/29a7ea893b.js"
 			crossorigin="anonymous"
@@ -33,7 +33,7 @@
 					<ul class="menu-items">
 						<li>
 							<a
-								href="/home"
+								href="/"
 								title="Tiger Collection Home - Premium Fashion and Accessories"
 								>Home</a
 							>
@@ -41,18 +41,20 @@
 
 						<li>
 							<a
-								href="/men"
+								href="/pages/men_category.html"
 								title="Men's Fashion - Tiger Collection - Trendy Men's Clothing & Accessories"
 								>Men</a
 							>
 						</li>
+
 						<li>
 							<a
-								href="/women"
+								href="/pages/women_category.html"
 								title="Women's Fashion - Tiger Collection - Stylish Women's Clothing & Accessories"
 								>Women
 							</a>
 						</li>
+
 						<li>
 							<a
 								href="/unisex"
@@ -60,12 +62,23 @@
 								>Unisex</a
 							>
 						</li>
-						<li>
-							<a
-								href="/collections"
-								title="Explore Tiger Collection - Exclusive Designer Catergories"
-								>Catergories</a
-							>
+						<li class="Catergory_">
+							<a href="#">Categories</a>
+
+							<div class="hoverEffect">
+								<p>Catergories</p>
+								<p>
+									<a href="/pages/bag_category.html">Bags</a>
+								</p>
+
+								<p>
+									<a href="/pages/accessory_category.html">Accessories</a>
+								</p>
+
+								<p>
+									<a href="/pages/footwear_category.html">Footwear</a>
+								</p>
+							</div>
 						</li>
 					</ul>
 					<div class="logo">
@@ -290,6 +303,7 @@
 						</figcaption>
 						<span class="wishlist"><i class="fa-regular fa-heart"></i></span>
 					</figure>
+
 					<figure>
 						<img
 							src="/assets/images/Recommended-sweater.png"
@@ -462,9 +476,9 @@
 					Today, Clothing for Men is gaining more popularity above all. This is
 					because gone are the days when Men were used to carrying uncomfortable
 					fashion. Today, a lady looks prettier when she is in Casual Men’s Wear
-					which is a comfortable outfit. Concerning this, Tiger Collection has a
-					big fat range of Stylish Men's Clothing that would make him stand out
-					wherever he goes.
+					which is a comfortable outfit. Concerning this,
+					<strong>Tiger Collection</strong> has a big fat range of Stylish Men's
+					Clothing that would make him stand out wherever he goes.
 				</p>
 			</article>
 

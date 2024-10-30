@@ -1,9 +1,10 @@
 "use strict";
 
+import { navbarTask } from "./modules/nav_bar.js";
+navbarTask("Home");
+
 const sliderContainer = document.querySelector("#slider");
 const firstCardOffset = sliderContainer.querySelector("div.card").offsetWidth;
-const canvas_1 = document.getElementById("canvas_1");
-console.log(canvas_1);
 
 const btns = document.querySelectorAll(".caro_btn button");
 const cards = Array.from(sliderContainer.children);
@@ -12,22 +13,43 @@ cards.map((card, i) => {
 	card.style.transform = `translateX(${i * 100}%)`;
 });
 
-const drawCanvas = async function (canvas) {
-	const response = await fetch("/assets/images/Hawaiian-Shirts.jpeg");
-	const image = await response.blob();
-	const imageUrl = URL.createObjectURL(image);
+const notificationTask = function () {
+	const notifyDiv = document.createElement("div");
+	notifyDiv.classList.add("notification");
+	const pEl = document.createElement("p");
+	pEl.classList.add("notification_content");
+	const shopBtn = document.createElement("button");
+	const cancelBtn = document.createElement("button");
+	const img = document.createElement("img");
+	const span2 = document.createElement("span");
+	cancelBtn.classList.add("notification_btn");
 
-	const img = new Image();
-	img.src = imageUrl;
+	notifyDiv.appendChild(pEl);
+	notifyDiv.appendChild(cancelBtn);
+	pEl.appendChild(img);
+	pEl.appendChild(span2);
+	pEl.appendChild(shopBtn);
 
-	img.onload = function () {
-		const ctx = canvas.getContext("2d");
-		ctx.drawImage(img, 0, 0);
-	};
-	console.log(imageUrl);
+	img.src = "/assets/images/Vector.png";
+	span2.textContent = "30% off men’s wear — Limited time!";
+	shopBtn.innerHTML = `Shop Now <i class="fa-solid fa-arrow-right"></i>`;
+	cancelBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+	const header = document.querySelector("header");
+	const main = document.querySelector("main");
+
+	header.insertAdjacentElement("beforebegin", notifyDiv);
+	main.style.marginTop = "7vh";
+	header.style.top = "13vh !important";
+	header.classList.add("header");
+
+	cancelBtn.addEventListener("click", () => {
+		notifyDiv.style.display = "none";
+		header.classList.remove("header");
+		header.style.top = "0";
+		main.style.marginTop = "10vh";
+	});
 };
-
-drawCanvas(canvas_1);
+notificationTask();
 
 /*
 const carouselTask = function (sliderContainer, offsetWidth, carouselBtn) {
@@ -55,3 +77,24 @@ const carouselTask = function (sliderContainer, offsetWidth, carouselBtn) {
 
 carouselTask(sliderContainer, firstCardOffset, btns);
 */
+
+// navLinks.forEach((link) => {
+// 	console.log(link);
+// });
+
+// const targetStyleTask = function () {
+// 	navLinks.forEach((link) => {
+// 		if (link.textContent === "Home") {
+// 			link.classList.add("target_page");
+// 		}
+// 	});
+
+// 	navLinks.forEach((link) => {
+// 		link.addEventListener("click", (ev) => {
+// 			navLinks.forEach((link) => link.classList.remove("target_page"));
+// 			ev.target.classList.add("target_page");
+// 		});
+// 	});
+// };
+
+// targetStyleTask();

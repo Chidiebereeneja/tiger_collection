@@ -28,11 +28,14 @@ body {
 	box-sizing: border-box;
 }
 
+.header {
+	top: 3rem !important;
+}
+
 main {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	margin-top: 13vh;
 	overflow-x: hidden !important;
 }
 
@@ -757,16 +760,6 @@ section.feedback article.profile_images {
 	position: relative;
 }
 
-/* div.slide_container {
-	margin: 0 auto;
-	width: 100%;
-	height: 100%;
-	position: relative;
-	display: flex;
-	gap: 1rem;
-	width: 100%;
-} */
-
 section.feedback article.profile_images div.card {
 	height: 100%;
 	display: flex;
@@ -818,5 +811,55 @@ div.card div.profile-card span {
 	padding: 4px;
 	font-weight: 500;
 	font-size: 17px;
+	cursor: pointer;
+}
+
+.notification {
+	width: 100%;
+	height: 6vh;
+	background-color: #28221f;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-inline: 1rem;
+}
+
+.notification p.notification_content {
+	display: flex;
+	align-items: center;
+	align-self: center;
+	height: 100%;
+	gap: 10px;
+	color: var(--primary-color);
+	margin-left: 29%;
+	font-family: Montserrat, sans-serif;
+}
+
+p.notification_content img {
+	width: 17px;
+	height: 25px;
+	object-fit: contain;
+	object-position: center;
+}
+
+.notification p.notification_content button {
+	background-color: transparent;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	cursor: pointer;
+}
+
+.notification button.notification_btn {
+	width: fit-content;
+	height: fit-content;
+	color: var(--primary-color);
+	padding: 5px;
+	margin-right: 5%;
+	background-color: transparent;
+	border: none;
 	cursor: pointer;
 }

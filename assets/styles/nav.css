@@ -40,7 +40,8 @@ header {
 	height: 13vh;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-evenly;
+	gap: 3.5rem;
 	position: fixed;
 	left: 0;
 	right: 0;
@@ -104,9 +105,9 @@ ul.filter_container {
 	font-size: 1.1rem;
 }
 
-.menu-items li:nth-child(1) a {
-	color: #000;
-	font-weight: 500;
+.target_page {
+	color: #000 !important;
+	font-weight: 500 !important;
 }
 
 .navbar a {
@@ -124,6 +125,8 @@ ul.filter_container {
 
 .filter_container {
 	order: 4;
+	display: flex;
+	gap: 2rem;
 }
 
 .filter_container input[type="text"] {
@@ -143,6 +146,61 @@ ul.filter_container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+li.Catergory_ {
+	position: relative;
+	transition: all 1s linear;
+}
+
+div.hoverEffect {
+	position: absolute;
+	top: 22px;
+	left: -10px;
+	background-color: #fff;
+	width: 150px;
+	height: 200px;
+	padding-block-start: 1rem;
+	gap: 1rem;
+	border-radius: 5px;
+	z-index: 10;
+	box-shadow: 0px 0px 4px #302f2f;
+	display: none;
+	flex-direction: column;
+	transition: all 1s linear;
+}
+
+div.hoverEffect p {
+	padding-inline: 1rem;
+	color: #616161;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+li.Catergory_:hover div.hoverEffect {
+	transition: all 1s linear;
+	display: flex;
+	flex-direction: column;
+}
+
+div.hoverEffect p:nth-child(1) {
+	color: #000000;
+	border-bottom: 1px solid #302f2f;
+	padding-bottom: 1rem;
+	font-size: 12px;
+	font-weight: 400;
+}
+
+div.hoverEffect a {
+	color: #302f2f;
+	font-weight: 500;
+	font-size: 13px;
+	letter-spacing: 0.6px;
+	transition: all 0.3s linear;
+}
+
+div.hoverEffect a:hover {
+	text-decoration: underline;
 }
 
 @media (max-width: 768px) {
