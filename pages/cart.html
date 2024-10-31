@@ -4,15 +4,13 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="/assets/styles/nav.css" />
-		<link rel="stylesheet" href="/assets/styles/wishlist_acct.css" />
+		<link rel="stylesheet" href="/assets/styles/cart.css" />
 		<link rel="stylesheet" href="/assets/styles/footer.css" />
 		<link rel="icon" href="/assets/images/Tiger_favicon.png" type="image/png" />
 
-		<title>
-			My Wishlist - Tiger Collection | Your Favorite Picks in Unisex Fashion
-		</title>
+		<title>Document</title>
 
-		<script src="/scripts/wishlist_acct.js" type="module" defer></script>
+		<script src="/scripts/cart.js" type="module" defer></script>
 		<script
 			src="https://kit.fontawesome.com/29a7ea893b.js"
 			crossorigin="anonymous"
@@ -116,136 +114,158 @@
 		</header>
 
 		<main>
-			<div class="track_page">
+			<div class="cart_header">
 				<p>
-					<span>Home</span>
+					<strong>Home</strong>
 					<i class="fa-solid fa-angle-right"></i>
-					<span>My Account</span>
-					<i class="fa-solid fa-angle-right"></i>
-					<span>Wishlist</span>
+					<strong>Add To Cart</strong>
+				</p>
+				<p>
+					Please fill in the fields below and click place order to complete your
+					purchase!
+				</p>
+				<p>
+					Already registered? <a href="/pages/login.html">Please login here</a>
 				</p>
 			</div>
 
-			<aside class="account_container">
-				<h2>Hello Collins</h2>
-				<p>Welcome to your Account</p>
+			<table class="cart_product">
+				<tr>
+					<th>Product Details</th>
+					<th>Price</th>
+					<th>Quantity</th>
+					<th>shipping</th>
+					<th>subtotal</th>
+					<th>action</th>
+				</tr>
 
-				<ul>
-					<li>
-						<img src="/assets/images/Icon--2.png" width="20" alt="" />
-						My orders
-					</li>
+				<tr class="check_product">
+					<td>
+						<img src="/assets/images/Tees-female.jpeg" width="50" alt="" />
+						<p>
+							<strong>Blue Flower Crop Top</strong>
+							<span>Color : Yellow</span>
+							<span>Size : M</span>
+						</p>
+					</td>
 
-					<li>
-						<i class="fa-regular fa-heart"></i>
-						Wishlist
-					</li>
+					<td>₦3,000</td>
 
-					<li>
-						<i class="fa-regular fa-user"></i>
-						My info
-					</li>
+					<td>
+						<p>
+							<span class="less_counter"
+								><i class="fa-solid fa-minus"></i
+							></span>
+							<span class="counter_num">1</span>
+							<span class="plus_counter">
+								<i class="fa-solid fa-plus"></i>
+							</span>
+						</p>
+					</td>
 
-					<li>
-						<i class="fa-solid fa-arrow-right-from-bracket"></i>
-						Sign out
-					</li>
-				</ul>
-			</aside>
+					<td>FREE</td>
 
-			<aside>
-				<h1>Wishlist</h1>
+					<td>₦3,000</td>
 
-				<section>
-					<div class="product_">
-						<i class="fa-solid fa-xmark"></i>
-						<img
-							src="/assets/images/Tees-female.jpeg"
-							alt=""
-							class="imageFirst"
-						/>
+					<td><i class="fa-regular fa-trash-can"></i></td>
+				</tr>
 
-						<div class="product_name">
-							<p>
-								<strong>Blue Flower Print Crop Top </strong>
-								<span>
-									<strong>Color:</strong>
-									<b>Yellow</b>
-								</span>
-								<span> Quantity : <b>1</b> </span>
-							</p>
-							<p>
-								<span>₦3,000</span>
-								<button>Add to cart</button>
-							</p>
-						</div>
+				<tr class="check_product">
+					<td>
+						<img src="/assets/images/limelight_1.jpeg" width="50" alt="" />
+						<p>
+							<strong>Levender Hoodie</strong>
+							<span>Color : Levender</span>
+							<span>Size : XXL</span>
+						</p>
+					</td>
+
+					<td>₦3,000</td>
+
+					<td>
+						<p>
+							<span class="less_counter"
+								><i class="fa-solid fa-minus"></i
+							></span>
+							<span class="counter_num">2</span>
+							<span class="plus_counter">
+								<i class="fa-solid fa-plus"></i>
+							</span>
+						</p>
+					</td>
+
+					<td>FREE</td>
+
+					<td>₦6,000</td>
+
+					<td><i class="fa-regular fa-trash-can"></i></td>
+				</tr>
+
+				<tr class="check_product">
+					<td>
+						<img src="/assets/images/limelight_3.jpeg" width="50" alt="" />
+						<p>
+							<strong>Black Sweatshirt</strong>
+							<span>Color : Black</span>
+							<span>Size : XXL</span>
+						</p>
+					</td>
+
+					<td>₦3,000</td>
+
+					<td>
+						<p>
+							<span class="less_counter"
+								><i class="fa-solid fa-minus"></i
+							></span>
+							<span class="counter_num">2</span>
+							<span class="plus_counter">
+								<i class="fa-solid fa-plus"></i>
+							</span>
+						</p>
+					</td>
+
+					<td>500</td>
+
+					<td>₦6,000</td>
+
+					<td><i class="fa-regular fa-trash-can"></i></td>
+				</tr>
+			</table>
+
+			<section>
+				<aside>
+					<h2>Discount Codes</h2>
+					<p>Enter your coupon code if you have one</p>
+
+					<form>
+						<input type="text" name="coupon" />
+						<button type="submit">Apply Coupon</button>
+					</form>
+
+					<button>Continue Shopping</button>
+				</aside>
+
+				<aside>
+					<div>
+						<p>
+							<strong>Sub Total</strong>
+							<strong>₦15,000</strong>
+						</p>
+
+						<p>
+							<strong>Shipping</strong>
+							<strong>₦500</strong>
+						</p>
+
+						<p>
+							<strong>Grand Total</strong>
+							<strong>₦15,500</strong>
+						</p>
 					</div>
-
-					<div class="product_">
-						<i class="fa-solid fa-xmark"></i>
-						<img
-							src="/assets/images/breezy _background.jpeg"
-							width="50"
-							alt=""
-						/>
-
-						<div class="product_name">
-							<p>
-								<strong>Yellow Flower Print Dress Crop Top </strong>
-								<span>
-									<strong>Color:</strong>
-									<b>Yellow</b>
-								</span>
-								<span> Quantity : <b>1</b> </span>
-							</p>
-							<p>
-								<span>₦3,000</span>
-								<button>Add to cart</button>
-							</p>
-						</div>
-					</div>
-
-					<div class="product_">
-						<i class="fa-solid fa-xmark"></i>
-						<img src="/assets/images/Cargo-Joggers.jpeg" width="50" alt="" />
-
-						<div class="product_name">
-							<p>
-								<strong>White Flower Crop Top </strong>
-								<span>
-									<strong>Color:</strong>
-									<b>White</b>
-								</span>
-								<span> Quantity : <b>1</b> </span>
-							</p>
-							<p>
-								<span>₦3,000</span>
-								<button>Add to cart</button>
-							</p>
-						</div>
-					</div>
-
-					<div class="product_">
-						<i class="fa-solid fa-xmark"></i>
-						<img src="/assets/images/FullSleeve.jpeg" width="50" alt="" />
-
-						<div class="product_name">
-							<p>
-								<strong>Brown men’s long sleeve T-shirt</strong>
-								<span>
-									<strong>Color:</strong>
-									<b>Brown</b>
-								</span>
-								<span> Quantity : <b>1</b> </span>
-							</p>
-							<p>
-								<span>₦3,000</span>
-								<button>Add to cart</button>
-							</p>
-						</div>
-					</div>
-				</section>
-			</aside>
+					<button>Proceed To Checkout</button>
+				</aside>
+			</section>
 		</main>
 
 		<footer>

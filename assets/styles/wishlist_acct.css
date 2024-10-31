@@ -30,6 +30,7 @@ main {
 		"trackPage trackPage trackPage trackPage"
 		"accountsCon wishlistCon wishlistCon wishlistCon";
 	grid-gap: 3.5rem;
+	margin-block-end: 5rem;
 }
 
 main div.track_page {
@@ -112,10 +113,15 @@ main aside.account_container + aside {
 		"h1 h1"
 		"productCon productCon";
 	grid-gap: 3rem;
+	margin-left: 1rem;
 }
 
 main aside.account_container + aside h1 {
 	grid-area: h1;
+	color: #3c4242;
+	letter-spacing: 1px;
+	font-size: 28px;
+	font-weight: 400;
 }
 
 main aside.account_container + aside section {
@@ -132,6 +138,11 @@ aside.account_container + aside section div.product_ {
 	height: 110px;
 	align-items: center;
 	gap: 1.7rem;
+}
+
+div.product_ i {
+	color: #807d7e;
+	cursor: pointer;
 }
 
 div.product_ div.product_name {
@@ -177,4 +188,29 @@ section div.product_ img {
 
 img.imageFirst {
 	width: 140px;
+}
+
+div.product_ div.product_name p:nth-child(2) {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+div.product_ div.product_name p:nth-child(2) span {
+	color: #807d7e;
+	font-size: 19px;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+div.product_ div.product_name p:nth-child(2) button {
+	background-color: #8a33fd;
+	color: #f6f6f6;
+	padding-inline: 0.8rem;
+	padding-block: 0.5rem;
+	font-size: 16px;
+	font-weight: 500;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
 }
