@@ -323,4 +323,5 @@ section aside:nth-child(2) div + button {
 	font-weight: 600;
 	border: none;
 	border-radius: 8px;
+    cursor: pointer
 }
