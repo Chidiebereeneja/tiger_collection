@@ -1,0 +1,180 @@
+@font-face {
+	src: url(/assets/fonts/Montserrat/static/);
+	font-family: Montserrat;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Montserrat, sans-serif;
+}
+
+body {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	align-self: center;
+	max-width: 1100px;
+	width: 100%;
+	margin-top: 14vh;
+	padding-inline: 5rem;
+	padding-block-start: 2rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-flow: auto;
+	grid-template-areas:
+		"trackPage trackPage trackPage trackPage"
+		"accountsCon wishlistCon wishlistCon wishlistCon";
+	grid-gap: 3.5rem;
+}
+
+main div.track_page {
+	grid-area: trackPage;
+}
+
+main div.track_page p {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	color: #807d7e;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+main div.track_page p span:nth-last-child(1) {
+	color: #3c4242;
+}
+
+main aside.account_container {
+	grid-area: accountsCon;
+}
+
+main aside.account_container h2 {
+	color: #3c4242;
+	font-weight: 500;
+	font-size: 28px;
+	letter-spacing: 1px;
+	border-left: 6px solid #8a33fd;
+	padding-left: 1rem;
+}
+
+main aside.account_container h2 + p {
+	color: #807d7e;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	margin-block: 1rem;
+}
+
+main aside.account_container ul {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+	list-style-type: none;
+}
+
+main aside.account_container ul li {
+	color: #807d7e;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding-inline-start: 2rem;
+	font-size: 16px;
+	font-weight: 600;
+	border-left: 3px solid transparent;
+	transition: all 0.3s linear;
+	cursor: pointer;
+}
+
+main aside.account_container ul li:hover {
+	background-color: #f6f6f6;
+	border-left: 3px solid #3c4242;
+}
+
+main aside.account_container ul li img {
+	object-fit: contain;
+	object-position: center;
+	width: 15px;
+}
+
+main aside.account_container + aside {
+	grid-area: wishlistCon;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-auto-rows: auto;
+	grid-template-areas:
+		"h1 h1"
+		"productCon productCon";
+	grid-gap: 3rem;
+}
+
+main aside.account_container + aside h1 {
+	grid-area: h1;
+}
+
+main aside.account_container + aside section {
+	width: 100%;
+	grid-area: productCon;
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+aside.account_container + aside section div.product_ {
+	width: 100%;
+	display: flex;
+	height: 110px;
+	align-items: center;
+	gap: 1.7rem;
+}
+
+div.product_ div.product_name {
+	width: 80%;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+div.product_ div.product_name p strong:nth-child(1),
+div.product_ div.product_name p span:nth-last-child(1) {
+	color: #3c4242;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+div.product_ div.product_name p span b {
+	color: #807d7e;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+div.product_ div.product_name p:nth-child(2) {
+	align-self: center;
+}
+
+div.product_ div.product_name p:nth-child(1) {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+section div.product_ img {
+	height: 100px;
+	width: 100px;
+	border-radius: 4px;
+	object-fit: cover;
+	object-position: center;
+}
+
+img.imageFirst {
+	width: 140px;
+}
