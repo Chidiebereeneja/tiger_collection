@@ -6,6 +6,7 @@ defaultStyleTask("Account");
 
 const liEls = queryAllElementTask(".account_container ul li");
 const accordBtnCon = queryElementTask(".accordionBtn");
+const signOutPopupCon = queryElementTask(".signOutPopup");
 
 const defaultSelectTask = function (str) {
 	const pageTrack = queryElementTask("#trackCur_page");
@@ -34,6 +35,10 @@ const clickEventStyleTask = function () {
 		li.addEventListener("click", () => {
 			const spanCont = li.querySelector("span").textContent.trim();
 			defaultSelectTask(spanCont);
+
+			if (li.classList.contains("signOut")) {
+				signOutPopupCon.style.display = "flex";
+			}
 		});
 	});
 };
