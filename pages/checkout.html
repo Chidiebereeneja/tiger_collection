@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/assets/styles/nav.css" />
+		<link rel="stylesheet" href="/assets/styles/checkout.css" />
+		<link rel="stylesheet" href="/assets/styles/footer.css" />
+		<link rel="icon" href="/assets/images/Tiger_favicon.png" type="image/png" />
+
+		<title>
+			Checkout - Tiger Collection | Secure Your Stylish Fashion Picks
+		</title>
+
+		<script src="/scripts/checkout.js" type="module" defer></script>
+		<script
+			src="https://kit.fontawesome.com/29a7ea893b.js"
+			crossorigin="anonymous"
+			defer
+		></script>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar">
+				<div class="navbar-container container">
+					<input type="checkbox" name="" id="" />
+					<div class="hamburger-lines">
+						<span class="line line1"></span>
+						<span class="line line2"></span>
+						<span class="line line3"></span>
+					</div>
+
+					<ul class="menu-items">
+						<li>
+							<a
+								href="/index.html"
+								title="Tiger Collection Home - Premium Fashion and Accessories"
+								>Home</a
+							>
+						</li>
+
+						<li>
+							<a
+								href="/pages/men_category.html"
+								title="Men's Fashion - Tiger Collection - Trendy Men's Clothing & Accessories"
+								>Men</a
+							>
+						</li>
+
+						<li>
+							<a
+								href="/pages/women_category.html"
+								title="Women's Fashion - Tiger Collection - Stylish Women's Clothing & Accessories"
+								>Women
+							</a>
+						</li>
+
+						<li>
+							<a
+								href="/pages/unisex_category.html"
+								title="Unisex Fashion - Tiger Collection - Fashion for Everyone"
+								>Unisex</a
+							>
+						</li>
+						<li class="Catergory_">
+							<a href="#">Categories</a>
+
+							<div class="hoverEffect">
+								<p>Catergories</p>
+								<p>
+									<a href="/pages/bag_category.html">Bags</a>
+								</p>
+
+								<p>
+									<a href="/pages/accessory_category.html">Accessories</a>
+								</p>
+
+								<p>
+									<a href="/pages/footwear_category.html">Footwear</a>
+								</p>
+							</div>
+						</li>
+					</ul>
+					<div class="logo">
+						<a href="#">
+							<img src="/assets/images/tiger-logo.png" width="60px" />
+						</a>
+					</div>
+
+					<ul class="filter_container">
+						<li>
+							<input type="text" placeholder="Search..." aria-label="Search" />
+						</li>
+						<li>
+							<a
+								href="/pages/wishlist.html"
+								title="Your Wishlist - Tiger Collection"
+								><i class="fa-regular fa-heart"></i
+							></a>
+						</li>
+
+						<li>
+							<a
+								href="/pages/wishlist_acct.html"
+								title="Your Account - Tiger Collection"
+							>
+								<i class="fa-regular fa-user"></i>
+							</a>
+						</li>
+						<li>
+							<a href="/pages/cart.html" title="Your Cart - Tiger Collection"
+								><i class="fa-solid fa-cart-shopping"></i
+							></a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<div class="checkout_header">
+				<p>
+					<span>Home</span>
+					<i class="fa-solid fa-angle-right"></i>
+					<span class="add_to_cart_btn">Add To Cart</span>
+					<i class="fa-solid fa-angle-right"></i>
+					<span>Check Out</span>
+				</p>
+
+				<h1>Check Out</h1>
+
+				<p>Billing Details</p>
+			</div>
+
+			<aside class="aside_1">
+				<form>
+					<div class="name">
+						<p>
+							<label for="firstName">First Name*</label>
+							<input type="text" placeholder="First Name" id="firstName" />
+						</p>
+
+						<p>
+							<label for="lastName">Last Name*</label>
+							<input type="text" placeholder="Last Name" id="lastName" />
+						</p>
+					</div>
+
+					<div class="country_company">
+						<p>
+							<label for="countryRegion">Country / Region*</label>
+							<input
+								type="text"
+								placeholder="Country / Region"
+								id="countryRegion"
+							/>
+						</p>
+
+						<p>
+							<label for="CompanyName">Company Name</label>
+							<input
+								type="text"
+								placeholder="Company (optional)"
+								id="CompanyName"
+							/>
+						</p>
+					</div>
+
+					<div class="street_unit">
+						<p>
+							<label for="streetAddress">Street Address*</label>
+							<input
+								type="text"
+								placeholder="House number and street name"
+								id="streetAddress"
+							/>
+						</p>
+
+						<p>
+							<label for="apt">Apt, suite, unit</label>
+							<input
+								type="text"
+								placeholder="apartment, suite, unit, etc. (optional)"
+								id="apt"
+							/>
+						</p>
+					</div>
+
+					<div class="state">
+						<p>
+							<label for="city">City*</label>
+							<input type="text" placeholder="Town / City" id="city" />
+						</p>
+
+						<p>
+							<label for="state">State*</label>
+							<input type="text" placeholder="State" id="state" />
+						</p>
+
+						<p>
+							<label for="postal">Postal Code*</label>
+							<input type="text" placeholder="Postal Code" id="postal" />
+						</p>
+					</div>
+
+					<div class="phone_">
+						<p>
+							<label for="phone">Phone*</label>
+							<input type="text" placeholder="Phone" id="phone" />
+						</p>
+					</div>
+
+					<div class="deliveryBtn">
+						<button>Continue to delivery</button>
+
+						<div>
+							<input type="checkbox" name="faster_delivery" id="faster" />
+							<label for="faster"
+								>Save my information for a faster checkout</label
+							>
+						</div>
+					</div>
+				</form>
+
+				<form>
+					<div class="shipping_address">
+						<h4>Shipping Address</h4>
+						<p>Select the address that matches your card or payment method.</p>
+					</div>
+
+					<div class="billing_address">
+						<div>
+							<input type="radio" id="bill_1" />
+							<label for="bill_1">Same as Billing address</label>
+						</div>
+						<hr />
+						<div>
+							<input type="radio" id="bill_2" />
+							<label for="bill_2">Use a different shipping address</label>
+						</div>
+					</div>
+
+					<span class="line"></span>
+
+					<div class="shipping_method">
+						<h4>Shipping Method</h4>
+
+						<div class="arrival">
+							<p class="paraDate">
+								<strong>Arrives by Monday, October 7</strong>
+							</p>
+							<hr />
+							<div class="fee_con">
+								<p>
+									<strong>Delivery Charges</strong>
+									<strong>₦200</strong>
+								</p>
+
+								<p>Additional fess may apply</p>
+							</div>
+						</div>
+					</div>
+
+					<span class="line"></span>
+
+					<article class="payment_method">
+						<h4>Payment Method</h4>
+						<p>All transactions are secure and encrypted.</p>
+
+						<div class="credit_card">
+							<div class="card_select">
+								<input type="radio" checked />
+								<label>
+									<strong>Credit Card</strong>
+									<span>We accept all major credit cards.</span>
+								</label>
+							</div>
+
+							<div class="paymentMthods">
+								<button>
+									<img src="/assets/images/googlePay.png" width="40" alt="" />
+								</button>
+								<button>
+									<img src="/assets/images/visa.png" width="40" alt="" />
+								</button>
+								<button>
+									<img src="/assets/images/master_card.png" width="40" alt="" />
+								</button>
+								<button>
+									<img src="/assets/images/Verve-Logo.png" width="40" alt="" />
+								</button>
+							</div>
+
+							<div class="card-input">
+								<input type="text" placeholder="Card Number" id="cardNumber" />
+
+								<input type="text" placeholder="Name of card" id="cardName" />
+
+								<input
+									type="text"
+									placeholder="Expiration date (MM/YY)"
+									id="cardExpire"
+								/>
+
+								<input type="password" placeholder="Security Code" />
+							</div>
+
+							<div class="cash_on_delivery">
+								<input type="radio" id="cash_" />
+								<label for="cash_">
+									<strong>Cash on delivery</strong>
+									<span>Pay with cash upon delivery.</span>
+								</label>
+							</div>
+						</div>
+
+						<div class="action_pay_btn">
+							<button>Pay Now</button>
+						</div>
+					</article>
+				</form>
+			</aside>
+
+			<aside class="aside_2">
+				<h2>Order Summary</h2>
+
+				<figure>
+					<img src="/assets/images/Tees-female.jpeg" width="80" alt="" />
+
+					<figcaption>
+						<p><strong>Blue Flower Crop Top</strong><span>x 1</span></p>
+						<p><strong>Color :</strong> <span>Yellow</span></p>
+					</figcaption>
+					<p><strong>₦3,000</strong></p>
+				</figure>
+
+				<figure>
+					<img src="/assets/images/limelight_1.jpeg" width="80" alt="" />
+
+					<figcaption>
+						<p><strong>Levender Hoodie</strong><span>x 2</span></p>
+						<p><strong>Color :</strong> <span>Levender</span></p>
+					</figcaption>
+					<p><strong>₦6,000</strong></p>
+				</figure>
+
+				<figure>
+					<img src="/assets/images/limelight_3.jpeg" width="80" alt="" />
+
+					<figcaption>
+						<p><strong>Black Sweatshirt</strong><span>x 2</span></p>
+						<p><strong>Color :</strong> <span>Black</span></p>
+					</figcaption>
+					<p><strong>₦6,000</strong></p>
+				</figure>
+
+				<div class="subTotal">
+					<p><strong>Subtotal</strong><span>(3 items)</span></p>
+					<p><strong>₦15,000</strong></p>
+				</div>
+
+				<div class="shipping_fee">
+					<p><strong>Shipping</strong></p>
+					<p><strong>₦500</strong></p>
+				</div>
+
+				<div class="totalPur">
+					<p><strong>Total</strong></p>
+					<p><strong>₦15,500</strong></p>
+				</div>
+			</aside>
+		</main>
+
+		<footer>
+			<section class="need_help_container">
+				<div class="need_help">
+					<h2>Need Help</h2>
+					<a href="#">Contact Us</a>
+					<a href="#">Track Order</a>
+					<a href="#">Returns & Refunds</a>
+					<a href="#">FAQ's</a>
+					<a href="#">Career</a>
+				</div>
+
+				<div class="company">
+					<h2>Company</h2>
+					<a href="#">About Us</a>
+					<a href="#">Products</a>
+					<a href="#">Terms & Conditions</a>
+					<a href="#">Collaboration</a>
+					<a href="#">Media</a>
+				</div>
+
+				<div class="more_info">
+					<h2>More Info</h2>
+					<a href="#">Term and Conditions</a>
+					<a href="#">Privacy Policy</a>
+					<a href="#">Shipping Policy</a>
+					<a href="#">Sitemap</a>
+				</div>
+
+				<div class="location">
+					<h2>Location</h2>
+					<p>
+						support@tigercollecction.in <br />
+						No 13 Enugu Road Nsukka, Enugu State, Nigeria
+					</p>
+					<a href="#">View on Map</a>
+				</div>
+			</section>
+
+			<figure>
+				<img src="/assets/images/logos_facebook.png" width="100" alt="" />
+
+				<img src="/assets/images/logos_tiktok-icon.png" width="100" alt="" />
+
+				<img src="/assets/images/instagram.png" width="100" alt="" />
+			</figure>
+
+			<hr />
+
+			<section class="popular_category">
+				<h2>Popular Categories <span>&#x276E;</span></h2>
+			</section>
+
+			<hr />
+			<p>Copyright © 2024 Tiger Collection Ltd. All rights reserved.</p>
+		</footer>
+	</body>
+</html>

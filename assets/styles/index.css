@@ -704,6 +704,10 @@ article.LimeLight figure div.img_wishList img {
 	border-radius: 5px;
 }
 
+.LimeLight img {
+	cursor: pointer;
+}
+
 article.LimeLight figure div.img_wishList span {
 	background-color: #fff;
 	height: 25px;

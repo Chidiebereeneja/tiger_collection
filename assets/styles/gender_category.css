@@ -359,6 +359,7 @@ article.product_container section.product_card_container figure img {
 	object-fit: cover;
 	object-position: center;
 	border-radius: 5px;
+	cursor: pointer;
 }
 
 section.product_card_container figure figcaption {

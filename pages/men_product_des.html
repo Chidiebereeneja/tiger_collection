@@ -12,7 +12,7 @@
 			Trends for Men
 		</title>
 
-		<script src="/scripts/men_product_des.js" defer></script>
+		<script src="/scripts/men_product_des.js" type="module" defer></script>
 		<script
 			src="https://kit.fontawesome.com/29a7ea893b.js"
 			crossorigin="anonymous"
@@ -33,7 +33,7 @@
 					<ul class="menu-items">
 						<li>
 							<a
-								href="/"
+								href="/index.html"
 								title="Tiger Collection Home - Premium Fashion and Accessories"
 								>Home</a
 							>
@@ -57,7 +57,7 @@
 
 						<li>
 							<a
-								href="/unisex"
+								href="/pages/unisex_category.html"
 								title="Unisex Fashion - Tiger Collection - Fashion for Everyone"
 								>Unisex</a
 							>
@@ -82,7 +82,7 @@
 						</li>
 					</ul>
 					<div class="logo">
-						<a href="./">
+						<a href="#">
 							<img src="/assets/images/tiger-logo.png" width="60px" />
 						</a>
 					</div>
@@ -92,7 +92,9 @@
 							<input type="text" placeholder="Search..." aria-label="Search" />
 						</li>
 						<li>
-							<a href="/wishlist" title="Your Wishlist - Tiger Collection"
+							<a
+								href="/pages/wishlist.html"
+								title="Your Wishlist - Tiger Collection"
 								><i class="fa-regular fa-heart"></i
 							></a>
 						</li>
@@ -128,19 +130,17 @@
 					</div>
 				</figure>
 
-				<figure>
-					<img src="/assets/images/Product-4.png" width="300" alt="" />
-				</figure>
+				<figure id="product_preview"></figure>
 			</aside>
 
 			<aside>
 				<p class="women_arr">
-					<span>Men</span>
+					<span id="trackPage"></span>
 					<i class="fa-solid fa-angle-right"></i>
 					<span>Top</span>
 				</p>
 
-				<h1>Raven Hoodie With Brown colored Design</h1>
+				<h1></h1>
 
 				<div class="rating">
 					<p>
@@ -188,7 +188,7 @@
 							<i class="fa-solid fa-cart-shopping"></i>
 							Add to Cart
 						</button>
-						<button>₦3,000</button>
+						<button class="Price_pre">₦3,000</button>
 					</p>
 				</div>
 
@@ -304,7 +304,7 @@
 
 						<figcaption>
 							<p>
-								<strong>White T-Shirt</strong>
+								<strong class="txt">White T-Shirt</strong>
 								<span>Priya’s Brand</span>
 							</p>
 							<p>
@@ -312,7 +312,7 @@
 							</p>
 						</figcaption>
 
-						<span>
+						<span class="heart">
 							<i class="fa-regular fa-heart"></i>
 						</span>
 					</figure>
@@ -322,7 +322,7 @@
 
 						<figcaption>
 							<p>
-								<strong>Dark Green Sweatshirt....</strong>
+								<strong class="txt">Dark Green Sweatshirt....</strong>
 								<span>Roboto’s Brand</span>
 							</p>
 							<p>
@@ -330,7 +330,7 @@
 							</p>
 						</figcaption>
 
-						<span>
+						<span class="heart">
 							<i class="fa-regular fa-heart"></i>
 						</span>
 					</figure>
@@ -340,7 +340,7 @@
 
 						<figcaption>
 							<p>
-								<strong>Levender Sweatshirt ....</strong>
+								<strong class="txt">Levender Sweatshirt ....</strong>
 								<span>Jhanvi’s Brand</span>
 							</p>
 							<p>
@@ -348,7 +348,7 @@
 							</p>
 						</figcaption>
 
-						<span>
+						<span class="heart">
 							<i class="fa-regular fa-heart"></i>
 						</span>
 					</figure>
@@ -358,7 +358,7 @@
 
 						<figcaption>
 							<p>
-								<strong>Urban jacket with white ....</strong>
+								<strong class="txt">Urban jacket with white ....</strong>
 								<span>Sagar’s Brand</span>
 							</p>
 							<p>
@@ -366,7 +366,7 @@
 							</p>
 						</figcaption>
 
-						<span>
+						<span class="heart">
 							<i class="fa-regular fa-heart"></i>
 						</span>
 					</figure>
@@ -376,7 +376,7 @@
 
 						<figcaption>
 							<p>
-								<strong>Plain White T-Shirt</strong>
+								<strong class="txt">Plain White T-Shirt</strong>
 								<span>Jhanvi’s Brand</span>
 							</p>
 							<p>
@@ -384,7 +384,7 @@
 							</p>
 						</figcaption>
 
-						<span>
+						<span class="heart">
 							<i class="fa-regular fa-heart"></i>
 						</span>
 					</figure>
@@ -394,7 +394,7 @@
 
 						<figcaption>
 							<p>
-								<strong>Checks Shirt with white.....</strong>
+								<strong class="txt">Checks Shirt with white.....</strong>
 								<span>H.M’s Brand</span>
 							</p>
 							<p>
@@ -402,7 +402,7 @@
 							</p>
 						</figcaption>
 
-						<span>
+						<span class="heart">
 							<i class="fa-regular fa-heart"></i>
 						</span>
 					</figure>
@@ -412,7 +412,7 @@
 
 						<figcaption>
 							<p>
-								<strong>One piece black top & ....</strong>
+								<strong class="txt">One piece black top & ....</strong>
 								<span>Nike’s Brand</span>
 							</p>
 							<p>
@@ -420,7 +420,7 @@
 							</p>
 						</figcaption>
 
-						<span>
+						<span class="heart">
 							<i class="fa-regular fa-heart"></i>
 						</span>
 					</figure>
@@ -434,7 +434,7 @@
 
 						<figcaption>
 							<p>
-								<strong>Denim Blue Shirt</strong>
+								<strong class="txt">Denim Blue Shirt</strong>
 								<span>MOMO’s Brand</span>
 							</p>
 							<p>
@@ -442,7 +442,7 @@
 							</p>
 						</figcaption>
 
-						<span>
+						<span class="heart">
 							<i class="fa-regular fa-heart"></i>
 						</span>
 					</figure>

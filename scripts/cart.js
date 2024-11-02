@@ -1,23 +1,17 @@
 "use strict";
 
-import { defaultStyleTask } from "./modules/varible.js";
+import {
+	defaultStyleTask,
+	queryElementTask,
+	queryAllElementTask,
+	currencyUpdateUITask,
+} from "./modules/varible.js";
 defaultStyleTask("Cart");
 
-const queryElement = (str) => document.querySelector(str);
-const queryAllElement = (str) => document.querySelectorAll(str);
-
-const checkoutBtn = queryAllElement(".cart-btn");
-const increementContainer = queryAllElement(".check_product td:nth-child(3) p");
-
-const currencyUpdateUITask = function (subtotal, str) {
-	if (str.length === 4) {
-		subtotal.textContent = `₦${str.slice(0, 1) + "," + str.slice(1)}`;
-	} else if (str.length === 5) {
-		subtotal.textContent = `₦${str.slice(0, 2) + "," + str.slice(2)}`;
-	} else if (str.length === 6) {
-		subtotal.textContent = `₦${str.slice(0, 3) + "," + str.slice(3)}`;
-	}
-};
+const checkoutBtn = queryAllElementTask(".cart-btn");
+const increementContainer = queryAllElementTask(
+	".check_product td:nth-child(3) p"
+);
 
 checkoutBtn.forEach((btn) => {
 	btn.addEventListener("click", () => {
@@ -84,7 +78,7 @@ increementContainer.forEach((container) => {
 });
 
 const subtotalAddTask = function () {
-	const subtotalCon = queryAllElement(".check_product td:nth-child(5) ");
+	const subtotalCon = queryAllElementTask(".check_product td:nth-child(5) ");
 
 	let totalVal = 0;
 	subtotalCon.forEach((tag) => {
@@ -92,7 +86,7 @@ const subtotalAddTask = function () {
 		totalVal += tagVal;
 	});
 
-	const subtotal = queryElement(".totalPurchase");
+	const subtotal = queryElementTask(".totalPurchase");
 	const str = totalVal.toString();
 
 	currencyUpdateUITask(subtotal, str);
@@ -118,7 +112,7 @@ const subtotalAddTask = function () {
 subtotalAddTask();
 
 const shippingTask = function () {
-	const shippingEl = queryAllElement(".check_product td:nth-child(4");
+	const shippingEl = queryAllElementTask(".check_product td:nth-child(4");
 
 	let shippingTotal = 0;
 	for (const ele of shippingEl) {
@@ -127,7 +121,7 @@ const shippingTask = function () {
 		shippingTotal += elementVal;
 	}
 
-	const shippingTotalEl = queryElement(".shipping_total");
+	const shippingTotalEl = queryElementTask(".shipping_total");
 	const str = shippingTotal.toString();
 
 	currencyUpdateUITask(shippingTotalEl, str);
@@ -135,9 +129,9 @@ const shippingTask = function () {
 shippingTask();
 
 const grandTotalTask = function () {
-	const totalPurchase = queryElement(".totalPurchase");
-	const shippingTotal = queryElement(".shipping_total");
-	const grandTotal = queryElement(".grand_total");
+	const totalPurchase = queryElementTask(".totalPurchase");
+	const shippingTotal = queryElementTask(".shipping_total");
+	const grandTotal = queryElementTask(".grand_total");
 
 	const totalPurchaseVal = parseInt(
 		totalPurchase.textContent.slice(1).split(",").join("")

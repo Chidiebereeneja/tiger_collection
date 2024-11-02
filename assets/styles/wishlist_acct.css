@@ -48,6 +48,7 @@ main div.track_page p {
 
 main div.track_page p span:nth-last-child(1) {
 	color: #3c4242;
+	text-transform: capitalize;
 }
 
 main aside.account_container {
@@ -98,6 +99,15 @@ main aside.account_container ul li:hover {
 	border-left: 3px solid #3c4242;
 }
 
+.defaultStyle {
+	background-color: #f6f6f6 !important;
+	border-left: 3px solid #3c4242 !important;
+}
+.defaultStyle-2 {
+	background-color: #f6f6f6 !important;
+	border-bottom: 3px solid #3c4242 !important;
+}
+
 main aside.account_container ul li img {
 	object-fit: contain;
 	object-position: center;
@@ -111,9 +121,9 @@ main aside.account_container + aside {
 	grid-auto-rows: auto;
 	grid-template-areas:
 		"h1 h1"
-		"productCon productCon";
-	grid-gap: 3rem;
+		"productDes productDes";
 	margin-left: 1rem;
+	gap: 3rem;
 }
 
 main aside.account_container + aside h1 {
@@ -122,7 +132,174 @@ main aside.account_container + aside h1 {
 	letter-spacing: 1px;
 	font-size: 28px;
 	font-weight: 400;
+	text-transform: capitalize;
 }
+
+section.active_container {
+	grid-area: productDes;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+section.active_container div.accordionBtn {
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+	border-bottom: 2px solid #f6f6f6;
+}
+
+section.active_container div.accordionBtn button {
+	background-color: transparent;
+	color: #3c4242;
+	height: 100%;
+	width: fit-content;
+	padding-inline: 2rem;
+	font-size: 18px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	margin-bottom: -5px;
+	border: none;
+	border-bottom: 3px solid transparent;
+	transition: all 0.3s linear;
+	cursor: pointer;
+}
+
+div.accordionBtn button:hover {
+	background-color: #f6f6f6 !important;
+	border-bottom: 3px solid #3c4242 !important;
+}
+
+section.accordion {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+section.accordion article {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding-block-end: 2rem;
+	padding-block-start: 1rem;
+	border-bottom: 1px solid #edeef2;
+}
+
+section.accordion article div.order_des,
+div.completedTxt {
+	background-color: #f6f6f6;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding-inline: 1.5rem;
+	padding-block: 2rem;
+	border-radius: 8px;
+}
+
+article div.order_des p,
+section#Cancelled div.order_des div {
+	display: flex;
+	justify-content: space-between;
+}
+
+article div.order_des p:nth-child(1) strong,
+article figure figcaption p:nth-child(1) strong,
+div.completedTxt p.order {
+	color: #3c4242;
+	font-weight: 600;
+	font-size: 17px;
+}
+
+article figure figcaption p:nth-child(1) {
+	align-self: flex-end;
+}
+
+article div.order_des p:nth-child(2) strong,
+article div.order_des p:nth-child(3) strong,
+div.order_des div p:nth-child(1) strong,
+figure figcaption p.paraTxt strong {
+	font-weight: 600;
+	font-size: 14px;
+	color: #3c4242 !important;
+}
+article div.order_des p:nth-child(2) b,
+article div.order_des p:nth-child(3) b,
+p.paraTxt {
+	font-weight: 600;
+	font-size: 14px;
+	color: #807d7e !important;
+}
+
+article figure {
+	display: flex;
+	gap: 0.6rem;
+}
+
+figure figcaption p.paraTxt span {
+	font-weight: 600;
+	font-size: 14px;
+}
+
+section#Cancelled div.order_des div p .red {
+	color: orangered;
+}
+
+section#Cancelled div.order_des div p .green {
+	color: green;
+}
+
+article figure img {
+	height: 96px;
+	width: 96px;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 4px;
+}
+
+article figure figcaption {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+}
+
+section#Cancelled div.order_des div p:nth-child(1) {
+	align-self: flex-start;
+}
+div.completedTxt div {
+	display: flex;
+	justify-content: space-between;
+}
+
+div.completedTxt p {
+	display: flex;
+	justify-content: space-between;
+	font-size: 14px;
+}
+
+div.completedTxt div p .green {
+	color: green;
+}
+
+div.completedTxt div + p span strong:nth-last-child(1),
+div.order_des div + p span strong:nth-last-child(1),
+div.completedTxt div p span strong:nth-child(2),
+div.order_des div p:nth-child(1) strong:nth-last-child(1) {
+	color: #807d7e !important;
+}
+
+div.completedTxt p.order {
+	color: #3c4242 !important;
+	font-weight: 500;
+	font-size: 17px;
+}
+
+.hidden {
+	display: none !important;
+	width: 0 !important;
+}
+
+/*
 
 main aside.account_container + aside section {
 	width: 100%;
@@ -213,4 +390,4 @@ div.product_ div.product_name p:nth-child(2) button {
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-}
+} */

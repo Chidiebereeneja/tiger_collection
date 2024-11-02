@@ -1,17 +1,29 @@
 "use strict";
 
 import { navbarTask } from "./modules/nav_bar.js";
+import { imgDescriptionTask } from "./modules/imageDescription.js";
+import { queryAllElementTask, queryElementTask } from "./modules/varible.js";
 navbarTask("Home");
 
-const sliderContainer = document.querySelector("#slider");
-const firstCardOffset = sliderContainer.querySelector("div.card").offsetWidth;
-
-const btns = document.querySelectorAll(".caro_btn button");
+const sliderContainer = queryElementTask("#slider");
 const cards = Array.from(sliderContainer.children);
 
 cards.map((card, i) => {
 	card.style.transform = `translateX(${i * 100}%)`;
 });
+
+const imgFileConverterTask = async function (url) {
+	const filename = url.split("/").slice(-1).join("");
+	const mimetype = "image/jpeg";
+
+	try {
+		const response = await fetch(url);
+		const buffer = response.arrayBuffer();
+		const fileObj = new File([buffer], filename, { type: mimetype });
+
+		return fileObj;
+	} catch (err) {}
+};
 
 const notificationTask = function () {
 	const notifyDiv = document.createElement("div");
@@ -34,8 +46,8 @@ const notificationTask = function () {
 	span2.textContent = "30% off men’s wear — Limited time!";
 	shopBtn.innerHTML = `Shop Now <i class="fa-solid fa-arrow-right"></i>`;
 	cancelBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
-	const header = document.querySelector("header");
-	const main = document.querySelector("main");
+	const header = queryElementTask("header");
+	const main = queryElementTask("main");
 
 	header.insertAdjacentElement("beforebegin", notifyDiv);
 	main.style.marginTop = "7vh";
@@ -48,53 +60,14 @@ const notificationTask = function () {
 		header.style.top = "0";
 		main.style.marginTop = "10vh";
 	});
+
+	shopBtn.addEventListener("click", () => {
+		window.location.href = "pages/men_category.html";
+	});
 };
 notificationTask();
 
-/*
-const carouselTask = function (sliderContainer, offsetWidth, carouselBtn) {
-	const carouselChildren = [...sliderContainer.children];
-
-	const correctOffset = Math.round(sliderContainer.offsetWidth / offsetWidth);
-
-	carouselChildren.slice(correctOffset).map((card) => {
-		sliderContainer.appendChild(card);
-	});
-
-	carouselChildren.slice(0, correctOffset).map((card) => {
-		sliderContainer.appendChild(card);
-	});
-
-	carouselBtn.forEach((btn) => {
-		btn.addEventListener("click", (e) => {
-			sliderContainer.scrollLeft =
-				+e.target.textContent === "Previous" ? -offsetWidth : offsetWidth;
-		});
-	});
-
-	console.log(sliderContainer);
-};
-
-carouselTask(sliderContainer, firstCardOffset, btns);
-*/
-
-// navLinks.forEach((link) => {
-// 	console.log(link);
-// });
-
-// const targetStyleTask = function () {
-// 	navLinks.forEach((link) => {
-// 		if (link.textContent === "Home") {
-// 			link.classList.add("target_page");
-// 		}
-// 	});
-
-// 	navLinks.forEach((link) => {
-// 		link.addEventListener("click", (ev) => {
-// 			navLinks.forEach((link) => link.classList.remove("target_page"));
-// 			ev.target.classList.add("target_page");
-// 		});
-// 	});
-// };
-
-// targetStyleTask();
+imgDescriptionTask(".category_images", "Home", "span.txt");
+imgDescriptionTask(".women_categories", "Home", ".txt");
+imgDescriptionTask(".LimeLight", "Home", ".LimeLight .txt");
+imgDescriptionTask(".carousel_slide", "Home", ".carousel_slide .txt");

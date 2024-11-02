@@ -33,7 +33,7 @@
 					<ul class="menu-items">
 						<li>
 							<a
-								href="/"
+								href="/index.html"
 								title="Tiger Collection Home - Premium Fashion and Accessories"
 								>Home</a
 							>
@@ -57,7 +57,7 @@
 
 						<li>
 							<a
-								href="/unisex"
+								href="/pages/unisex_category.html"
 								title="Unisex Fashion - Tiger Collection - Fashion for Everyone"
 								>Unisex</a
 							>
@@ -82,7 +82,7 @@
 						</li>
 					</ul>
 					<div class="logo">
-						<a href="./">
+						<a href="#">
 							<img src="/assets/images/tiger-logo.png" width="60px" />
 						</a>
 					</div>
@@ -92,7 +92,9 @@
 							<input type="text" placeholder="Search..." aria-label="Search" />
 						</li>
 						<li>
-							<a href="/wishlist" title="Your Wishlist - Tiger Collection"
+							<a
+								href="/pages/wishlist.html"
+								title="Your Wishlist - Tiger Collection"
 								><i class="fa-regular fa-heart"></i
 							></a>
 						</li>
@@ -122,7 +124,7 @@
 					<i class="fa-solid fa-angle-right"></i>
 					<span>My Account</span>
 					<i class="fa-solid fa-angle-right"></i>
-					<span>Wishlist</span>
+					<span id="trackCur_page"></span>
 				</p>
 			</div>
 
@@ -133,30 +135,588 @@
 				<ul>
 					<li>
 						<img src="/assets/images/Icon--2.png" width="20" alt="" />
-						My orders
-					</li>
-
-					<li>
-						<i class="fa-regular fa-heart"></i>
-						Wishlist
+						<span class="track">My orders</span>
 					</li>
 
 					<li>
 						<i class="fa-regular fa-user"></i>
-						My info
+						<span class="track">My info</span>
 					</li>
 
 					<li>
 						<i class="fa-solid fa-arrow-right-from-bracket"></i>
-						Sign out
+						<span class="track">Sign out</span>
 					</li>
 				</ul>
 			</aside>
 
 			<aside>
-				<h1>Wishlist</h1>
+				<h1 class="h1Display"></h1>
 
-				<section>
+				<section class="active_container">
+					<div class="accordionBtn">
+						<button>Active</button>
+						<button>Cancelled</button>
+						<button>Completed</button>
+					</div>
+
+					<section class="accordion" id="Active">
+						<article>
+							<div class="order_des">
+								<p>
+									<span>
+										<strong>Order no:</strong>
+										<strong>#123456789</strong>
+									</span>
+								</p>
+
+								<p>
+									<span
+										><strong>Order Date :</strong>
+										<b> 2 October 2024 2:40 PM </b>
+									</span>
+									<span>
+										<strong>Order Status :</strong>
+										<b>Inprogress</b>
+									</span>
+								</p>
+
+								<p>
+									<span
+										><strong>Estimated Delivery Date :</strong>
+										<b>8 June 2023 </b>
+									</span>
+									<span>
+										<strong>Payment Method :</strong>
+										<b>Cash on delivery</b>
+									</span>
+								</p>
+							</div>
+
+							<figure>
+								<img src="/assets/images/Rectangle-21.jpeg" width="50" alt="" />
+
+								<figcaption>
+									<p>
+										<strong>Black Printed T-shirt</strong>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Colour :</strong>
+										<span>Pink</span>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Qty :</strong>
+										<span>1</span>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Total :</strong>
+										<strong>₦3,000</strong>
+									</p>
+								</figcaption>
+							</figure>
+						</article>
+
+						<article>
+							<div class="order_des">
+								<p>
+									<span>
+										<strong>Order no:</strong> <strong>#12345702</strong>
+									</span>
+								</p>
+
+								<p>
+									<span
+										><strong>Order Date :</strong>
+										<b> 2 October 2024 2:40 PM </b>
+									</span>
+									<span>
+										<strong>Order Status :</strong>
+										<b>Inprogress</b>
+									</span>
+								</p>
+
+								<p>
+									<span
+										><strong>Estimated Delivery Date :</strong>
+										<b>8 June 2023 </b>
+									</span>
+									<span>
+										<strong>Payment Method :</strong>
+										<b>Cash on delivery</b>
+									</span>
+								</p>
+							</div>
+
+							<figure>
+								<img src="/assets/images/bag-9.jpeg" width="50" alt="" />
+
+								<figcaption>
+									<p>
+										<strong>Black Printed Bag</strong>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Colour :</strong>
+										<span>Brown</span>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Qty :</strong>
+										<span>2</span>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Total :</strong>
+										<strong>₦3,000</strong>
+									</p>
+								</figcaption>
+							</figure>
+						</article>
+
+						<article>
+							<div class="order_des">
+								<p>
+									<span>
+										<strong>Order no:</strong>
+										<strong>#12345702</strong>
+									</span>
+								</p>
+
+								<p>
+									<span
+										><strong>Order Date :</strong>
+										<b> 2 October 2024 2:40 PM </b>
+									</span>
+									<span>
+										<strong>Order Status :</strong>
+										<b>Inprogress</b>
+									</span>
+								</p>
+
+								<p>
+									<span
+										><strong>Estimated Delivery Date :</strong>
+										<b>8 June 2023 </b>
+									</span>
+									<span>
+										<strong>Payment Method :</strong>
+										<b>Cash on delivery</b>
+									</span>
+								</p>
+							</div>
+
+							<figure>
+								<img
+									src="/assets/images/Recommended-sweater.png"
+									width="50"
+									alt=""
+								/>
+
+								<figcaption>
+									<p>
+										<strong>Black Printed Men Sweater</strong>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Colour :</strong>
+										<span>Brown</span>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Qty :</strong>
+										<span>2</span>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Total :</strong>
+										<strong>₦3,000</strong>
+									</p>
+								</figcaption>
+							</figure>
+						</article>
+					</section>
+
+					<section class="accordion hidden" id="Cancelled">
+						<article>
+							<div class="order_des">
+								<p>
+									<span>
+										<strong>Order no:</strong>
+										<strong>#123456789</strong>
+									</span>
+								</p>
+
+								<div>
+									<p>
+										<strong>Order Date :</strong>
+										<strong> 2 October 2024 2:40 PM </strong>
+									</p>
+									<p>
+										<span>
+											<strong>Order Status :</strong>
+											<span class="red">Cancelled</span>
+										</span>
+									</p>
+								</div>
+
+								<p>
+									<span
+										><strong>Estimated Delivery Date :</strong>
+										<strong>8 June 2023 </strong>
+									</span>
+									<span>
+										<strong>Payment Method :</strong>
+										<strong>Cash on delivery</strong>
+									</span>
+								</p>
+							</div>
+
+							<figure>
+								<img src="/assets/images/Rectangle-21.jpeg" width="50" alt="" />
+
+								<figcaption>
+									<p>
+										<strong>Black Printed T-shirt</strong>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Colour :</strong>
+										<span>Pink</span>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Qty :</strong>
+										<span>1</span>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Total :</strong>
+										<strong>₦3,000</strong>
+									</p>
+								</figcaption>
+							</figure>
+						</article>
+
+						<article>
+							<div class="order_des">
+								<p>
+									<span>
+										<strong>Order no:</strong> <strong>#12345702</strong>
+									</span>
+								</p>
+
+								<div>
+									<p>
+										<strong>Order Date :</strong>
+										<strong> 2 October 2024 2:40 PM </strong>
+									</p>
+									<p>
+										<span>
+											<strong>Order Status :</strong>
+											<span class="red">Cancelled</span>
+										</span>
+									</p>
+								</div>
+
+								<p>
+									<span
+										><strong>Estimated Delivery Date :</strong>
+										<b>8 June 2023 </b>
+									</span>
+									<span>
+										<strong>Payment Method :</strong>
+										<strong>Cash on delivery</strong>
+									</span>
+								</p>
+							</div>
+
+							<figure>
+								<img src="/assets/images/bag-9.jpeg" width="50" alt="" />
+
+								<figcaption>
+									<p>
+										<strong>Black Printed Bag</strong>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Colour :</strong>
+										<span>Brown</span>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Qty :</strong>
+										<span>2</span>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Total :</strong>
+										<strong>₦3,000</strong>
+									</p>
+								</figcaption>
+							</figure>
+						</article>
+
+						<article>
+							<div class="order_des">
+								<p>
+									<span>
+										<strong>Order no:</strong>
+										<strong>#12345702</strong>
+									</span>
+								</p>
+
+								<div>
+									<p>
+										<strong>Order Date :</strong>
+										<strong> 2 October 2024 2:40 PM </strong>
+									</p>
+									<p>
+										<span>
+											<strong>Order Status :</strong>
+											<span class="red">Cancelled</span>
+										</span>
+									</p>
+								</div>
+
+								<p>
+									<span
+										><strong>Estimated Delivery Date :</strong>
+										<strong>8 June 2023 </strong>
+									</span>
+									<span>
+										<strong>Payment Method :</strong>
+										<strong>Cash on delivery</strong>
+									</span>
+								</p>
+							</div>
+
+							<figure>
+								<img
+									src="/assets/images/Recommended-sweater.png"
+									width="50"
+									alt=""
+								/>
+
+								<figcaption>
+									<p>
+										<strong>Black Printed Men Sweater</strong>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Colour :</strong>
+										<span>Brown</span>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Qty :</strong>
+										<span>2</span>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Total :</strong>
+										<strong>₦3,000</strong>
+									</p>
+								</figcaption>
+							</figure>
+						</article>
+					</section>
+
+					<section class="accordion hidden" id="Completed">
+						<article>
+							<div class="completedTxt">
+								<p class="order">
+									<span>
+										<strong>Order no:</strong>
+										<strong>#123456789</strong>
+									</span>
+								</p>
+
+								<div>
+									<p>
+										<span
+											><strong>Order Date :</strong>
+											<strong> 2 October 2024 2:40 PM </strong></span
+										>
+									</p>
+									<p>
+										<span>
+											<strong>Order Status :</strong>
+											<span class="green">Completed</span>
+										</span>
+									</p>
+								</div>
+
+								<p>
+									<span
+										><strong>Estimated Delivery Date :</strong>
+										<strong>8 June 2023 </strong>
+									</span>
+									<span>
+										<strong>Payment Method :</strong>
+										<strong>Cash on delivery</strong>
+									</span>
+								</p>
+							</div>
+
+							<figure>
+								<img src="/assets/images/Rectangle-21.jpeg" width="50" alt="" />
+
+								<figcaption>
+									<p>
+										<strong>Black Printed T-shirt</strong>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Colour :</strong>
+										<span>Pink</span>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Qty :</strong>
+										<span>1</span>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Total :</strong>
+										<strong>₦3,000</strong>
+									</p>
+								</figcaption>
+							</figure>
+						</article>
+
+						<article>
+							<div class="completedTxt">
+								<p class="order">
+									<span>
+										<strong>Order no:</strong> <strong>#12345702</strong>
+									</span>
+								</p>
+
+								<div>
+									<p>
+										<span
+											><strong>Order Date :</strong>
+											<strong> 2 October 2024 2:40 PM </strong></span
+										>
+									</p>
+									<p>
+										<span>
+											<strong>Order Status :</strong>
+											<span class="green">Completed</span>
+										</span>
+									</p>
+								</div>
+
+								<p>
+									<span
+										><strong>Estimated Delivery Date :</strong>
+										<strong>8 June 2023 </strong>
+									</span>
+									<span>
+										<strong>Payment Method :</strong>
+										<strong>Cash on delivery</strong>
+									</span>
+								</p>
+							</div>
+
+							<figure>
+								<img src="/assets/images/bag-9.jpeg" width="50" alt="" />
+
+								<figcaption>
+									<p>
+										<strong>Black Printed Bag</strong>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Colour :</strong>
+										<span>Brown</span>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Qty :</strong>
+										<span>2</span>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Total :</strong>
+										<strong>₦3,000</strong>
+									</p>
+								</figcaption>
+							</figure>
+						</article>
+
+						<article>
+							<div class="completedTxt">
+								<p class="order">
+									<span>
+										<strong>Order no:</strong>
+										<strong>#12345702</strong>
+									</span>
+								</p>
+
+								<div>
+									<p>
+										<span
+											><strong>Order Date :</strong>
+											<strong> 2 October 2024 2:40 PM </strong></span
+										>
+									</p>
+									<p>
+										<span>
+											<strong>Order Status :</strong>
+											<span class="green">Completed</span>
+										</span>
+									</p>
+								</div>
+
+								<p>
+									<span
+										><strong>Estimated Delivery Date :</strong>
+										<strong>8 June 2023 </strong>
+									</span>
+									<span>
+										<strong>Payment Method :</strong>
+										<strong>Cash on delivery</strong>
+									</span>
+								</p>
+							</div>
+
+							<figure>
+								<img
+									src="/assets/images/Recommended-sweater.png"
+									width="50"
+									alt=""
+								/>
+
+								<figcaption>
+									<p>
+										<strong>Black Printed Men Sweater</strong>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Colour :</strong>
+										<span>Brown</span>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Qty :</strong>
+										<span>2</span>
+									</p>
+
+									<p class="paraTxt">
+										<strong>Total :</strong>
+										<strong>₦3,000</strong>
+									</p>
+								</figcaption>
+							</figure>
+						</article>
+					</section>
+				</section>
+
+				<!-- <section>
 					<div class="product_">
 						<i class="fa-solid fa-xmark"></i>
 						<img
@@ -244,7 +804,7 @@
 							</p>
 						</div>
 					</div>
-				</section>
+				</section> -->
 			</aside>
 		</main>
 

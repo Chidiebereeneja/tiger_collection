@@ -8,7 +8,7 @@ const navbarTask = function (targetStr) {
 	});
 	navLinks.forEach((link) => {
 		if (link.textContent.trim() === targetStr) {
-			link.classList.add("target_page");
+			link.classList.add("target_page", "active");
 		}
 	});
 };
