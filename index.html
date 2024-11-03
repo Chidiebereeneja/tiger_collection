@@ -11,11 +11,20 @@
 		<link rel="stylesheet" href="/assets/styles/index.css" />
 		<link rel="stylesheet" href="/assets/styles/footer.css" />
 		<link rel="icon" href="/assets/images/Tiger_favicon.png" type="image/png" />
+		<link
+			rel="stylesheet"
+			href="/node_modules/@splidejs/splide/dist/css/splide.min.css"
+		/>
 
 		<script src="/scripts/index.js" type="module" defer></script>
 		<script
 			src="https://kit.fontawesome.com/29a7ea893b.js"
 			crossorigin="anonymous"
+			defer
+		></script>
+
+		<script
+			src="/node_modules/@splidejs/splide/dist/js/splide.min.js"
 			defer
 		></script>
 	</head>
@@ -119,25 +128,31 @@
 
 		<main>
 			<section class="landing_page-con">
-				<figure>
-					<img
-						src="/assets/images/background_carousel.png"
-						alt="Trendy Summer T-shirts and Tops Background Carousel"
-					/>
-				</figure>
+				<section id="splide" class="splide slide_container">
+					<div class="splide__track splide1__track">
+						<ul class="splide__list splide1_list">
+							<li class="splide__slide splide1">
+								<img
+									src="/assets/images/background_carousel.png"
+									alt="Trendy Summer T-shirts and Tops Background Carousel"
+								/>
+							</li>
+							<li class="splide__slide splide1">
+								<img
+									src="/assets/images/limeelight_2.jpeg"
+									alt="Trendy Summer T-shirts and Tops Background Carousel"
+								/>
+							</li>
+						</ul>
+					</div>
+				</section>
+
 				<article>
 					<h5>T-shirt / Tops</h5>
 					<h1>Summer Value Pack <span>Cool / Colorful / Comfy</span></h1>
 					<h4>Exclusive Summer Collection</h4>
 					<button>Shop Now</button>
 				</article>
-
-				<div class="carousel_track">
-					<span></span>
-					<span></span>
-				</div>
-				<button class="caro_right_btn btn-select">&#x276F;</button>
-				<button class="caro_left_btn btn-select">&#x276E;</button>
 			</section>
 
 			<section class="deals_container">
@@ -174,63 +189,65 @@
 				<div class="new-arrival-txt categories">
 					<p>New Arrival</p>
 				</div>
-				<article class="arrival_caro">
-					<div class="carousel_slide">
-						<figure class="slider-container">
-							<img
-								src="/assets/images/joggers.jpeg"
-								width="200"
-								alt="Knitted Joggers"
-							/>
-							<figcaption class="txt">Knitted Joggers</figcaption>
-							<span class="wishlist_slid"
-								><i class="fa-regular fa-heart"></i
-							></span>
-						</figure>
 
-						<figure class="slider-container">
-							<img
-								src="/assets/images/FullSleeve.jpeg"
-								width="200"
-								alt="Full Sleeve Shirt"
-							/>
-							<figcaption class="txt">Full Sleeve</figcaption>
-							<span class="wishlist_slid"
-								><i class="fa-regular fa-heart"></i
-							></span>
-						</figure>
-
-						<figure class="slider-container">
-							<img
-								src="/assets/images/Active_T-Shirts.jpeg"
-								width="200"
-								alt="Active T-Shirts"
-							/>
-							<figcaption class="txt">Active T-Shirts</figcaption>
-							<span class="wishlist_slid"
-								><i class="fa-regular fa-heart"></i
-							></span>
-						</figure>
-
-						<figure class="slider-container">
-							<img
-								src="/assets/images/Urban-Shirts.jpeg"
-								width="200"
-								alt="Urban Shirts"
-							/>
-							<figcaption class="txt">Urban Shirts</figcaption>
-							<span class="wishlist_slid"
-								><i class="fa-regular fa-heart"></i
-							></span>
-						</figure>
+				<section class="splide" id="newArrivalSlide">
+					<div class="splide__track arrivalTrack">
+						<ul class="splide__list arrivalList">
+							<li class="splide__slide arrivalSlide">
+								<figure class="slider-container splide__slide">
+									<img
+										src="/assets/images/joggers.jpeg"
+										width="200"
+										alt="Knitted Joggers"
+									/>
+									<figcaption class="txt">Knitted Joggers</figcaption>
+									<span class="wishlist_slid"
+										><i class="fa-regular fa-heart"></i
+									></span>
+								</figure>
+							</li>
+							<li class="splide__slide arrivalSlide">
+								<figure class="slider-container">
+									<img
+										src="/assets/images/FullSleeve.jpeg"
+										width="200"
+										alt="Full Sleeve Shirt"
+									/>
+									<figcaption class="txt">Full Sleeve</figcaption>
+									<span class="wishlist_slid"
+										><i class="fa-regular fa-heart"></i
+									></span>
+								</figure>
+							</li>
+							<li class="splide__slide arrivalSlide">
+								<figure class="slider-container">
+									<img
+										src="/assets/images/Active_T-Shirts.jpeg"
+										width="200"
+										alt="Active T-Shirts"
+									/>
+									<figcaption class="txt">Active T-Shirts</figcaption>
+									<span class="wishlist_slid"
+										><i class="fa-regular fa-heart"></i
+									></span>
+								</figure>
+							</li>
+							<li class="splide__slide arrivalSlide">
+								<figure class="slider-container">
+									<img
+										src="/assets/images/Urban-Shirts.jpeg"
+										width="200"
+										alt="Urban Shirts"
+									/>
+									<figcaption class="txt">Urban Shirts</figcaption>
+									<span class="wishlist_slid"
+										><i class="fa-regular fa-heart"></i
+									></span>
+								</figure>
+							</li>
+						</ul>
 					</div>
-					<button class="caro_left_btn" aria-label="Previous Slide">
-						<i class="fa-solid fa-arrow-left"></i>
-					</button>
-					<button class="caro_right_btn" aria-label="Next Slide">
-						<i class="fa-solid fa-arrow-right"></i>
-					</button>
-				</article>
+				</section>
 			</section>
 
 			<section class="big_savings_container">
@@ -671,168 +688,203 @@
 					<p>Feedback</p>
 				</div>
 
-				<article class="profile_images" id="slider">
-					<div class="card">
-						<div class="profile-card">
-							<img src="/assets/images/profile_1.png" width="100" alt="" />
+				<section class="splide" id="feedbackSlide">
+					<div class="splide__track feedbackSlide_track">
+						<ul class="splide__list feedbackSlide_list">
+							<li class="splide__slide">
+								<figure>
+									<div class="profile-card">
+										<img
+											src="/assets/images/profile_1.png"
+											width="100"
+											alt=""
+										/>
 
-							<p>
-								<span data-star-fill="&#9734;">&#9733;</span>
-								<span data-star-fill="&#9734;">&#9733;</span>
-								<span data-star-fill="&#9734;">&#9733;</span>
-								<span data-star-fill="&#9733;">&#9734;</span>
-								<span data-star-fill="&#9733;">&#9734;</span>
-							</p>
-						</div>
+										<p>
+											<span data-star-fill="&#9734;">&#9733;</span>
+											<span data-star-fill="&#9734;">&#9733;</span>
+											<span data-star-fill="&#9734;">&#9733;</span>
+											<span data-star-fill="&#9733;">&#9734;</span>
+											<span data-star-fill="&#9733;">&#9734;</span>
+										</p>
+									</div>
 
-						<p>
-							<strong>Floyd Miles</strong>
-						</p>
+									<p>
+										<strong>Floyd Miles</strong>
+									</p>
 
-						<p>
-							Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-							amet sint. Velit officia consequat duis enim velit mollit.
-							Exercitation veniam consequat sunt nostrud amet. Amet minim mollit
-							non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-							officia consequat duis enim velit mollit. Exercitation veniam
-							consequat sunt nostrud amet.
-						</p>
+									<p>
+										Amet minim mollit non deserunt ullamco est sit aliqua dolor
+										do amet sint. Velit officia consequat duis enim velit
+										mollit. Exercitation veniam consequat sunt nostrud amet.
+										Amet minim mollit non deserunt ullamco est sit aliqua dolor
+										do amet sint. Velit officia consequat duis enim velit
+										mollit. Exercitation veniam consequat sunt nostrud amet.
+									</p>
+								</figure>
+							</li>
+
+							<li class="splide__slide">
+								<figure>
+									<div class="profile-card">
+										<img
+											src="/assets/images/profile_2.png"
+											width="100"
+											alt=""
+										/>
+
+										<p>
+											<span data-star-fill="&#9734;">&#9733;</span>
+											<span data-star-fill="&#9734;">&#9733;</span>
+											<span data-star-fill="&#9734;">&#9733;</span>
+											<span data-star-fill="&#9733;">&#9734;</span>
+											<span data-star-fill="&#9733;">&#9734;</span>
+										</p>
+									</div>
+
+									<p>
+										<strong class="profile_name">Ronald Richards</strong>
+									</p>
+
+									<p>
+										ullamco est sit aliqua dolor do amet sint. Velit officia
+										consequat duis enim velit mollit. Exercitation veniam
+										consequat sunt nostrud amet.
+									</p>
+								</figure>
+							</li>
+
+							<li class="splide__slide">
+								<figure>
+									<div class="profile-card">
+										<img
+											src="/assets/images/profile_3.png"
+											width="100"
+											alt=""
+										/>
+
+										<p>
+											<span data-star-fill="&#9734;">&#9733;</span>
+											<span data-star-fill="&#9734;">&#9733;</span>
+											<span data-star-fill="&#9734;">&#9733;</span>
+											<span data-star-fill="&#9733;">&#9734;</span>
+											<span data-star-fill="&#9733;">&#9734;</span>
+										</p>
+									</div>
+
+									<p>
+										<strong class="profile_name">Savannah Nguyen</strong>
+									</p>
+
+									<p>
+										Amet minim mollit non deserunt ullamco est sit aliqua dolor
+										do amet sint. Velit officia consequat duis enim velit
+										mollit. Exercitation veniam consequat sunt nostrud amet.
+										Amet minim mollit non deserunt ullamco est sit aliqua dolor
+										do amet sint. Velit officia consequat duis enim velit
+										mollit. Exercitation veniam consequat sunt nostrud amet.
+									</p>
+								</figure>
+							</li>
+
+							<li class="splide__slide">
+								<figure>
+									<div class="profile-card">
+										<img
+											src="/assets/images/profile_1.png"
+											width="100"
+											alt=""
+										/>
+
+										<p>
+											<span data-star-fill="&#9734;">&#9733;</span>
+											<span data-star-fill="&#9734;">&#9733;</span>
+											<span data-star-fill="&#9734;">&#9733;</span>
+											<span data-star-fill="&#9733;">&#9734;</span>
+											<span data-star-fill="&#9733;">&#9734;</span>
+										</p>
+									</div>
+
+									<p>
+										<strong>Floyd Miles</strong>
+									</p>
+
+									<p>
+										Amet minim mollit non deserunt ullamco est sit aliqua dolor
+										do amet sint. Velit officia consequat duis enim velit
+										mollit. Exercitation veniam consequat sunt nostrud amet.
+										Amet minim mollit non deserunt ullamco est sit aliqua dolor
+										do amet sint. Velit officia consequat duis enim velit
+										mollit. Exercitation veniam consequat sunt nostrud amet.
+									</p>
+								</figure>
+							</li>
+
+							<li class="splide__slide">
+								<figure>
+									<div class="profile-card">
+										<img
+											src="/assets/images/profile_2.png"
+											width="100"
+											alt=""
+										/>
+
+										<p>
+											<span data-star-fill="&#9734;">&#9733;</span>
+											<span data-star-fill="&#9734;">&#9733;</span>
+											<span data-star-fill="&#9734;">&#9733;</span>
+											<span data-star-fill="&#9733;">&#9734;</span>
+											<span data-star-fill="&#9733;">&#9734;</span>
+										</p>
+									</div>
+
+									<p>
+										<strong class="profile_name">Ronald Richards</strong>
+									</p>
+
+									<p>
+										ullamco est sit aliqua dolor do amet sint. Velit officia
+										consequat duis enim velit mollit. Exercitation veniam
+										consequat sunt nostrud amet.
+									</p>
+								</figure>
+							</li>
+
+							<li class="splide__slide">
+								<figure>
+									<div class="profile-card">
+										<img
+											src="/assets/images/profile_3.png"
+											width="100"
+											alt=""
+										/>
+
+										<p>
+											<span data-star-fill="&#9734;">&#9733;</span>
+											<span data-star-fill="&#9734;">&#9733;</span>
+											<span data-star-fill="&#9734;">&#9733;</span>
+											<span data-star-fill="&#9733;">&#9734;</span>
+											<span data-star-fill="&#9733;">&#9734;</span>
+										</p>
+									</div>
+
+									<p>
+										<strong class="profile_name">Savannah Nguyen</strong>
+									</p>
+
+									<p>
+										Amet minim mollit non deserunt ullamco est sit aliqua dolor
+										do amet sint. Velit officia consequat duis enim velit
+										mollit. Exercitation veniam consequat sunt nostrud amet.
+										Amet minim mollit non deserunt ullamco est sit aliqua dolor
+										do amet sint. Velit officia consequat duis enim velit
+										mollit. Exercitation veniam consequat sunt nostrud amet.
+									</p>
+								</figure>
+							</li>
+						</ul>
 					</div>
-
-					<div class="card">
-						<div class="profile-card">
-							<img src="/assets/images/profile_2.png" width="100" alt="" />
-
-							<p>
-								<span data-star-fill="&#9734;">&#9733;</span>
-								<span data-star-fill="&#9734;">&#9733;</span>
-								<span data-star-fill="&#9734;">&#9733;</span>
-								<span data-star-fill="&#9733;">&#9734;</span>
-								<span data-star-fill="&#9733;">&#9734;</span>
-							</p>
-						</div>
-
-						<p>
-							<strong class="profile_name">Ronald Richards</strong>
-						</p>
-
-						<p>
-							ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-							duis enim velit mollit. Exercitation veniam consequat sunt nostrud
-							amet.
-						</p>
-					</div>
-
-					<div class="card">
-						<div class="profile-card">
-							<img src="/assets/images/profile_3.png" width="100" alt="" />
-
-							<p>
-								<span data-star-fill="&#9734;">&#9733;</span>
-								<span data-star-fill="&#9734;">&#9733;</span>
-								<span data-star-fill="&#9734;">&#9733;</span>
-								<span data-star-fill="&#9733;">&#9734;</span>
-								<span data-star-fill="&#9733;">&#9734;</span>
-							</p>
-						</div>
-
-						<p>
-							<strong class="profile_name">Savannah Nguyen</strong>
-						</p>
-
-						<p>
-							Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-							amet sint. Velit officia consequat duis enim velit mollit.
-							Exercitation veniam consequat sunt nostrud amet. Amet minim mollit
-							non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-							officia consequat duis enim velit mollit. Exercitation veniam
-							consequat sunt nostrud amet.
-						</p>
-					</div>
-
-					<div class="card">
-						<div class="profile-card">
-							<img src="/assets/images/profile_1.png" width="100" alt="" />
-
-							<p>
-								<span data-star-fill="&#9734;">&#9733;</span>
-								<span data-star-fill="&#9734;">&#9733;</span>
-								<span data-star-fill="&#9734;">&#9733;</span>
-								<span data-star-fill="&#9733;">&#9734;</span>
-								<span data-star-fill="&#9733;">&#9734;</span>
-							</p>
-						</div>
-
-						<p>
-							<strong>Floyd Miles</strong>
-						</p>
-
-						<p>
-							Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-							amet sint. Velit officia consequat duis enim velit mollit.
-							Exercitation veniam consequat sunt nostrud amet. Amet minim mollit
-							non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-							officia consequat duis enim velit mollit. Exercitation veniam
-							consequat sunt nostrud amet.
-						</p>
-					</div>
-
-					<div class="card">
-						<div class="profile-card">
-							<img src="/assets/images/profile_2.png" width="100" alt="" />
-
-							<p>
-								<span data-star-fill="&#9734;">&#9733;</span>
-								<span data-star-fill="&#9734;">&#9733;</span>
-								<span data-star-fill="&#9734;">&#9733;</span>
-								<span data-star-fill="&#9733;">&#9734;</span>
-								<span data-star-fill="&#9733;">&#9734;</span>
-							</p>
-						</div>
-
-						<p>
-							<strong class="profile_name">Ronald Richards</strong>
-						</p>
-
-						<p>
-							ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-							duis enim velit mollit. Exercitation veniam consequat sunt nostrud
-							amet.
-						</p>
-					</div>
-
-					<div class="card">
-						<div class="profile-card">
-							<img src="/assets/images/profile_3.png" width="100" alt="" />
-
-							<p>
-								<span data-star-fill="&#9734;">&#9733;</span>
-								<span data-star-fill="&#9734;">&#9733;</span>
-								<span data-star-fill="&#9734;">&#9733;</span>
-								<span data-star-fill="&#9733;">&#9734;</span>
-								<span data-star-fill="&#9733;">&#9734;</span>
-							</p>
-						</div>
-
-						<p>
-							<strong class="profile_name">Savannah Nguyen</strong>
-						</p>
-
-						<p>
-							Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-							amet sint. Velit officia consequat duis enim velit mollit.
-							Exercitation veniam consequat sunt nostrud amet. Amet minim mollit
-							non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-							officia consequat duis enim velit mollit. Exercitation veniam
-							consequat sunt nostrud amet.
-						</p>
-					</div>
-				</article>
-
-				<div class="caro_btn">
-					<button>Next</button>
-					<button>Previous</button>
-				</div>
+				</section>
 			</section>
 		</main>
 
