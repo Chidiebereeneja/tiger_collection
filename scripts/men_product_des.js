@@ -6,12 +6,14 @@ import { queryElementTask, queryAllElementTask } from "./modules/varible.js";
 const imgTargetEl = queryElementTask("#product_preview");
 const productCont = queryElementTask(".product_img_");
 const trackPage = document.getElementById("trackPage");
+const relatedProductImg = queryAllElementTask(".related_product img");
 
 const loadPageTask = function () {
 	const h1El = queryElementTask(".women_arr + h1");
 	const trackPageEl = queryElementTask(".women_arr #trackPage");
 	const productObj = JSON.parse(localStorage.getItem("productObj"));
 	const img = document.createElement("img");
+	console.log(trackPageEl);
 
 	img.src = productObj.src;
 	h1El.textContent = productObj.name;
@@ -79,3 +81,10 @@ const sizeClickTask = function () {
 	});
 };
 sizeClickTask();
+
+relatedProductImg.forEach((img) => {
+	img.addEventListener("click", () => {
+		const imgSrc = img.src;
+		imgTargetEl.querySelector("img").src = imgSrc;
+	});
+});

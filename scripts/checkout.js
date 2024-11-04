@@ -83,3 +83,20 @@ const cashDeliveryTask = function () {
 };
 
 cashDeliveryTask();
+
+const stateRender = async function () {
+	const response = await fetch("/scripts/modules/state.json");
+
+	const data = await response.json();
+	return data;
+};
+
+stateRender().then((data) => {
+	const statesDropdown = document.getElementById("states");
+	for (const state in data) {
+		const option = document.createElement("option");
+		option.value = state;
+		option.text = state;
+		statesDropdown.add(option);
+	}
+});

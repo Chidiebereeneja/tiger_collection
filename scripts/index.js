@@ -5,8 +5,6 @@ import { imgDescriptionTask } from "./modules/imageDescription.js";
 import { queryAllElementTask, queryElementTask } from "./modules/varible.js";
 navbarTask("Home");
 
-const sliderContainer = queryElementTask("#slider");
-
 document.addEventListener("DOMContentLoaded", function () {
 	new Splide("#splide", {
 		type: "fade",

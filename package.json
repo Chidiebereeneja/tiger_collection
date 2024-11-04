@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@splidejs/splide": "^4.1.4"
+    "@splidejs/splide": "^4.1.4",
+    "cors-anywhere": "^0.4.4"
   }
 }

@@ -112,7 +112,8 @@ aside.aside_1 form:nth-child(1) div p label {
 	padding-left: 3px;
 }
 
-aside.aside_1 form:nth-child(1) div p input {
+aside.aside_1 form:nth-child(1) div p input,
+aside.aside_1 form:nth-child(1) div p select {
 	background-color: #f6f6f6;
 	color: #807d7e;
 	height: 44px;
@@ -123,6 +124,10 @@ aside.aside_1 form:nth-child(1) div p input {
 	border: none;
 	outline: none;
 	border-radius: 8px;
+}
+
+aside.aside_1 form:nth-child(1) div p select option {
+	height: 50px;
 }
 
 aside.aside_1 form:nth-child(1) div.phone_ p input {

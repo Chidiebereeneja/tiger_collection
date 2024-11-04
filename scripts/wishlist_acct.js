@@ -4,7 +4,7 @@ import { defaultStyleTask } from "./modules/varible.js";
 import { queryAllElementTask, queryElementTask } from "./modules/varible.js";
 defaultStyleTask("Account");
 
-const liEls = queryAllElementTask(".account_container ul li");
+const liEls = queryAllElementTask(".account_container ul .category");
 const accordBtnCon = queryElementTask(".accordionBtn");
 const signOutPopupCon = queryElementTask(".signOutPopup");
 
@@ -32,17 +32,35 @@ defaultSelectTask("My Orders");
 
 const clickEventStyleTask = function () {
 	liEls.forEach((li) => {
-		li.addEventListener("click", () => {
+		li.addEventListener("click", (ev) => {
+			ev.stopPropagation();
 			const spanCont = li.querySelector("span").textContent.trim();
 			defaultSelectTask(spanCont);
 
 			if (li.classList.contains("signOut")) {
-				signOutPopupCon.style.display = "flex";
+				const popup = queryElementTask(".signOutPopup");
+				popup.classList.remove("hidden");
+
+				popupSignTask(popup);
 			}
 		});
 	});
 };
 clickEventStyleTask();
+
+const popupSignTask = function (container) {
+	container.addEventListener("click", (ev) => {
+		ev.stopPropagation();
+
+		if (ev.target.tagName === "BUTTON" || ev.target.tagName === "I") {
+			const btn = ev.target;
+
+			if (btn.classList.contains("no") || ev.target.tagName === "I") {
+				container.classList.add("hidden");
+			}
+		}
+	});
+};
 
 const defaultBtnTask = function (targetStr) {
 	const btns = accordBtnCon.querySelectorAll("button");

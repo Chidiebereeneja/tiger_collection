@@ -127,6 +127,7 @@ ul.filter_container {
 	order: 4;
 	display: flex;
 	gap: 2rem;
+	position: relative;
 }
 
 .filter_container input[type="text"] {
@@ -146,6 +147,80 @@ ul.filter_container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+div.popup__con {
+	background-color: #fff !important;
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	position: absolute;
+	top: 3rem;
+	border: 2.2px solid #3fa43f;
+	border-radius: 9px;
+
+	box-shadow: 0px 4px 4px #b5b5b5;
+}
+
+div.popup__con div.txt-des {
+	width: 100%;
+	height: 79px;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding-inline: 2rem;
+}
+
+div.txt-des img {
+	width: 40px;
+}
+
+div.txt-des p {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+div.txt-des p strong {
+	color: #000;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+div.txt-des p span {
+	color: #a09e9e;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+div.txt-des p:nth-last-child(1) {
+	width: fit-content;
+	cursor: pointer;
+}
+
+div.popup__con span.lineStyle {
+	width: 100%;
+	height: 4px;
+	background-color: #3fa43f;
+	transition: width 1s linear;
+	transition: transform linear;
+}
+
+.add_animate {
+	animation: popupStyle 5s linear forwards;
+}
+
+.hidden {
+	display: none !important;
+}
+
+@keyframes popupStyle {
+	from {
+		width: 100%;
+	}
+	to {
+		width: 0;
+	}
 }
 
 li.Catergory_ {

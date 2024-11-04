@@ -258,6 +258,7 @@ ul.arrivalList figure img {
 	object-fit: cover;
 	object-position: center;
 	border-radius: 12px;
+	cursor: pointer;
 }
 
 ul.arrivalList figure figcaption.txt {
