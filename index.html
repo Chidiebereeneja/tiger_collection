@@ -7,6 +7,11 @@
 			Tiger Collection - Premium Fashion, Affordable Everyday Wear & Trendy
 			Styles
 		</title>
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
 		<link rel="stylesheet" href="/assets/styles/nav.css" />
 		<link rel="stylesheet" href="/assets/styles/index.css" />
 		<link rel="stylesheet" href="/assets/styles/footer.css" />
@@ -15,7 +20,6 @@
 			rel="stylesheet"
 			href="/node_modules/@splidejs/splide/dist/css/splide.min.css"
 		/>
-
 		<script src="/scripts/index.js" type="module" defer></script>
 		<script
 			src="https://kit.fontawesome.com/29a7ea893b.js"
@@ -23,10 +27,12 @@
 			defer
 		></script>
 
-		<script
-			src="/node_modules/@splidejs/splide/dist/js/splide.min.js"
-			defer
-		></script>
+		<style>
+			.swiper {
+				width: 600px;
+				height: 300px;
+			}
+		</style>
 	</head>
 	<body>
 		<header>
@@ -943,5 +949,7 @@
 			<hr />
 			<p>Copyright © 2024 Tiger Collection Ltd. All rights reserved.</p>
 		</footer>
+		<script src="/node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	</body>
 </html>

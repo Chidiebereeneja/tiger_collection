@@ -6,7 +6,10 @@ defaultStyleTask("Account");
 
 const liEls = queryAllElementTask(".account_container ul .category");
 const accordBtnCon = queryElementTask(".accordionBtn");
-const signOutPopupCon = queryElementTask(".signOutPopup");
+const changeBtn = queryElementTask("#changeDetailBtn");
+const sections = queryAllElementTask("section.info__");
+const addNewAddressBtn = queryElementTask(".addNew__address button");
+// const signOutPopupCon = queryElementTask(".signOutPopup");
 
 const defaultSelectTask = function (str) {
 	const pageTrack = queryElementTask("#trackCur_page");
@@ -40,13 +43,30 @@ const clickEventStyleTask = function () {
 			if (li.classList.contains("signOut")) {
 				const popup = queryElementTask(".signOutPopup");
 				popup.classList.remove("hidden");
-
 				popupSignTask(popup);
+			} else if (li.classList.contains("my_order")) {
+				removeClassTask(sections, "orderRender");
+			} else if (li.classList.contains("info_category")) {
+				removeClassTask(sections, "infoRender");
 			}
 		});
 	});
 };
 clickEventStyleTask();
+
+const removeClassTask = function (sections, targetClass) {
+	sections.forEach((section) => {
+		section.classList.add("hidden");
+	});
+
+	const targetRender = Array.from(sections).filter((section) =>
+		section.classList.contains(targetClass)
+	);
+
+	targetRender.map((section) => {
+		section.classList.remove("hidden");
+	});
+};
 
 const popupSignTask = function (container) {
 	container.addEventListener("click", (ev) => {
@@ -66,11 +86,14 @@ const defaultBtnTask = function (targetStr) {
 	const btns = accordBtnCon.querySelectorAll("button");
 	btns.forEach((btn) => btn.classList.remove("defaultStyle-2"));
 
-	const [targetBtn] = Array.from(btns).filter(
+	const targetBtn = Array.from(btns).filter(
 		(btn) => btn.textContent.trim() === targetStr
 	);
 
-	targetBtn.classList.add("defaultStyle-2");
+	targetBtn.map((btn) => {
+		// log
+		btn.classList.add("defaultStyle-2");
+	});
 };
 defaultBtnTask("Active");
 
@@ -87,4 +110,14 @@ accordBtnCon.addEventListener("click", (ev) => {
 		displayAccord.classList.remove("hidden");
 		console.log(displayAccord);
 	}
+});
+
+changeBtn.addEventListener("click", (ev) => {
+	ev.stopPropagation();
+	removeClassTask(sections, "changeName_form");
+});
+
+addNewAddressBtn.addEventListener("click", (ev) => {
+	ev.stopPropagation();
+	removeClassTask(sections, "change__address-con");
 });

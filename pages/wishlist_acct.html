@@ -133,12 +133,12 @@
 				<p>Welcome to your Account</p>
 
 				<ul>
-					<li class="category">
+					<li class="category my_order">
 						<img src="/assets/images/Icon--2.png" width="20" alt="" />
 						<span class="track">My orders</span>
 					</li>
 
-					<li class="category">
+					<li class="category info_category">
 						<i class="fa-regular fa-user"></i>
 						<span class="track">My info</span>
 					</li>
@@ -172,10 +172,10 @@
 				</ul>
 			</aside>
 
-			<aside>
+			<aside id="render__wishlist">
 				<h1 class="h1Display"></h1>
 
-				<section class="active_container">
+				<section class="active_container orderRender info__">
 					<div class="accordionBtn">
 						<button>Active</button>
 						<button>Cancelled</button>
@@ -738,95 +738,246 @@
 					</section>
 				</section>
 
-				<!-- <section>
-					<div class="product_">
-						<i class="fa-solid fa-xmark"></i>
-						<img
-							src="/assets/images/Tees-female.jpeg"
-							alt=""
-							class="imageFirst"
-						/>
-
-						<div class="product_name">
-							<p>
-								<strong>Blue Flower Print Crop Top </strong>
-								<span>
-									<strong>Color:</strong>
-									<b>Yellow</b>
-								</span>
-								<span> Quantity : <b>1</b> </span>
-							</p>
-							<p>
-								<span>₦3,000</span>
-								<button>Add to cart</button>
-							</p>
-						</div>
+				<section class="my__info infoRender info__ hidden">
+					<div>
+						<span>Contact Details</span>
+						<button id="changeDetailBtn">Change</button>
 					</div>
 
-					<div class="product_">
-						<i class="fa-solid fa-xmark"></i>
-						<img
-							src="/assets/images/breezy _background.jpeg"
-							width="50"
-							alt=""
-						/>
-
-						<div class="product_name">
-							<p>
-								<strong>Yellow Flower Print Dress Crop Top </strong>
-								<span>
-									<strong>Color:</strong>
-									<b>Yellow</b>
-								</span>
-								<span> Quantity : <b>1</b> </span>
-							</p>
-							<p>
-								<span>₦3,000</span>
-								<button>Add to cart</button>
-							</p>
-						</div>
+					<div class="name_info">
+						<p>Your Name</p>
+						<p>Collins Doe</p>
 					</div>
 
-					<div class="product_">
-						<i class="fa-solid fa-xmark"></i>
-						<img src="/assets/images/Cargo-Joggers.jpeg" width="50" alt="" />
-
-						<div class="product_name">
-							<p>
-								<strong>White Flower Crop Top </strong>
-								<span>
-									<strong>Color:</strong>
-									<b>White</b>
-								</span>
-								<span> Quantity : <b>1</b> </span>
-							</p>
-							<p>
-								<span>₦3,000</span>
-								<button>Add to cart</button>
-							</p>
-						</div>
+					<div>
+						<p>Email Address</p>
+						<p>collinsdoe@gmail.com</p>
 					</div>
 
-					<div class="product_">
-						<i class="fa-solid fa-xmark"></i>
-						<img src="/assets/images/FullSleeve.jpeg" width="50" alt="" />
+					<div>
+						<p>Phone Number</p>
+						<p>8980252445</p>
+					</div>
 
-						<div class="product_name">
-							<p>
-								<strong>Brown men’s long sleeve T-shirt</strong>
-								<span>
-									<strong>Color:</strong>
-									<b>Brown</b>
-								</span>
-								<span> Quantity : <b>1</b> </span>
+					<div class="Password_con">
+						<div>
+							<p class="Password">
+								<span>Password</span>
+								<strong>**********</strong>
 							</p>
-							<p>
-								<span>₦3,000</span>
-								<button>Add to cart</button>
-							</p>
+							<p>Change</p>
 						</div>
 					</div>
-				</section> -->
+				</section>
+
+				<section class="add__address infoRender info__ hidden">
+					<div class="addNew__address">
+						<span>Address</span>
+						<button>Add New</button>
+					</div>
+
+					<article>
+						<div class="address_render">
+							<h4>Collins Doe</h4>
+							<p>8980252445</p>
+							<p>142 Enugu Road, Nsukka Enugu State Nigeria</p>
+							<p>
+								<button>Home</button>
+								<button>Default billing address</button>
+							</p>
+							<p>
+								<button>Remove</button>
+								<button>Edit</button>
+							</p>
+						</div>
+
+						<div class="address_render">
+							<h4>Collins Doe</h4>
+							<p>8980252445</p>
+							<p>142 Enugu Road, Nsukka Enugu State Nigeria</p>
+							<p>
+								<button>Home</button>
+								<button>Default shipping address</button>
+							</p>
+							<p>
+								<button>Remove</button>
+								<button>Edit</button>
+							</p>
+						</div>
+
+						<div class="address_render">
+							<h4>Collins Doe</h4>
+							<p>8980252445</p>
+							<p>142 Enugu Road, Nsukka Enugu State Nigeria</p>
+							<p>
+								<button>Office</button>
+							</p>
+							<p>
+								<button>Remove</button>
+								<button>Edit</button>
+								<button>Set as default</button>
+							</p>
+						</div>
+
+						<div class="address_render">
+							<h4>Collins Doe</h4>
+							<p>8980252445</p>
+							<p>142 Enugu Road, Nsukka Enugu State Nigeria</p>
+							<p>
+								<button>Home2</button>
+							</p>
+							<p>
+								<button>Remove</button>
+								<button>Edit</button>
+								<button>Set as default</button>
+							</p>
+						</div>
+					</article>
+				</section>
+
+				<section class="change__address-con info__ hidden">
+					<h4>Add Address</h4>
+
+					<form>
+						<div class="name_cont">
+							<label for="firstName">First Name*</label>
+							<input type="text" placeholder="First Name" id="firstName" />
+
+							<label for="lastName">Last Name*</label>
+							<input type="text" placeholder="Last Name" id="lastName" />
+						</div>
+
+						<div class="region_company">
+							<label for="region">Country / Region*</label>
+							<input type="text" placeholder="Country / Region" id="region" />
+
+							<label for="company">Company Name</label>
+							<input
+								type="text"
+								placeholder="Company (optional)"
+								id="company"
+							/>
+						</div>
+
+						<div class="street_unit">
+							<label for="street">Street Address*</label>
+							<input
+								type="text"
+								placeholder="House number and street name"
+								id="street"
+							/>
+
+							<label for="apt">Apt, suite, unit</label>
+							<input
+								type="text"
+								placeholder="apartment, suite, unit, etc. (optional)"
+								id="apt"
+							/>
+						</div>
+
+						<div class="city_state">
+							<label for="city">City*</label>
+							<input type="text" placeholder="Town / City" id="city" />
+
+							<label for="state">State*</label>
+							<input type="text" placeholder="State" id="state" />
+						</div>
+
+						<div class="phone_postal">
+							<label for="phone">Phone*</label>
+							<input type="text" placeholder="Phone" id="phone" />
+
+							<label for="postal">Postal Code*</label>
+							<input type="text" placeholder="Postal Code" id="postal" />
+						</div>
+
+						<div class="delivery_des">
+							<label for="instruction">Delivery Instruction</label>
+							<textarea
+								placeholder="Delivery Instruction"
+								id="instruction"
+							></textarea>
+						</div>
+
+						<ul class="checkbox_con">
+							<li>
+								<input type="checkbox" name="" id="shipping" />
+								<label for="shipping">Set as default shipping address</label>
+							</li>
+							<li>
+								<input type="checkbox" name="" id="billing" />
+								<label for="billing">Set as default billing address</label>
+							</li>
+						</ul>
+
+						<ul class="submit_cancel_btns">
+							<li>
+								<button>Save</button>
+								<button>Cancel</button>
+							</li>
+						</ul>
+					</form>
+				</section>
+
+				<section class="changeName_form info__ hidden">
+					<form>
+						<div class="formHeader">
+							<h4>Collins Doe</h4>
+							<p>collinsdoe@gmail.com</p>
+						</div>
+
+						<div class="formGroupName">
+							<label for="firstNameChange">First Name</label>
+							<input
+								type="text"
+								placeholder="First Name"
+								id="firstNameChange"
+							/>
+
+							<label for="lastNameChange">Last Name</label>
+							<input type="text" placeholder="Last Name" id="lastNameChange" />
+						</div>
+
+						<div class="formGroupMail">
+							<label for="emailChange">Email Address</label>
+							<input type="email" placeholder="Email" id="emailChange" />
+
+							<label for="phoneChange">Phone Number</label>
+							<input type="text" placeholder="Phone" id="phoneChange" />
+						</div>
+
+						<div class="saveChange">
+							<button>Cancel</button>
+							<button>Save Changes</button>
+						</div>
+					</form>
+				</section>
+
+				<section class="change_password-con info__ hidden">
+					<form>
+						<div>
+							<label for="old_password">Enter Old Password</label>
+							<input type="password" id="old_password" />
+						</div>
+
+						<div>
+							<label for="new-password">Enter New Password </label>
+							<input type="password" id="new-password" />
+						</div>
+
+						<div>
+							<label for="re-enter"> Re-enter New Password </label>
+							<input type="password" id="re-enter" />
+						</div>
+
+						<ul class="save_password_change">
+							<li>
+								<button>Cancel</button>
+								<button>Save Changes</button>
+							</li>
+						</ul>
+					</form>
+				</section>
 			</aside>
 		</main>
 
