@@ -218,7 +218,6 @@ main aside.account_container + aside {
 		"changePassFom changePassFom";
 	margin-left: 1rem;
 	gap: 3rem;
-	position: relative;
 }
 
 main aside.account_container + aside h1 {
@@ -235,6 +234,7 @@ section.active_container {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
+	position: relative;
 }
 
 section.active_container div.accordionBtn {
@@ -393,6 +393,7 @@ section.my__info {
 	grid-area: my__info;
 	display: flex;
 	flex-direction: column;
+	margin-top: -5rem;
 }
 
 section.my__info div {
@@ -557,6 +558,7 @@ section.change__address-con {
 	display: flex;
 	flex-direction: column;
 	gap: 2.4rem;
+	margin-top: -10rem;
 }
 
 section.change__address-con h4 {
@@ -691,6 +693,7 @@ form ul.submit_cancel_btns button:nth-child(2) {
 section.changeName_form {
 	grid-area: changeNameFom;
 	height: fit-content;
+	margin-top: -12rem;
 	border-radius: 20px;
 	box-shadow: 0px 4px 8px #dee2e6;
 }
@@ -823,14 +826,12 @@ section.change_password-con {
 	height: 470px;
 	width: 450px;
 	display: flex;
-	transform: translateY(-20%);
+	transform: translateY(-50%);
 	flex-direction: column;
 	justify-content: space-evenly;
 	gap: 1rem;
 	border-radius: 20px;
 	box-shadow: 0px 4px 8px #dee2e6;
-	position: absolute;
-	top: -1rem;
 }
 
 section.change_password-con form {
@@ -883,6 +884,7 @@ ul.save_password_change li button:nth-child(2) {
 section.change_password-con form div input {
 	background-color: #f6f6f6;
 	height: 55px;
+	padding-inline-start: 10px;
 	outline: none;
 	border: none;
 	border-radius: 8px;

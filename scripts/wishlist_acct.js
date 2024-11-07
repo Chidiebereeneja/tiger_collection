@@ -9,6 +9,8 @@ const accordBtnCon = queryElementTask(".accordionBtn");
 const changeBtn = queryElementTask("#changeDetailBtn");
 const sections = queryAllElementTask("section.info__");
 const addNewAddressBtn = queryElementTask(".addNew__address button");
+const changePasswordBtn = queryElementTask("#changePasswordBtn");
+const save_cancelBtn = queryAllElementTask(".change__address-con form button");
 // const signOutPopupCon = queryElementTask(".signOutPopup");
 
 const defaultSelectTask = function (str) {
@@ -121,3 +123,10 @@ addNewAddressBtn.addEventListener("click", (ev) => {
 	ev.stopPropagation();
 	removeClassTask(sections, "change__address-con");
 });
+
+changePasswordBtn.addEventListener("click", (ev) => {
+	ev.stopPropagation();
+	removeClassTask(sections, "change_password-con");
+});
+
+console.log(save_cancelBtn);
