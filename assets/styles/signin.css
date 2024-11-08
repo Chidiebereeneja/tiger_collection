@@ -1,0 +1,171 @@
+@font-face {
+	src: url(/assets/fonts/Montserrat/static/Montserrat-Light.ttf);
+	font-family: Montserrat;
+	font-weight: 300;
+	font-style: normal;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+}
+
+main {
+	max-width: 1100px;
+	width: 100%;
+	display: flex;
+	gap: 3rem;
+	margin-top: 80px;
+	height: fit-content;
+	font-family: Montserrat, sans-serif;
+}
+
+main aside:nth-child(1) {
+	width: 50%;
+	height: 100%;
+}
+
+main aside:nth-child(1) figure {
+	width: 100%;
+	height: 100%;
+}
+
+main aside:nth-child(1) figure img {
+	width: 100%;
+	height: 700px;
+	object-fit: cover;
+	object-position: center;
+}
+
+main aside:nth-child(2) {
+	align-self: center;
+	width: 45%;
+	height: fit-content;
+	margin-top: 2rem;
+}
+
+main aside:nth-child(2) form {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	padding-inline: 1rem;
+}
+
+main aside:nth-child(2) form h1 {
+	color: #333333;
+	font-weight: 500;
+	font-size: 34px;
+	letter-spacing: 1px;
+}
+
+main aside:nth-child(2) form h1 + button {
+	color: #8a33fd;
+	height: 45px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	margin-block: 1rem;
+	font-weight: 500;
+	font-size: 20px;
+	border: 1px solid #3c4242;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+main aside:nth-child(2) form h1 + button img {
+	height: 20px;
+	width: 20px;
+}
+
+main aside:nth-child(2) form div.lineCon {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+form div.lineCon span {
+	color: #666666;
+	font-weight: 400;
+	font-size: 18px;
+}
+
+form div.lineCon span.line_ {
+	background-color: #66666640;
+	width: 47%;
+	height: 2px;
+}
+
+form div.username_email_con,
+form div.password_con,
+form div.save-continer {
+	display: flex;
+	flex-direction: column;
+}
+
+form div.username_email_con input,
+form div.password_con input,
+form div.save-continer input {
+	height: 45px;
+	width: 100%;
+	margin-top: 8px;
+	outline: none;
+	border: 1px solid #3c4242;
+	border-radius: 8px;
+}
+
+form div.username_email_con label,
+form div.password_con label,
+form div.save-continer label {
+	color: #3c4242;
+	font-size: 18px;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+
+form div.password_con label {
+	display: flex;
+	justify-content: space-between;
+}
+
+form div.password_con p {
+	align-self: flex-end;
+	margin-top: 6px;
+}
+
+form div.password_con p a {
+	text-decoration: none;
+	color: #3c4242;
+	font-weight: 400;
+	font-size: 16px;
+	border-bottom: 1px solid #3c4242;
+}
+
+div.save-continer {
+	align-items: flex-start;
+}
+
+div.save-continer button {
+	background-color: #8a33fd;
+	color: #ffffff;
+	height: 45px;
+	width: fit-content;
+	font-size: 18px;
+	font-weight: 400;
+	padding-inline: 3rem;
+	margin-block: 0.5rem;
+	border: none;
+	border-radius: 8px;
+}
+
+div.save-continer p {
+	color: #3c4242;
+	font-size: 16px;
+	font-weight: 400;
+}

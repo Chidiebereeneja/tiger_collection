@@ -13,7 +13,6 @@ const loadPageTask = function () {
 	const trackPageEl = queryElementTask(".women_arr #trackPage");
 	const productObj = JSON.parse(localStorage.getItem("productObj"));
 	const img = document.createElement("img");
-	console.log(trackPageEl);
 
 	img.src = productObj.src;
 	h1El.textContent = productObj.name;
@@ -36,8 +35,6 @@ const SimilarProducts = function () {
 	productCont.addEventListener("click", (ev) => {
 		const imgPrev = imgTargetEl.querySelector("img");
 		const renderName = queryElementTask(".women_arr + h1");
-
-		console.log(ev.target.parentElement);
 
 		if (ev.target.tagName === "IMG") {
 			imgPrev.src = ev.target.src;

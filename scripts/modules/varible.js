@@ -5,6 +5,9 @@ const navbarFilterLink = document.querySelectorAll(".filter_container a");
 
 const queryElementTask = (str) => document.querySelector(str);
 const queryAllElementTask = (str) => document.querySelectorAll(str);
+const productSearchCon = queryAllElementTask(
+	"section.product_card_container figure"
+);
 
 const defaultStyleTask = function (str) {
 	navbarFilterLink.forEach((link) => {
@@ -24,4 +27,11 @@ const currencyUpdateUITask = function (subtotal, str) {
 	}
 };
 
-export { navLinks, defaultStyleTask, queryAllElementTask, queryElementTask, currencyUpdateUITask };
+export {
+	navLinks,
+	defaultStyleTask,
+	queryAllElementTask,
+	queryElementTask,
+	currencyUpdateUITask,
+	productSearchCon,
+};

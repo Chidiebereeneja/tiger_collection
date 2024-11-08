@@ -10,7 +10,9 @@ const changeBtn = queryElementTask("#changeDetailBtn");
 const sections = queryAllElementTask("section.info__");
 const addNewAddressBtn = queryElementTask(".addNew__address button");
 const changePasswordBtn = queryElementTask("#changePasswordBtn");
-const save_cancelBtn = queryAllElementTask(".change__address-con form button");
+const addAddressForm = queryElementTask(".change__address-con form ");
+const saveChangesBtn = queryElementTask("div.saveChange");
+const savePasswordBtn = queryElementTask("ul.save_password_change");
 // const signOutPopupCon = queryElementTask(".signOutPopup");
 
 const defaultSelectTask = function (str) {
@@ -129,4 +131,38 @@ changePasswordBtn.addEventListener("click", (ev) => {
 	removeClassTask(sections, "change_password-con");
 });
 
-console.log(save_cancelBtn);
+const saveRemoveClassTask = () => {
+	removeClassTask(sections, "my__info");
+	queryElementTask(".add__address").classList.remove("hidden");
+};
+
+addAddressForm.addEventListener("click", (ev) => {
+	ev.stopPropagation();
+	ev.preventDefault();
+
+	if (ev.target.tagName === "BUTTON") {
+		if (ev.target.textContent.trim() === "Cancel") {
+			saveRemoveClassTask();
+		}
+	}
+});
+
+saveChangesBtn.addEventListener("click", (ev) => {
+	ev.preventDefault();
+
+	if (ev.target.tagName === "BUTTON") {
+		if (ev.target.textContent.trim() === "Cancel") {
+			saveRemoveClassTask();
+		}
+	}
+});
+
+savePasswordBtn.addEventListener("click", (ev) => {
+	ev.preventDefault();
+
+	if (ev.target.tagName === "BUTTON") {
+		if (ev.target.textContent.trim() === "Cancel") {
+			saveRemoveClassTask();
+		}
+	}
+});

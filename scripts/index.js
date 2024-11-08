@@ -6,6 +6,11 @@ import { queryAllElementTask, queryElementTask } from "./modules/varible.js";
 const container = queryElementTask(".arrivalList");
 navbarTask("Home");
 
+imgDescriptionTask(".category_images", "Home", "span.txt");
+imgDescriptionTask(".women_categories", "Home", ".txt");
+imgDescriptionTask(".LimeLight", "Home", ".LimeLight .txt");
+imgDescriptionTask(".arrivalList", "Home", ".arrivalList .txt");
+
 document.addEventListener("DOMContentLoaded", function () {
 	new Splide("#splide", {
 		type: "fade",
@@ -87,11 +92,6 @@ const navBarotificationTask = function () {
 	});
 };
 navBarotificationTask();
-
-imgDescriptionTask(".category_images", "Home", "span.txt");
-imgDescriptionTask(".women_categories", "Home", ".txt");
-imgDescriptionTask(".LimeLight", "Home", ".LimeLight .txt");
-// imgDescriptionTask(".arrivalList", "Home", ".arrivalList .txt");
 
 const fetchTask = async function () {
 	const response = await fetch(

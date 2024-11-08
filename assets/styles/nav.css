@@ -155,11 +155,11 @@ div.popup__con {
 	flex-direction: column;
 	width: 400px;
 	position: absolute;
-	top: 3rem;
+	top: -22rem;
 	border: 2.2px solid #3fa43f;
 	border-radius: 9px;
-
 	box-shadow: 0px 4px 4px #b5b5b5;
+	transition: position ease-in-out;
 }
 
 div.popup__con div.txt-des {
@@ -203,15 +203,33 @@ div.popup__con span.lineStyle {
 	height: 4px;
 	background-color: #3fa43f;
 	transition: width 1s linear;
+
 	transition: transform linear;
 }
 
 .add_animate {
-	animation: popupStyle 5s linear forwards;
+	animation: popupStyle 3s 1s linear forwards;
+}
+.add_right_animate {
+	animation: positionAnimate 1s linear forwards;
 }
 
 .hidden {
 	display: none !important;
+}
+
+@keyframes positionAnimate {
+	0% {
+		top: -22rem;
+	}
+
+	80% {
+		top: 5rem;
+	}
+
+	100% {
+		top: 3rem;
+	}
 }
 
 @keyframes popupStyle {

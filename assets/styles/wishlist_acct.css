@@ -665,6 +665,10 @@ label {
 	cursor: pointer;
 }
 
+button {
+	cursor: pointer;
+}
+
 section.change__address-con form ul.submit_cancel_btns li {
 	display: flex;
 	gap: 2rem;
