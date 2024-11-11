@@ -1,12 +1,13 @@
 "use strict";
 
 import { queryElementTask, queryAllElementTask } from "./modules/varible.js";
-// import { imgDescriptionTask } from "./modules/imageDescription.js";
 
 const imgTargetEl = queryElementTask("#product_preview");
 const productCont = queryElementTask(".product_img_");
 const trackPage = document.getElementById("trackPage");
 const relatedProductImg = queryAllElementTask(".related_product img");
+const addToCartBtn = document.querySelector(".add_to_cart");
+const navPopupCon = document.querySelector(".popup__con");
 
 const loadPageTask = function () {
 	const h1El = queryElementTask(".women_arr + h1");
@@ -84,4 +85,16 @@ relatedProductImg.forEach((img) => {
 		const imgSrc = img.src;
 		imgTargetEl.querySelector("img").src = imgSrc;
 	});
+});
+
+addToCartBtn.addEventListener("click", (ev) => {
+	ev.stopPropagation();
+	navPopupCon.classList.remove("hidden");
+	navPopupCon.classList.add("add_right_animate");
+	console.log(navPopupCon);
+
+	setTimeout(() => {
+		navPopupCon.classList.add("hidden");
+		navPopupCon.classList.remove("add_right_animate");
+	}, 4 * 1000);
 });

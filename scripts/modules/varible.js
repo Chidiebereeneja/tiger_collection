@@ -27,11 +27,20 @@ const currencyUpdateUITask = function (subtotal, str) {
 	}
 };
 
+const sizeStyleTask = (container) => {
+	container.addEventListener("click", (eve) => {
+		if (eve.target.tagName === "SPAN") {
+			eve.target.classList.toggle("sizeSelector");
+		}
+	});
+};
+
 export {
 	navLinks,
 	defaultStyleTask,
 	queryAllElementTask,
 	queryElementTask,
 	currencyUpdateUITask,
+	sizeStyleTask,
 	productSearchCon,
 };

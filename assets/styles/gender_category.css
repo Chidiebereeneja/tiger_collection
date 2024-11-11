@@ -514,3 +514,8 @@ td:nth-child(2) {
 article.buy-men-clothing table tr td:nth-child(2) {
 	text-align: center;
 }
+
+.sizeSelector {
+	background-color: #3c4242 !important;
+	color: #f6f6f6 !important;
+}

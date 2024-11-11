@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>
+			Join the Tiger Collection: Exclusive Access to Premium Fashion & Deals |
+			Create New Password Today
+		</title>
+		<link rel="stylesheet" href="/assets/styles/authpage.css" />
+		<link rel="stylesheet" href="/assets/styles/create-new-pass.css" />
+		<link rel="icon" href="/assets/images/Tiger_favicon.png" />
+		<script src="/scripts/create-new-pass.js" type="module" defer></script>
+		<script
+			src="https://kit.fontawesome.com/29a7ea893b.js"
+			crossorigin="anonymous"
+			defer
+		></script>
+	</head>
+	<body>
+		<header>
+			<div>
+				<img src="/assets/images/tiger-logo.png" width="90" alt="" />
+			</div>
+
+			<div>
+				<a href="/pages/signin.html">Sign In</a>
+				<a href="/pages/signUp.html">Sign Up</a>
+			</div>
+		</header>
+
+		<main>
+			<aside>
+				<figure>
+					<img
+						src="/assets/images/create-new-password-bg.png"
+						width="300"
+						alt=""
+					/>
+				</figure>
+			</aside>
+
+			<aside>
+				<form id="formReset">
+					<div class="pass-des">
+						<h1>Create New Password</h1>
+						<p>
+							Your new password must be different from previous used passwords.
+						</p>
+					</div>
+
+					<div class="username_email_con">
+						<label for="password">Password</label>
+						<input type="email" id="password" required />
+						<i class="fa-regular fa-eye-slash close"></i>
+						<i class="fa-regular fa-eye open hidden"></i>
+					</div>
+
+					<div class="password_con">
+						<label for="conPassword"> Confirm Password </label>
+						<input type="password" id="conPassword" />
+						<i class="fa-regular fa-eye-slash close hidden"></i>
+						<i class="fa-regular fa-eye open hidden"></i>
+					</div>
+
+					<div class="save-continer">
+						<button type="submit">Reset Password</button>
+						<button id="BacktoLogin" class="hidden">Back to login</button>
+					</div>
+				</form>
+			</aside>
+		</main>
+
+		<div class="popupCon hidden">
+			<div class="container_Pop">
+				<img src="/assets/images/Vector_1.png" alt="vector" />
+				<p class="pass_des">
+					<strong>Password Reset</strong>
+					<span>Your password has been successfully changed </span>
+				</p>
+
+				<p>
+					<i class="fa-solid fa-xmark"></i>
+				</p>
+			</div>
+
+			<span class="borderStyle"></span>
+		</div>
+	</body>
+</html>
