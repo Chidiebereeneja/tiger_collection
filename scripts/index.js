@@ -91,7 +91,10 @@ const navBarotificationTask = function () {
 		window.location.href = "pages/men_category.html";
 	});
 };
-navBarotificationTask();
+
+setTimeout(() => {
+	navBarotificationTask();
+}, 5 * 1000);
 
 const fetchTask = async function () {
 	const response = await fetch(

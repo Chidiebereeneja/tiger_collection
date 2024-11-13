@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="/assets/styles/admin-dashborad/reset-pass-admin.css"
+		/>
+		<script src="/scripts/admin-dashboard/reset-pass-admin.js" defer></script>
+		<script
+			src="https://kit.fontawesome.com/29a7ea893b.js"
+			crossorigin="anonymous"
+			defer
+		></script>
+	</head>
+	<body>
+		<main>
+			<section class="reset-password-container">
+				<aside>
+					<figure class="logoCon">
+						<img src="/assets/images/tiger-logo.png" width="100" alt="" />
+					</figure>
+					<div class="headerCon">
+						<h1>Forgot password?</h1>
+						<p>
+							Don’t worry, it happens to the best of us! Enter your email
+							address and we’ll send you a reset link
+						</p>
+					</div>
+					<form>
+						<input type="email" placeholder="Email" />
+						<button type="submit">Continue</button>
+
+						<p>
+							<a href="/pages/admin-dashboard/signin_admin.html"
+								>Back to login</a
+							>
+						</p>
+					</form>
+				</aside>
+
+				<aside>
+					<figure class="bg">
+						<img src="/assets/images/reset-pass-admin-bg.jpeg" alt="" />
+					</figure>
+				</aside>
+			</section>
+
+			<section class="otp-reset-container hidden">
+				<aside>
+					<figure class="logoCon">
+						<img src="/assets/images/tiger-logo.png" width="100" alt="" />
+					</figure>
+					<div class="headerCon">
+						<h1>Password reset</h1>
+						<p>We sent a code to <strong>johndoe@gmail.com</strong></p>
+					</div>
+					<form>
+						<div class="otp-container">
+							<input type="text" />
+							<input type="text" />
+							<input type="text" />
+							<input type="text" />
+						</div>
+						<button type="submit">Continue</button>
+
+						<p>
+							<span>Didn’t receive the code?</span>
+							<button class="resend-otp">Click to resend</button>
+						</p>
+					</form>
+				</aside>
+
+				<aside>
+					<figure class="bg">
+						<img src="/assets/images/otp-reset-admin.jpeg" alt="" />
+					</figure>
+				</aside>
+			</section>
+		</main>
+	</body>
+</html>

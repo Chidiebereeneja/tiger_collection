@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="/assets/styles/admin-dashborad/setNew-pass-admin.css"
+		/>
+		<script src="/scripts/admin-dashboard/setNew-pass-admin.js" defer></script>
+		<script
+			src="https://kit.fontawesome.com/29a7ea893b.js"
+			crossorigin="anonymous"
+			defer
+		></script>
+	</head>
+	<body>
+		<main>
+			<section class="setNew-pasword-container">
+				<aside>
+					<figure class="logoCon">
+						<img src="/assets/images/tiger-logo.png" width="100" alt="" />
+					</figure>
+					<div class="headerCon">
+						<h1>Set new password</h1>
+						<p>Must be at least 8 characters</p>
+					</div>
+					<form>
+						<div class="password">
+							<input type="password" placeholder="Password" />
+							<i class="fa-regular fa-eye"></i>
+						</div>
+						<div class="password">
+							<input type="password" placeholder="Confirm password" />
+							<i class="fa-regular fa-eye"></i>
+						</div>
+						<button type="submit">Reset</button>
+					</form>
+				</aside>
+
+				<aside>
+					<figure class="bg">
+						<img src="/assets/images/setNew-pass-admin-bg.jpeg" alt="" />
+					</figure>
+				</aside>
+			</section>
+
+			<section class="set-successful-popup hidden">
+				<aside>
+					<figure class="logoCon">
+						<img src="/assets/images/tiger-logo.png" width="100" alt="" />
+					</figure>
+					<div class="headerCon">
+						<h1>Password changed</h1>
+						<p>Your password has been changed successfully</p>
+					</div>
+					<form>
+						<button type="submit">Back to login</button>
+					</form>
+				</aside>
+
+				<aside>
+					<figure class="bg">
+						<img src="/assets/images/successful-setpass-bg.jpeg" alt="" />
+					</figure>
+				</aside>
+			</section>
+		</main>
+	</body>
+</html>
