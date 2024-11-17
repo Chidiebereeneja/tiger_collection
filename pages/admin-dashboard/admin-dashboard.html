@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="/assets/styles/admin-dashborad/admin-dashboard.css"
+		/>
+		<script src="/scripts/admin-dashboard/admin-dashboard.js" defer></script>
+
+		<script
+			src="https://kit.fontawesome.com/29a7ea893b.js"
+			crossorigin="anonymous"
+			defer
+		></script>
+	</head>
+	<body>
+		<main>
+			<aside id="continer_aside-1">
+				<figure class="logo">
+					<img
+						src="/assets/images/tiger-logo.png"
+						width="100"
+						alt="tiger collection logo"
+					/>
+				</figure>
+
+				<section class="menu-list">
+					<ul>
+						<h2>MAIN MENU</h2>
+
+						<li>
+							<i class="fa-solid fa-shop"></i>
+							<span>Dashboard</span>
+						</li>
+
+						<li>
+							<i class="fa-solid fa-cart-shopping"></i>
+							<span>Order Management</span>
+						</li>
+
+						<li>
+							<i class="fa-solid fa-user-group"></i>
+							<span>Customers</span>
+						</li>
+
+						<li>
+							<i class="fa-solid fa-link"></i>
+							<span>Categories</span>
+						</li>
+
+						<li>
+							<i class="fa-solid fa-money-bill-transfer"></i>
+							<span>Transaction</span>
+						</li>
+					</ul>
+
+					<ul>
+						<h2>PRODUCTS</h2>
+
+						<li>
+							<i class="fa-solid fa-circle-plus"></i>
+							<span>Add Products</span>
+						</li>
+
+						<li>
+							<i class="fa-solid fa-dice-d6"></i>
+							<span>Product List</span>
+						</li>
+					</ul>
+
+					<ul>
+						<h2>OTHERS</h2>
+
+						<li>
+							<i class="fa-solid fa-gear"></i>
+							<span>Setting</span>
+						</li>
+
+						<li id="log_out_li">
+							<i class="fa-solid fa-arrow-right-from-bracket"></i>
+							<span>Log out</span>
+						</li>
+
+						<div class="log_out_popup hidden">
+							<div class="xmark-popup">
+								<i class="fa-solid fa-xmark"></i>
+							</div>
+							<div class="log_body">
+								<p>
+									<strong>Are you sure you want to log out?</strong>
+								</p>
+								<p>
+									Your session will be ended, and you will be redirected to the
+									login page
+								</p>
+
+								<div class="log_btns">
+									<button id="cancel">No, cancel</button>
+
+									<button id="logout">Yes, Log out</button>
+								</div>
+							</div>
+						</div>
+					</ul>
+				</section>
+			</aside>
+
+			<aside id="continer_aside-2">
+				<header class="aside2_container">
+					<h1>Dashboard</h1>
+
+					<div class="actions">
+						<p id="notify_bell">
+							<i class="fa-regular fa-bell"></i>
+							<span class="bell_num_count">1</span>
+						</p>
+
+						<figure class="profile-img">
+							<img src="/assets/images/profile-admin.png" width="30" alt="" />
+							<figcaption class="green-active"></figcaption>
+						</figure>
+
+						<div class="notification_popup hidden">
+							<div class="xmark-popup">
+								<h2>NOTIFICATIONS</h2>
+								<button id="cancel_notify">
+									<i class="fa-solid fa-xmark"></i>
+								</button>
+							</div>
+
+							<ul class="notification_body">
+								<li>
+									<figure>
+										<img
+											src="/assets/images/Oversized-T-Shirts.jpeg"
+											width="34"
+											alt=""
+										/>
+
+										<figcaption>
+											<strong>Low Stock Alerts</strong>
+											<span>Urban Shirt has 12 units left. Restock soon.</span>
+
+											<span>3 hours ago</span>
+										</figcaption>
+									</figure>
+								</li>
+
+								<li>
+									<figure>
+										<img
+											src="/assets/images/Oversized-T-Shirts.jpeg"
+											width="34"
+											alt=""
+										/>
+
+										<figcaption>
+											<strong>Low Stock Alerts</strong>
+											<span>Urban Shirt has 12 units left. Restock soon.</span>
+
+											<span>3 hours ago</span>
+										</figcaption>
+									</figure>
+								</li>
+
+								<li>
+									<figure>
+										<img
+											src="/assets/images/Oversized-T-Shirts.jpeg"
+											width="34"
+											alt=""
+										/>
+
+										<figcaption>
+											<strong>Low Stock Alerts</strong>
+											<span>Urban Shirt has 12 units left. Restock soon.</span>
+
+											<span>3 hours ago</span>
+										</figcaption>
+									</figure>
+								</li>
+
+								<li>
+									<figure>
+										<img
+											src="/assets/images/Oversized-T-Shirts.jpeg"
+											width="34"
+											alt=""
+										/>
+
+										<figcaption>
+											<strong>Low Stock Alerts</strong>
+											<span>Urban Shirt has 12 units left. Restock soon.</span>
+
+											<span>3 hours ago</span>
+										</figcaption>
+									</figure>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</header>
+
+				<section class="total_sales">
+					<aside class="total_container">
+						<div class="txt-cost">
+							<p><strong>Total Sales & Costs</strong></p>
+							<p>Last 7 days</p>
+							<h3>₦350K</h3>
+
+							<div class="cost">
+								<p>
+									<mark>&uarr; 8.56K</mark>
+									vs last 7 days
+								</p>
+							</div>
+						</div>
+
+						<div class="track-map">
+							<div class="sales-map">
+								<div>
+									<div class="circle-blue"></div>
+									<p>Sales</p>
+								</div>
+
+								<div>
+									<div class="circle-green"></div>
+									<p>Cost</p>
+								</div>
+							</div>
+
+							<div class="canvas_lines">
+								<canvas id="blue_line"></canvas>
+								<canvas id="green_line"> </canvas>
+
+								<div class="weekdays">
+									<span>Mon</span>
+									<span>Tue</span>
+									<span>Wed</span>
+									<span>Thu</span>
+									<span>Fri</span>
+									<span>Sat</span>
+									<span>Sun</span>
+								</div>
+							</div>
+						</div>
+					</aside>
+
+					<aside class="inventory">
+						<div class="inventory-txt">
+							<p><strong>Total Inventory</strong></p>
+							<p>Last 7 days</p>
+							<h3>16.5K</h3>
+
+							<div class="inventory-percent">
+								<p>
+									<mark>&darr; 3%</mark>
+									vs last 7 days
+								</p>
+							</div>
+						</div>
+
+						<div class="canvas-inventory">
+							<canvas id="canvas-red"></canvas>
+						</div>
+					</aside>
+				</section>
+
+				<section class="order_profit_discount">
+					<article class="order-container">
+						<div class="order">
+							<p><strong>Total Orders</strong></p>
+							<p>Last 7 days</p>
+							<h3>25.7K</h3>
+
+							<div class="order-percent">
+								<p>
+									<mark>&uarr; 6%</mark>
+									vs last 7 days
+								</p>
+							</div>
+						</div>
+
+						<div class="canvas--order">
+							<canvas id="order--green-line"></canvas>
+						</div>
+					</article>
+
+					<article class="profit-container">
+						<div class="profit">
+							<p><strong>Total Profit</strong></p>
+							<p>Last 7 days</p>
+							<h3>50K</h3>
+
+							<div class="profit-percent">
+								<p>
+									<mark>&uarr; 12%</mark>
+									vs last 7 days
+								</p>
+							</div>
+						</div>
+
+						<div class="canvas--profit">
+							<canvas id="canvas--profit-line"></canvas>
+						</div>
+					</article>
+
+					<article class="discount-container">
+						<div class="discount">
+							<p><strong>Discounted Amount</strong></p>
+							<p>Last 7 days</p>
+							<h3>12K</h3>
+
+							<div class="profit-percent">
+								<p>
+									<mark>&uarr; 2%</mark>
+									vs last 7 days
+								</p>
+							</div>
+						</div>
+
+						<div class="canvas--discount">
+							<canvas id="canvas--discount-line"></canvas>
+						</div>
+					</article>
+				</section>
+
+				<section class="reports_quantity">
+					<aside class="repots">
+						<div class="report_header">
+							<p>
+								<strong>Reports</strong>
+								<span>Last 7 Days</span>
+							</p>
+
+							<div class="dot">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+
+						<div class="report_body">
+							<ul class="report-modal-header">
+								<li id="Customers">
+									<strong>24k</strong>
+									<span>Customers</span>
+								</li>
+
+								<li id="Products">
+									<strong>1.5k</strong>
+									<span>Products</span>
+								</li>
+								<li id="Revenue">
+									<strong>250k</strong>
+									<span>Revenue</span>
+								</li>
+							</ul>
+
+							<div class="chart">
+								<canvas id="chart_table"></canvas>
+							</div>
+						</div>
+					</aside>
+
+					<aside class="quantity">
+						<div class="quantity_header">
+							<p>
+								<strong>Products running low</strong>
+								<strong>29</strong>
+							</p>
+							<button>View All</button>
+						</div>
+
+						<div class="quantity_body">
+							<table>
+								<tr>
+									<th>Products</th>
+									<th>Remaining quantity</th>
+								</tr>
+
+								<tr>
+									<td>
+										<img
+											src="/assets/images/white-shirt.png"
+											width="30"
+											alt=""
+										/>
+
+										<p>
+											<strong>Urban Shirts</strong>
+											<span>Men</span>
+										</p>
+
+										<input
+											type="range"
+											id="product_range"
+											min="0"
+											max="1000000"
+										/>
+									</td>
+
+									<td>
+										<p>
+											<span>30</span>
+										</p>
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<img
+											src="/assets/images/Urban-Shirts.jpeg"
+											width="30"
+											alt=""
+										/>
+
+										<p>
+											<strong>Urban Shirts</strong>
+											<span>Women</span>
+										</p>
+
+										<input
+											type="range"
+											id="product_range"
+											min="0"
+											max="1000000"
+										/>
+									</td>
+
+									<td>
+										<p>
+											<span>25</span>
+										</p>
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<img src="/assets/images/neck-1.jpeg" width="30" alt="" />
+
+										<p>
+											<strong>Rolex</strong>
+											<span>Accessories</span>
+										</p>
+
+										<input
+											type="range"
+											id="product_range"
+											min="0"
+											max="1000000"
+										/>
+									</td>
+
+									<td>
+										<p>
+											<span>20</span>
+										</p>
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<img src="/assets/images/women-3.jpeg" width="30" alt="" />
+
+										<p>
+											<strong>Hoodie</strong>
+											<span>Women</span>
+										</p>
+
+										<input
+											type="range"
+											id="product_range"
+											min="0"
+											max="1000000"
+										/>
+									</td>
+
+									<td>
+										<p>
+											<span>14</span>
+										</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</aside>
+				</section>
+
+				<section class="popular_transactions">
+					<aside class="popular_product">
+						<div class="product_header">
+							<div class="sec_head">
+								<h4>Popular Products</h4>
+								<p>Total 10.4k Products</p>
+							</div>
+							<div class="line_con">
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+						</div>
+
+						<ul>
+							<li>
+								<p>
+									<strong>Urban Shirts </strong> <span>Item: #FXZ-4567</span>
+								</p>
+								<p>₦3200</p>
+							</li>
+
+							<li>
+								<p>
+									<strong>Plain Hoodie </strong> <span>Item: #FXZ-3456</span>
+								</p>
+								<p>₦3200</p>
+							</li>
+
+							<li>
+								<p>
+									<strong>Urban Shirts </strong> <span>Item: #FXZ-4567</span>
+								</p>
+								<p>₦3200</p>
+							</li>
+
+							<li>
+								<p>
+									<strong>Plain Hoodie </strong> <span>Item: #FXZ-3456</span>
+								</p>
+								<p>₦3200</p>
+							</li>
+
+							<li>
+								<p>
+									<strong>Urban Shirts </strong> <span>Item: #FXZ-4567</span>
+								</p>
+								<p>₦3200</p>
+							</li>
+
+							<li>
+								<p>
+									<strong>Plain Hoodie </strong> <span>Item: #FXZ-3456</span>
+								</p>
+								<p>₦3200</p>
+							</li>
+						</ul>
+					</aside>
+
+					<aside class="transaction_container">
+						<div class="transaction_header">
+							<h4>Last Transactions</h4>
+							<button>View All</button>
+						</div>
+
+						<table class="transaction_body">
+							<tr>
+								<th>ID</th>
+								<th>ISSUED DATE</th>
+								<th>TOTAL</th>
+								<th>ACTIONS</th>
+							</tr>
+
+							<tr>
+								<td>#123456789</td>
+								<td>31 March 2024</td>
+								<td>₦3200</td>
+								<td>View Detail</td>
+							</tr>
+
+							<tr>
+								<td>#123456789</td>
+								<td>31 March 2024</td>
+								<td>₦3200</td>
+								<td>View Detail</td>
+							</tr>
+
+							<tr>
+								<td>#123456789</td>
+								<td>31 March 2024</td>
+								<td>₦3200</td>
+								<td>View Detail</td>
+							</tr>
+
+							<tr>
+								<td>#123456789</td>
+								<td>31 March 2024</td>
+								<td>₦3200</td>
+								<td>View Detail</td>
+							</tr>
+
+							<tr>
+								<td>#123456789</td>
+								<td>31 March 2024</td>
+								<td>₦3200</td>
+								<td>View Detail</td>
+							</tr>
+
+							<tr>
+								<td>#123456789</td>
+								<td>31 March 2024</td>
+								<td>₦3200</td>
+								<td>View Detail</td>
+							</tr>
+						</table>
+					</aside>
+				</section>
+			</aside>
+		</main>
+	</body>
+</html>

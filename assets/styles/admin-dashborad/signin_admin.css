@@ -13,34 +13,38 @@ body {
 	display: flex;
 	justify-content: center;
 }
-
 main {
 	max-width: 1100px;
+	height: 100%;
+}
+
+main section.signin-container {
 	width: 100%;
+	height: 100%;
 	display: flex;
 	gap: 2rem;
 	padding: 1rem;
 }
 
-main aside:nth-child(1) {
+main section.signin-container aside:nth-child(1) {
 	width: 40%;
 }
-main aside:nth-child(2) {
+main section.signin-container aside:nth-child(2) {
 	width: 55%;
 }
 
-main aside:nth-child(1) figure.logoCon img {
+main section.signin-container aside:nth-child(1) figure.logoCon img {
 	width: 52.1px;
 	height: 43px;
 	object-fit: contain;
 	object-position: center;
 }
 
-main aside:nth-child(1) div.headerCon {
+main section.signin-container aside:nth-child(1) div.headerCon {
 	margin-top: 4rem;
 }
 
-main aside:nth-child(1) div.headerCon h1 {
+main section.signin-container aside:nth-child(1) div.headerCon h1 {
 	color: #181510;
 	font-weight: 500;
 	font-size: 36px;
@@ -49,7 +53,7 @@ main aside:nth-child(1) div.headerCon h1 {
 	margin-bottom: 0.9rem;
 }
 
-main aside:nth-child(1) div.headerCon p {
+main section.signin-container aside:nth-child(1) div.headerCon p {
 	color: #181510b2;
 	width: 90%;
 	font-weight: 400;
@@ -57,7 +61,7 @@ main aside:nth-child(1) div.headerCon p {
 	line-height: 30px;
 }
 
-main aside:nth-child(1) form {
+main section.signin-container aside:nth-child(1) form {
 	width: 100%;
 	height: fit-content;
 }
@@ -80,7 +84,7 @@ div.password i {
 	cursor: pointer;
 }
 
-main aside:nth-child(1) form input:nth-last-child(4) {
+main section.signin-container aside:nth-child(1) form input:nth-last-child(4) {
 	color: #181510;
 	height: 45px;
 	width: 100%;
@@ -95,7 +99,7 @@ main aside:nth-child(1) form input:nth-last-child(4) {
 	outline: none;
 }
 
-main aside:nth-child(1) form input:nth-last-child(2) {
+main section.signin-container aside:nth-child(1) form input:nth-last-child(2) {
 	color: #181510;
 	height: 100%;
 	width: 100%;
@@ -109,11 +113,11 @@ main aside:nth-child(1) form input:nth-last-child(2) {
 	outline: none;
 }
 
-main aside:nth-child(1) form input:focus {
+main section.signin-container aside:nth-child(1) form input:focus {
 	border: 1.86px solid #8a33fd;
 }
 
-main aside:nth-child(1) form div.checkbox-con {
+main section.signin-container aside:nth-child(1) form div.checkbox-con {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -125,14 +129,19 @@ form div.checkbox-con div.check_con {
 	gap: 5px;
 }
 
-main aside:nth-child(1) form div.checkbox-con input[type="checkbox"] {
+main
+	section.signin-container
+	aside:nth-child(1)
+	form
+	div.checkbox-con
+	input[type="checkbox"] {
 	height: 20px;
 	width: 20px;
 	border: 2px solid #181510;
 	accent-color: #181510;
 }
 
-main aside:nth-child(1) form div.checkbox-con label {
+main section.signin-container aside:nth-child(1) form div.checkbox-con label {
 	color: #181510;
 	font-weight: 500;
 	font-size: 17px;
@@ -161,7 +170,7 @@ form div.checkbox-con + button[type="submit"] {
 	cursor: pointer;
 }
 
-main aside figure.bg {
+main section.signin-container aside figure.bg {
 	height: 100%;
 }
 
@@ -171,4 +180,90 @@ figure.bg img {
 	object-fit: cover;
 	object-position: center;
 	border-radius: 15px;
+}
+
+main section.splash-style-popup {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main section.splash-style-popup figure {
+	width: fit-content;
+	/* width: 300px; */
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: fit-content;
+	grid-auto-flow: row;
+	grid-auto-rows: auto;
+	grid-column-gap: 1rem;
+	grid-template-areas:
+		"row1A row1B"
+		"col1A col1B"
+		"figcaption figcaption";
+	position: relative;
+}
+
+main section.splash-style-popup figure img.c-charater {
+	height: 41%;
+	width: 58%;
+	object-fit: contain;
+	object-position: center;
+	position: absolute;
+	top: 3rem;
+	left: 20%;
+}
+
+main section.splash-style-popup figure img.row {
+	width: 120px;
+	transform: translateY(0.9rem);
+	/* background-color: red; */
+}
+
+main section.splash-style-popup figure img.row1 {
+	grid-area: row1A;
+	transform: translateX(4.5rem);
+	margin-top: 1rem;
+}
+main section.splash-style-popup figure img.row2 {
+	grid-area: row1B;
+}
+
+main section.splash-style-popup figure img.col {
+	height: 60%;
+	object-fit: contain;
+	object-position: center;
+	align-items: end;
+	transform: translate(1rem, -1rem);
+}
+
+main section.splash-style-popup figure img.col1 {
+	grid-area: col1A;
+	transform: translate(11rem, -1rem);
+}
+main section.splash-style-popup figure img.col2 {
+	grid-area: col1B;
+	transform: translateY(-1rem);
+}
+
+main section.splash-style-popup figure figcaption {
+	grid-area: figcaption;
+	width: 100%;
+	color: #000000;
+	transform: translateY(-8rem);
+	font-size: 56.23px;
+	font-weight: 729;
+	line-height: 68.54px;
+	display: flex;
+	justify-content: center;
+}
+
+main section.splash-style-popup figure figcaption span:nth-child(5) {
+	padding-right: 1.7rem;
+}
+
+.hidden {
+	display: none !important;
 }

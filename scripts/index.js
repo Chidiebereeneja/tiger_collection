@@ -111,53 +111,53 @@ const fetchTask = async function () {
 };
 
 fetchTask().then((data) => {
-	// data.map((obj) => createElementTask(obj));
-	// container.innerHTML = data
-	// 	.map(
-	// 		(obj) =>
-	// 			`<li class="splide__slide arrivalSlide">
-	// 		<figure class="slider-container">
-	// 			<img
-	// 				src="/assets/images/Urban-Shirts.jpeg"
-	// 				width="200"
-	// 				alt="Urban Shirts"
-	// 			/>
-	// 			<figcaption class="txt">${obj?.name}</figcaption>
-	// 			<span class="wishlist_slid"
-	// 				><i class="fa-regular fa-heart"></i
-	// 			></span>
-	// 		</figure>
-	// 	</li>`
-	// 	)
-	// 	.join("");
+	data.map((obj) => createElementTask(obj));
+	container.innerHTML = data
+		.map(
+			(obj) =>
+				`<li class="splide__slide arrivalSlide">
+			<figure class="slider-container">
+				<img
+					src="/assets/images/Urban-Shirts.jpeg"
+					width="200"
+					alt="Urban Shirts"
+				/>
+				<figcaption class="txt">${obj?.name}</figcaption>
+				<span class="wishlist_slid"
+					><i class="fa-regular fa-heart"></i
+				></span>
+			</figure>
+		</li>`
+		)
+		.join("");
 });
 
-// const createElementTask = (obj) => {
-// 	const li = document.createElement("div");
-// 	const figure = document.createElement("figure");
-// 	const img = document.createElement("img");
-// 	const figCaption = document.createElement("figcaption");
-// 	const span = document.createElement("span");
-// 	const i = document.createElement("i");
+const createElementTask = (obj) => {
+	const li = document.createElement("div");
+	const figure = document.createElement("figure");
+	const img = document.createElement("img");
+	const figCaption = document.createElement("figcaption");
+	const span = document.createElement("span");
+	const i = document.createElement("i");
 
-// 	li.appendChild(figure);
-// 	figure.appendChild(img);
-// 	figure.appendChild(figCaption);
-// 	figure.appendChild(span);
-// 	figure.appendChild(i);
-// 	<div class="">Slide 1</div>;
+	li.appendChild(figure);
+	figure.appendChild(img);
+	figure.appendChild(figCaption);
+	figure.appendChild(span);
+	figure.appendChild(i);
+	// <div class="">Slide 1</div>;
 
-// 	li.classList.add("swiper-slide", "arrivalSlide");
-// 	figure.classList.add("splide__slide", "slider-container");
-// 	figCaption.classList.add("txt");
-// 	span.classList.add("wishlist_slid");
-// 	i.classList.add("fa-regular", "fa-heart");
+	li.classList.add("swiper-slide", "arrivalSlide");
+	figure.classList.add("splide__slide", "slider-container");
+	figCaption.classList.add("txt");
+	span.classList.add("wishlist_slid");
+	i.classList.add("fa-regular", "fa-heart");
 
-// 	img.src = obj.flyer;
-// 	figCaption.textContent = obj.name;
+	img.src = obj.flyer;
+	figCaption.textContent = obj.name;
 
-// 	container.appendChild(li);
-// };
+	container.appendChild(li);
+};
 
 /*
 <li class="splide__slide arrivalSlide">
