@@ -505,21 +505,28 @@ div.track-map div.canvas_lines {
 }
 
 div.track-map div.canvas_lines canvas {
-	height: 60px;
 	width: 100%;
 }
 
 div.canvas-inventory {
-	width: 80%;
-	height: 120px;
+	width: 100%;
+}
+
+#canvas-red {
+	display: flex;
+}
+
+div.canvas--order {
+	height: 100%;
+	width: 100%;
 }
 
 section.order_profit_discount canvas {
-	width: 100%;
-	height: 120px;
+	width: 90%;
+	height: 150px !important;
 }
 
-div.canvas_lines div.weekdays {
+/* div.canvas_lines div.weekdays {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -531,7 +538,7 @@ div.canvas_lines div.weekdays span {
 	font-size: 12px;
 	line-height: 20px;
 	letter-spacing: 0.5px;
-}
+} */
 
 aside#continer_aside-2 section.reports_quantity {
 	width: 100%;
@@ -634,6 +641,14 @@ ul.report-modal-header li span {
 	font-size: 14px;
 	line-height: 20px;
 	letter-spacing: 0.5px;
+}
+
+div.chart {
+	width: 100%;
+}
+
+div.chart canvas#chart_table {
+	width: 100%;
 }
 
 section.reports_quantity aside.quantity {
