@@ -295,9 +295,9 @@ div.modal_header ul li button {
 	cursor: pointer;
 }
 
-div.modal_header ul li button:nth-child(1) {
-	color: #8a33fd;
-	border-bottom: 2px solid #8a33fd;
+.active_modal_header {
+	color: #8a33fd !important;
+	border-bottom: 2px solid #8a33fd !important;
 }
 
 div.modal_header ul li button:hover {
@@ -350,7 +350,9 @@ article#product_progress_container {
 	flex-direction: column;
 }
 
-article#product_progress_container section.pending_order_container {
+article#product_progress_container section.pending_order_container,
+article#product_progress_container section.confirmed_order_container,
+article#product_progress_container section.cancel_order_container {
 	width: 100%;
 }
 
@@ -362,14 +364,34 @@ th {
 	border-right: none;
 }
 
-section.pending_order_container table {
+section.confirmed_order_container table,
+td,
+th {
+	border: 1px solid #e9e7fd;
+	border-left: none;
+	border-right: none;
+}
+
+section.cancel_order_container table,
+td,
+th {
+	border: 1px solid #e9e7fd;
+	border-left: none;
+	border-right: none;
+}
+
+section.pending_order_container table,
+section.confirmed_order_container table,
+section.cancel_order_container table {
 	width: 100%;
 	background-color: #ffffff;
 	border-collapse: collapse;
 	border-top: none !important;
 }
 
-section.pending_order_container table tr.row td {
+section.pending_order_container table tr.row td,
+section.confirmed_order_container table tr.row td,
+section.cancel_order_container table tr.row td {
 	text-align: center;
 }
 
@@ -379,20 +401,47 @@ th {
 	padding-block: 0.5rem;
 }
 
-section.pending_order_container tr.row td {
+section.confirmed_order_container td,
+th {
+	padding-inline: 1rem;
+	padding-block: 0.5rem;
+}
+
+section.cancel_order_container td,
+th {
+	padding-inline: 1rem;
+	padding-block: 0.5rem;
+}
+
+section.pending_order_container tr.row td,
+section.confirmed_order_container tr.row td,
+section.cancel_order_container tr.row td {
 	color: #23272e;
 	font-weight: 400;
 	font-size: 15px;
 	line-height: 22px;
 }
 
-section.pending_order_container tr.row td:nth-child(1) {
+section.pending_order_container tr.row td:nth-child(1),
+section.confirmed_order_container tr.row td:nth-child(1),
+section.cancel_order_container tr.row td:nth-child(1) {
 	font-weight: 600;
 }
 
-section.pending_order_container tr.row td:nth-child(5) mark {
+section.pending_order_container tr.row td:nth-child(5) mark,
+section.confirmed_order_container tr.row td:nth-child(5) mark,
+section.cancel_order_container tr.row td:nth-child(5) mark {
 	background-color: #28c76f29;
 	color: #28c76f;
+	padding: 4px;
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 14px;
+	border-radius: 4px;
+}
+
+tr.row td:nth-child(6) span {
+	height: 24px;
 	padding: 4px;
 	font-weight: 600;
 	font-size: 13px;
@@ -403,15 +452,19 @@ section.pending_order_container tr.row td:nth-child(5) mark {
 section.pending_order_container tr.row td:nth-child(6) span {
 	background-color: #ffc60029;
 	color: #ffc600;
-	height: 24px;
-	padding: 4px;
-	font-weight: 600;
-	font-size: 13px;
-	line-height: 14px;
-	border-radius: 4px;
+}
+section.confirmed_order_container tr.row td:nth-child(6) span {
+	background-color: #28c76f29;
+	color: #1eb564;
 }
 
-section.pending_order_container th {
+section.cancel_order_container tr.row td:nth-child(6) span {
+	background-color: #ea545529;
+	color: #ea5455;
+}
+
+section.pending_order_container th,
+section.confirmed_order_container th {
 	color: #8b909a;
 	font-weight: 500;
 	font-size: 13px;
@@ -493,12 +546,25 @@ td.indicate_style {
 }
 tr.modal_total_row td:nth-child(7) {
 	text-align: center;
-	color: #ffc600;
 	font-weight: 600;
 	font-size: 13px;
 	line-height: 14px;
 	border-radius: 4px;
 	margin-block-end: 2rem;
+}
+
+section.pending_order_container tr.modal_total_row td:nth-child(7) {
+	color: #ffc600;
+}
+
+section.confirmed_order_container tr.modal_total_row td:nth-child(7) {
+	color: #1eb564;
+}
+
+tr.row td:nth-child(7) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 tr.modal_ship_row_total td,
