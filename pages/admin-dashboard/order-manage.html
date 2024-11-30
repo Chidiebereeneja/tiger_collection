@@ -169,12 +169,11 @@
 					</div>
 				</header>
 
-				<div class="modal_header">
+				<div class="modal_header" id="modal_header_btns">
 					<ul>
 						<li>
 							<button>All</button>
 							<button class="active_modal_header">Pending</button>
-							<button>Processing</button>
 							<button>Cancelled</button>
 							<button>Confirmed</button>
 						</li>
@@ -193,7 +192,7 @@
 				</section>
 
 				<article id="product_progress_container">
-					<section class="pending_order_container">
+					<section class="pending_order_container progress_" id="pending_">
 						<table class="pending_order_progress">
 							<thead>
 								<tr class="no_border">
@@ -205,230 +204,6 @@
 									<th>Status</th>
 								</tr>
 							</thead>
-
-							<tbody>
-								<tr class="row">
-									<td>#123456789</td>
-									<td>2 min ago</td>
-									<td>Collins Doe</td>
-									<td>₦654</td>
-									<td>₦154 <mark>16%</mark></td>
-									<td><span>Pending</span></td>
-									<td>
-										<button><i class="fa-solid fa-angle-down"></i></button>
-									</td>
-								</tr>
-							</tbody>
-
-							<tbody>
-								<tr class="row">
-									<td>#123456789</td>
-									<td>2 min ago</td>
-									<td>Collins Doe</td>
-									<td>₦654</td>
-									<td>₦154 <mark>16%</mark></td>
-									<td><span>Pending</span></td>
-									<td>
-										<button><i class="fa-solid fa-angle-down"></i></button>
-									</td>
-								</tr>
-							</tbody>
-
-							<tbody>
-								<tr class="row">
-									<td>#123456789</td>
-									<td>2 min ago</td>
-									<td>Collins Doe</td>
-									<td>₦654</td>
-									<td>₦154 <mark>16%</mark></td>
-									<td><span>Pending</span></td>
-									<td>
-										<button><i class="fa-solid fa-angle-down"></i></button>
-									</td>
-								</tr>
-							</tbody>
-
-							<tbody>
-								<tr class="row">
-									<td>#123456789</td>
-									<td>2 min ago</td>
-									<td>Collins Doe</td>
-									<td>₦654</td>
-									<td>₦154 <mark>16%</mark></td>
-									<td><span>Pending</span></td>
-									<td>
-										<button><i class="fa-solid fa-angle-up"></i></button>
-									</td>
-								</tr>
-							</tbody>
-
-							<thead class="modal_order_header hidden">
-								<tr class="style">
-									<th><span>#</span> <span> SKU</span></th>
-									<th>Name</th>
-									<th>Price</th>
-									<th>qty</th>
-									<th>disc.</th>
-									<th>total</th>
-									<th><i class="fa-solid fa-print"></i>Print</th>
-								</tr>
-							</thead>
-
-							<tbody class="modal_order_body hidden">
-								<tr class="modal_row_order">
-									<td>#123456789</td>
-									<td>Urban Shirt</td>
-									<td>₦999.29</td>
-									<td>x1</td>
-									<td>5%</td>
-									<td>₦3,000.29</td>
-									<td></td>
-								</tr>
-
-								<tr class="modal_row_order">
-									<td>#123456789</td>
-									<td>Urban Shirt</td>
-									<td>₦999.29</td>
-									<td>x1</td>
-									<td>5%</td>
-									<td>₦3,000.29</td>
-									<td></td>
-								</tr>
-
-								<tr class="modal_row_order">
-									<td>#123456789</td>
-									<td>Urban Shirt</td>
-									<td>₦999.29</td>
-									<td>x1</td>
-									<td>5%</td>
-									<td>₦3,000.29</td>
-									<td></td>
-								</tr>
-
-								<tr class="modal_order_row_total">
-									<td></td>
-									<td></td>
-									<td></td>
-									<td class="indicate_style">Subtotal</td>
-									<td></td>
-									<td>₦9,000.29</td>
-									<td></td>
-								</tr>
-
-								<tr class="modal_ship_row_total">
-									<td></td>
-									<td></td>
-									<td></td>
-									<td class="indicate_style">Shipping</td>
-									<td></td>
-									<td>₦5.50</td>
-									<td></td>
-								</tr>
-
-								<tr class="modal_discount_row_total">
-									<td></td>
-									<td></td>
-									<td></td>
-									<td class="indicate_style">Discount</td>
-									<td></td>
-									<td id="color_style">₦150.50</td>
-									<td></td>
-								</tr>
-
-								<tr class="modal_total_row">
-									<td></td>
-									<td></td>
-									<td></td>
-									<td class="indicate_style">Total</td>
-									<td></td>
-									<td>₦9,647.32</td>
-									<td>Pending</td>
-								</tr>
-							</tbody>
-
-							<tbody>
-								<tr class="row">
-									<td>#123456789</td>
-									<td>2 min ago</td>
-									<td>Collins Doe</td>
-									<td>₦654</td>
-									<td>₦154 <mark>16%</mark></td>
-									<td><span>Pending</span></td>
-									<td>
-										<button><i class="fa-solid fa-angle-down"></i></button>
-									</td>
-								</tr>
-							</tbody>
-
-							<tbody>
-								<tr class="row">
-									<td>#123456789</td>
-									<td>2 min ago</td>
-									<td>Collins Doe</td>
-									<td>₦654</td>
-									<td>₦154 <mark>16%</mark></td>
-									<td><span>Pending</span></td>
-									<td>
-										<button><i class="fa-solid fa-angle-down"></i></button>
-									</td>
-								</tr>
-							</tbody>
-
-							<tbody>
-								<tr class="row">
-									<td>#123456789</td>
-									<td>2 min ago</td>
-									<td>Collins Doe</td>
-									<td>₦654</td>
-									<td>₦154 <mark>16%</mark></td>
-									<td><span>Pending</span></td>
-									<td>
-										<button><i class="fa-solid fa-angle-down"></i></button>
-									</td>
-								</tr>
-							</tbody>
-
-							<tbody>
-								<tr class="row">
-									<td>#123456789</td>
-									<td>2 min ago</td>
-									<td>Collins Doe</td>
-									<td>₦654</td>
-									<td>₦154 <mark>16%</mark></td>
-									<td><span>Pending</span></td>
-									<td>
-										<button><i class="fa-solid fa-angle-down"></i></button>
-									</td>
-								</tr>
-							</tbody>
-
-							<tbody>
-								<tr class="row">
-									<td>#123456789</td>
-									<td>2 min ago</td>
-									<td>Collins Doe</td>
-									<td>₦654</td>
-									<td>₦154 <mark>16%</mark></td>
-									<td><span>Pending</span></td>
-									<td>
-										<button><i class="fa-solid fa-angle-down"></i></button>
-									</td>
-								</tr>
-							</tbody>
-
-							<tbody>
-								<tr class="row">
-									<td>#123456789</td>
-									<td>2 min ago</td>
-									<td>Collins Doe</td>
-									<td>₦654</td>
-									<td>₦154 <mark>16%</mark></td>
-									<td><span>Pending</span></td>
-									<td>
-										<button><i class="fa-solid fa-angle-down"></i></button>
-									</td>
-								</tr>
-							</tbody>
 						</table>
 
 						<div class="pagination_container">
@@ -458,7 +233,10 @@
 						</div>
 					</section>
 
-					<section class="confirmed_order_container">
+					<section
+						class="confirmed_order_container progress_ hidden"
+						id="confirmed_"
+					>
 						<table class="pending_order_progress">
 							<thead>
 								<tr class="no_border">
@@ -470,230 +248,6 @@
 									<th>Status</th>
 								</tr>
 							</thead>
-
-							<tbody>
-								<tr class="row">
-									<td>#123456789</td>
-									<td>2 min ago</td>
-									<td>Collins Doe</td>
-									<td>₦654</td>
-									<td>₦154 <mark>16%</mark></td>
-									<td><span>Confirmed</span></td>
-									<td>
-										<button><i class="fa-solid fa-angle-down"></i></button>
-									</td>
-								</tr>
-							</tbody>
-
-							<tbody>
-								<tr class="row">
-									<td>#123456789</td>
-									<td>2 min ago</td>
-									<td>Collins Doe</td>
-									<td>₦654</td>
-									<td>₦154 <mark>16%</mark></td>
-									<td><span>Confirmed</span></td>
-									<td>
-										<button><i class="fa-solid fa-angle-down"></i></button>
-									</td>
-								</tr>
-							</tbody>
-
-							<tbody>
-								<tr class="row">
-									<td>#123456789</td>
-									<td>2 min ago</td>
-									<td>Collins Doe</td>
-									<td>₦654</td>
-									<td>₦154 <mark>16%</mark></td>
-									<td><span>Confirmed</span></td>
-									<td>
-										<button><i class="fa-solid fa-angle-down"></i></button>
-									</td>
-								</tr>
-							</tbody>
-
-							<tbody>
-								<tr class="row">
-									<td>#123456789</td>
-									<td>2 min ago</td>
-									<td>Collins Doe</td>
-									<td>₦654</td>
-									<td>₦154 <mark>16%</mark></td>
-									<td><span>Confirmed</span></td>
-									<td>
-										<button><i class="fa-solid fa-angle-up"></i></button>
-									</td>
-								</tr>
-							</tbody>
-
-							<thead class="modal_order_header hidden">
-								<tr class="style">
-									<th><span>#</span> <span> SKU</span></th>
-									<th>Name</th>
-									<th>Price</th>
-									<th>qty</th>
-									<th>disc.</th>
-									<th>total</th>
-									<th><i class="fa-solid fa-print"></i>Print</th>
-								</tr>
-							</thead>
-
-							<tbody class="modal_order_body hidden">
-								<tr class="modal_row_order">
-									<td>#123456789</td>
-									<td>Urban Shirt</td>
-									<td>₦999.29</td>
-									<td>x1</td>
-									<td>5%</td>
-									<td>₦3,000.29</td>
-									<td></td>
-								</tr>
-
-								<tr class="modal_row_order">
-									<td>#123456789</td>
-									<td>Urban Shirt</td>
-									<td>₦999.29</td>
-									<td>x1</td>
-									<td>5%</td>
-									<td>₦3,000.29</td>
-									<td></td>
-								</tr>
-
-								<tr class="modal_row_order">
-									<td>#123456789</td>
-									<td>Urban Shirt</td>
-									<td>₦999.29</td>
-									<td>x1</td>
-									<td>5%</td>
-									<td>₦3,000.29</td>
-									<td></td>
-								</tr>
-
-								<tr class="modal_order_row_total">
-									<td></td>
-									<td></td>
-									<td></td>
-									<td class="indicate_style">Subtotal</td>
-									<td></td>
-									<td>₦9,000.29</td>
-									<td></td>
-								</tr>
-
-								<tr class="modal_ship_row_total">
-									<td></td>
-									<td></td>
-									<td></td>
-									<td class="indicate_style">Shipping</td>
-									<td></td>
-									<td>₦5.50</td>
-									<td></td>
-								</tr>
-
-								<tr class="modal_discount_row_total">
-									<td></td>
-									<td></td>
-									<td></td>
-									<td class="indicate_style">Discount</td>
-									<td></td>
-									<td id="color_style">₦150.50</td>
-									<td></td>
-								</tr>
-
-								<tr class="modal_total_row">
-									<td></td>
-									<td></td>
-									<td></td>
-									<td class="indicate_style">Total</td>
-									<td></td>
-									<td>₦9,647.32</td>
-									<td>Confirmed</td>
-								</tr>
-							</tbody>
-
-							<tbody>
-								<tr class="row">
-									<td>#123456789</td>
-									<td>2 min ago</td>
-									<td>Collins Doe</td>
-									<td>₦654</td>
-									<td>₦154 <mark>16%</mark></td>
-									<td><span>Confirmed</span></td>
-									<td>
-										<button><i class="fa-solid fa-angle-down"></i></button>
-									</td>
-								</tr>
-							</tbody>
-
-							<tbody>
-								<tr class="row">
-									<td>#123456789</td>
-									<td>2 min ago</td>
-									<td>Collins Doe</td>
-									<td>₦654</td>
-									<td>₦154 <mark>16%</mark></td>
-									<td><span>Confirmed</span></td>
-									<td>
-										<button><i class="fa-solid fa-angle-down"></i></button>
-									</td>
-								</tr>
-							</tbody>
-
-							<tbody>
-								<tr class="row">
-									<td>#123456789</td>
-									<td>2 min ago</td>
-									<td>Collins Doe</td>
-									<td>₦654</td>
-									<td>₦154 <mark>16%</mark></td>
-									<td><span>Confirmed</span></td>
-									<td>
-										<button><i class="fa-solid fa-angle-down"></i></button>
-									</td>
-								</tr>
-							</tbody>
-
-							<tbody>
-								<tr class="row">
-									<td>#123456789</td>
-									<td>2 min ago</td>
-									<td>Collins Doe</td>
-									<td>₦654</td>
-									<td>₦154 <mark>16%</mark></td>
-									<td><span>Confirmed</span></td>
-									<td>
-										<button><i class="fa-solid fa-angle-down"></i></button>
-									</td>
-								</tr>
-							</tbody>
-
-							<tbody>
-								<tr class="row">
-									<td>#123456789</td>
-									<td>2 min ago</td>
-									<td>Collins Doe</td>
-									<td>₦654</td>
-									<td>₦154 <mark>16%</mark></td>
-									<td><span>Confirmed</span></td>
-									<td>
-										<button><i class="fa-solid fa-angle-down"></i></button>
-									</td>
-								</tr>
-							</tbody>
-
-							<tbody>
-								<tr class="row">
-									<td>#123456789</td>
-									<td>2 min ago</td>
-									<td>Collins Doe</td>
-									<td>₦654</td>
-									<td>₦154 <mark>16%</mark></td>
-									<td><span>Confirmed</span></td>
-									<td>
-										<button><i class="fa-solid fa-angle-down"></i></button>
-									</td>
-								</tr>
-							</tbody>
 						</table>
 
 						<div class="pagination_container">
@@ -723,7 +277,10 @@
 						</div>
 					</section>
 
-					<section class="cancel_order_container">
+					<section
+						class="cancel_order_container progress_ hidden"
+						id="cancelled_"
+					>
 						<table class="pending_order_progress">
 							<thead>
 								<tr class="no_border">
@@ -735,7 +292,7 @@
 									<th>Status</th>
 								</tr>
 							</thead>
-
+							<!-- 
 							<tbody>
 								<tr class="row">
 									<td>#123456789</td>
@@ -958,7 +515,272 @@
 										<button><i class="fa-solid fa-angle-down"></i></button>
 									</td>
 								</tr>
+							</tbody> -->
+						</table>
+
+						<div class="pagination_container">
+							<p>
+								<select name="showing_nums" id="nums_show">
+									<option value="Showing">Showing <strong>10</strong></option>
+									<option value="showing2">Showing <strong>20</strong></option>
+								</select>
+								of
+								<span class="nums_hidden"> 50 </span>
+							</p>
+
+							<p class="num_pagi_container">
+								<button class="left_pagination_btn">
+									<i class="fa-solid fa-angle-left"></i>
+								</button>
+								<span class="nums_1 nums_pagination active_pagination">1</span>
+								<span class="nums_2 nums_pagination">2</span>
+								<span class="nums_3 nums_pagination">3</span>
+								<span class="nums_4 nums_pagination">4</span>
+								<span class="nums_5 nums_pagination">5</span>
+
+								<button class="right_pagination_btn">
+									<i class="fa-solid fa-angle-right"></i>
+								</button>
+							</p>
+						</div>
+					</section>
+
+					<section class="all_order_container progress_ hidden" id="all_">
+						<table class="pending_order_progress">
+							<thead>
+								<tr class="no_border">
+									<th>Order id</th>
+									<th>Created</th>
+									<th>customer</th>
+									<th>total</th>
+									<th>profit</th>
+									<th>Status</th>
+								</tr>
+							</thead>
+
+							<!-- <tbody>
+								<tr class="row">
+									<td>#123456789</td>
+									<td>2 min ago</td>
+									<td>Collins Doe</td>
+									<td>₦654</td>
+									<td>₦154 <mark>16%</mark></td>
+									<td><span class="pending_sty">Pending</span></td>
+									<td>
+										<button><i class="fa-solid fa-angle-down"></i></button>
+									</td>
+								</tr>
 							</tbody>
+
+							<tbody>
+								<tr class="row">
+									<td>#123456789</td>
+									<td>2 min ago</td>
+									<td>Collins Doe</td>
+									<td>₦654</td>
+									<td>₦154 <mark>16%</mark></td>
+									<td><span class="confirm_sty">Confirmed</span></td>
+									<td>
+										<button><i class="fa-solid fa-angle-down"></i></button>
+									</td>
+								</tr>
+							</tbody>
+
+							<tbody>
+								<tr class="row">
+									<td>#123456789</td>
+									<td>2 min ago</td>
+									<td>Collins Doe</td>
+									<td>₦654</td>
+									<td>₦154 <mark>16%</mark></td>
+									<td><span class="cancel_sty">Canceled</span></td>
+									<td>
+										<button><i class="fa-solid fa-angle-down"></i></button>
+									</td>
+								</tr>
+							</tbody>
+
+							<tbody>
+								<tr class="row">
+									<td>#123456789</td>
+									<td>2 min ago</td>
+									<td>Collins Doe</td>
+									<td>₦654</td>
+									<td>₦154 <mark>16%</mark></td>
+									<td><span class="confirm_sty">Confirmed</span></td>
+									<td>
+										<button><i class="fa-solid fa-angle-up"></i></button>
+									</td>
+								</tr>
+							</tbody>
+
+							<thead class="modal_order_header hidden">
+								<tr class="style">
+									<th><span>#</span> <span> SKU</span></th>
+									<th>Name</th>
+									<th>Price</th>
+									<th>qty</th>
+									<th>disc.</th>
+									<th>total</th>
+									<th><i class="fa-solid fa-print"></i>Print</th>
+								</tr>
+							</thead>
+
+							<tbody class="modal_order_body hidden">
+								<tr class="modal_row_order">
+									<td>#123456789</td>
+									<td>Urban Shirt</td>
+									<td>₦999.29</td>
+									<td>x1</td>
+									<td>5%</td>
+									<td>₦3,000.29</td>
+									<td></td>
+								</tr>
+
+								<tr class="modal_row_order">
+									<td>#123456789</td>
+									<td>Urban Shirt</td>
+									<td>₦999.29</td>
+									<td>x1</td>
+									<td>5%</td>
+									<td>₦3,000.29</td>
+									<td></td>
+								</tr>
+
+								<tr class="modal_row_order">
+									<td>#123456789</td>
+									<td>Urban Shirt</td>
+									<td>₦999.29</td>
+									<td>x1</td>
+									<td>5%</td>
+									<td>₦3,000.29</td>
+									<td></td>
+								</tr>
+
+								<tr class="modal_order_row_total">
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="indicate_style">Subtotal</td>
+									<td></td>
+									<td>₦9,000.29</td>
+									<td></td>
+								</tr>
+
+								<tr class="modal_ship_row_total">
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="indicate_style">Shipping</td>
+									<td></td>
+									<td>₦5.50</td>
+									<td></td>
+								</tr>
+
+								<tr class="modal_discount_row_total">
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="indicate_style">Discount</td>
+									<td></td>
+									<td id="color_style">₦150.50</td>
+									<td></td>
+								</tr>
+
+								<tr class="modal_total_row">
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="indicate_style">Total</td>
+									<td></td>
+									<td>₦9,647.32</td>
+									<td class="confirm_sty_modal">Confirmed</td>
+								</tr>
+							</tbody>
+
+							<tbody>
+								<tr class="row">
+									<td>#123456789</td>
+									<td>2 min ago</td>
+									<td>Collins Doe</td>
+									<td>₦654</td>
+									<td>₦154 <mark>16%</mark></td>
+									<td><span class="pending_sty">Pending</span></td>
+									<td>
+										<button><i class="fa-solid fa-angle-down"></i></button>
+									</td>
+								</tr>
+							</tbody>
+
+							<tbody>
+								<tr class="row">
+									<td>#123456789</td>
+									<td>2 min ago</td>
+									<td>Collins Doe</td>
+									<td>₦654</td>
+									<td>₦154 <mark>16%</mark></td>
+									<td><span class="cancel_sty">Canceled</span></td>
+									<td>
+										<button><i class="fa-solid fa-angle-down"></i></button>
+									</td>
+								</tr>
+							</tbody>
+
+							<tbody>
+								<tr class="row">
+									<td>#123456789</td>
+									<td>2 min ago</td>
+									<td>Collins Doe</td>
+									<td>₦654</td>
+									<td>₦154 <mark>16%</mark></td>
+									<td><span class="cancel_sty">Canceled</span></td>
+									<td>
+										<button><i class="fa-solid fa-angle-down"></i></button>
+									</td>
+								</tr>
+							</tbody>
+
+							<tbody>
+								<tr class="row">
+									<td>#123456789</td>
+									<td>2 min ago</td>
+									<td>Collins Doe</td>
+									<td>₦654</td>
+									<td>₦154 <mark>16%</mark></td>
+									<td><span class="confirm_sty">Confirmed</span></td>
+									<td>
+										<button><i class="fa-solid fa-angle-down"></i></button>
+									</td>
+								</tr>
+							</tbody>
+
+							<tbody>
+								<tr class="row">
+									<td>#123456789</td>
+									<td>2 min ago</td>
+									<td>Collins Doe</td>
+									<td>₦654</td>
+									<td>₦154 <mark>16%</mark></td>
+									<td><span class="pending_sty">Pending</span></td>
+									<td>
+										<button><i class="fa-solid fa-angle-down"></i></button>
+									</td>
+								</tr>
+							</tbody>
+
+							<tbody>
+								<tr class="row">
+									<td>#123456789</td>
+									<td>2 min ago</td>
+									<td>Collins Doe</td>
+									<td>₦654</td>
+									<td>₦154 <mark>16%</mark></td>
+									<td><span class="confirm_sty">Confirmed</span></td>
+									<td>
+										<button><i class="fa-solid fa-angle-down"></i></button>
+									</td>
+								</tr>
+							</tbody> -->
 						</table>
 
 						<div class="pagination_container">

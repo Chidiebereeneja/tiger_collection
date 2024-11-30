@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="/assets/styles/admin-dashborad/customer.css" />
+		<script src="/scripts/admin-dashboard/customer.js" defer></script>
+
+		<script
+			src="https://kit.fontawesome.com/29a7ea893b.js"
+			crossorigin="anonymous"
+			defer
+		></script>
+	</head>
+	<body>
+		<main>
+			<aside id="continer_aside-1">
+				<figure class="logo">
+					<img
+						src="/assets/images/tiger-logo.png"
+						width="100"
+						alt="tiger collection logo"
+					/>
+				</figure>
+
+				<section class="menu-list">
+					<ul>
+						<h2>MAIN MENU</h2>
+
+						<li>
+							<i class="fa-solid fa-shop"></i>
+							<span>Dashboard</span>
+						</li>
+
+						<li>
+							<i class="fa-solid fa-cart-shopping"></i>
+							<span>Order Management</span>
+						</li>
+
+						<li>
+							<i class="fa-solid fa-user-group"></i>
+							<span>Customers</span>
+						</li>
+
+						<li>
+							<i class="fa-solid fa-link"></i>
+							<span>Categories</span>
+						</li>
+
+						<li>
+							<i class="fa-solid fa-money-bill-transfer"></i>
+							<span>Transaction</span>
+						</li>
+					</ul>
+
+					<ul>
+						<h2>PRODUCTS</h2>
+
+						<li>
+							<i class="fa-solid fa-circle-plus"></i>
+							<span>Add Products</span>
+						</li>
+
+						<li>
+							<i class="fa-solid fa-dice-d6"></i>
+							<span>Product List</span>
+						</li>
+					</ul>
+				</section>
+			</aside>
+
+			<aside id="continer_aside-2">
+				<header class="aside2_container">
+					<h1>Customers</h1>
+
+					<div class="actions">
+						<p id="notify_bell">
+							<i class="fa-regular fa-bell"></i>
+							<span class="bell_num_count">1</span>
+						</p>
+
+						<figure class="profile-img">
+							<img src="/assets/images/profile-admin.png" width="30" alt="" />
+							<figcaption class="green-active"></figcaption>
+						</figure>
+
+						<div class="notification_popup hidden">
+							<div class="xmark-popup">
+								<h2>NOTIFICATIONS</h2>
+								<button id="cancel_notify">
+									<i class="fa-solid fa-xmark"></i>
+								</button>
+							</div>
+
+							<ul class="notification_body">
+								<li>
+									<figure>
+										<img
+											src="/assets/images/Oversized-T-Shirts.jpeg"
+											width="34"
+											alt=""
+										/>
+
+										<figcaption>
+											<strong>Low Stock Alerts</strong>
+											<span>Urban Shirt has 12 units left. Restock soon.</span>
+
+											<span>3 hours ago</span>
+										</figcaption>
+									</figure>
+								</li>
+
+								<li>
+									<figure>
+										<img
+											src="/assets/images/Oversized-T-Shirts.jpeg"
+											width="34"
+											alt=""
+										/>
+
+										<figcaption>
+											<strong>Low Stock Alerts</strong>
+											<span>Urban Shirt has 12 units left. Restock soon.</span>
+
+											<span>3 hours ago</span>
+										</figcaption>
+									</figure>
+								</li>
+
+								<li>
+									<figure>
+										<img
+											src="/assets/images/Oversized-T-Shirts.jpeg"
+											width="34"
+											alt=""
+										/>
+
+										<figcaption>
+											<strong>Low Stock Alerts</strong>
+											<span>Urban Shirt has 12 units left. Restock soon.</span>
+
+											<span>3 hours ago</span>
+										</figcaption>
+									</figure>
+								</li>
+
+								<li>
+									<figure>
+										<img
+											src="/assets/images/Oversized-T-Shirts.jpeg"
+											width="34"
+											alt=""
+										/>
+
+										<figcaption>
+											<strong>Low Stock Alerts</strong>
+											<span>Urban Shirt has 12 units left. Restock soon.</span>
+
+											<span>3 hours ago</span>
+										</figcaption>
+									</figure>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</header>
+
+				<section class="search_filter">
+					<form class="search">
+						<input type="search" placeholder="Search by order id" />
+					</form>
+				</section>
+
+				<section class="customer_table">
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Phone Number</th>
+								<th>Created</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+
+						<tbody id="customer_pro_body"></tbody>
+					</table>
+
+					<div class="pagination_container">
+						<p>
+							<select name="showing_nums" id="nums_show">
+								<option value="Showing">Showing <strong>10</strong></option>
+								<option value="showing2">Showing <strong>20</strong></option>
+							</select>
+							of
+							<span class="nums_hidden"> 50 </span>
+						</p>
+
+						<p class="num_pagi_container">
+							<button class="left_pagination_btn">
+								<i class="fa-solid fa-angle-left"></i>
+							</button>
+							<span class="nums_1 nums_pagination active_pagination">1</span>
+							<span class="nums_2 nums_pagination">2</span>
+							<span class="nums_3 nums_pagination">3</span>
+							<span class="nums_4 nums_pagination">4</span>
+							<span class="nums_5 nums_pagination">5</span>
+
+							<button class="right_pagination_btn">
+								<i class="fa-solid fa-angle-right"></i>
+							</button>
+						</p>
+					</div>
+				</section>
+			</aside>
+		</main>
+	</body>
+</html>
