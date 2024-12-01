@@ -474,6 +474,9 @@ const modalRenderTask = function (
 
 	const firstRenderSliceObj = arrObj.slice(0, 10);
 
+	if (sectionCont.getAttribute("data-shown")) return;
+
+	sectionCont.setAttribute("data-shown", true);
 	firstRenderSliceObj.map((obj, i) => {
 		i++;
 		sectionCont.querySelector("table").innerHTML += `
