@@ -440,12 +440,12 @@ const prodProgressContainer = document.getElementById(
 
 const modalBtns = document.querySelectorAll("div#modal_header_btns li button");
 
-const allOrderArr = [];
+const allObj = [];
 
 PendingObj.forEach((obj, i) => {
-	allOrderArr.push(obj);
-	allOrderArr.push(confirmedObj[i]);
-	allOrderArr.push(cancelledObj[i]);
+	allObj.push(obj);
+	allObj.push(confirmedObj[i]);
+	allObj.push(cancelledObj[i]);
 });
 
 const checkStatusTask = function (str) {
@@ -458,10 +458,24 @@ const checkStatusTask = function (str) {
 	}
 };
 
-const modalRenderTask = function (arrObj, idStr) {
+const modalRenderTask = function (
+	arrObj,
+	idStr,
+	countRender,
+	pignationCounter
+) {
 	const sectionCont = document.getElementById(idStr);
+	const pignationCont = sectionCont.querySelector("div.pagination_container");
+	const pignationCounterCont = pignationCont.querySelector(
+		"div.pignation_count"
+	);
+	const selectEl = pignationCont.querySelector("#nums_show");
+	const totalNumsCon = selectEl.nextElementSibling;
 
-	arrObj.map((obj) => {
+	const firstRenderSliceObj = arrObj.slice(0, 10);
+
+	firstRenderSliceObj.map((obj, i) => {
+		i++;
 		sectionCont.querySelector("table").innerHTML += `
 			<tbody>
 				<tr class="row">
@@ -479,12 +493,31 @@ const modalRenderTask = function (arrObj, idStr) {
 		`;
 	});
 
-	const pignationCont = sectionCont.querySelector("div.pagination_container");
+	arrObj.map((_, i) => {
+		i++;
+
+		if (i === pignationCounter) {
+			const div = document.createElement("div");
+			const checkRender =
+				countRender === 1
+					? "nums_pagination  active_pagination"
+					: "nums_pagination";
+
+			div.setAttribute("class", checkRender);
+			div.textContent = countRender;
+			pignationCounterCont.appendChild(div);
+
+			selectEl.innerHTML += `
+			<option value="Showing">Showing ${i++}</option>
+		`;
+			countRender++;
+			pignationCounter += 10;
+		}
+	});
+
+	totalNumsCon.textContent = arrObj.length;
 };
-modalRenderTask(PendingObj, "pending_");
-modalRenderTask(confirmedObj, "confirmed_");
-modalRenderTask(cancelledObj, "cancelled_");
-modalRenderTask(allOrderArr, "all_");
+modalRenderTask(PendingObj, "pending_", 1, 10);
 
 const defaultTask = function (container) {
 	Array.from(container).map((ul) => {
@@ -562,127 +595,28 @@ const clickEventTask = function () {
 };
 clickEventTask();
 
-const subModalTask = function (container) {
-	const firstElementBtn = container.querySelector("button");
-	if (!firstElementBtn) return;
-	const containerId = firstElementBtn.getAttribute("data-container-id");
+const targetRenderTask = function (str) {
+	const idKey = `${str}_`;
 
-	const allCon = container.parentNode.querySelectorAll(".progress_");
-};
-
-const allSection = document.querySelectorAll(".progress_");
-
-const createSubElModalTask = function (container) {
-	const thead = `<thead class="modal_order_header">
-			<tr class="style">
-			<th><span>#</span> <span> SKU</span></th>
-			<th>Name</th>
-			<th>Price</th>
-			<th>qty</th>
-			<th>disc.</th>
-			<th>total</th>
-			<th><i class="fa-solid fa-print"></i>Print</th>
-			</tr>
-		</thead>
-
-		<tbody class="modal_order_body">
-			<tr class="modal_row_order">
-				<td>#123456789</td>
-				<td>Urban Shirt</td>
-				<td>₦999.29</td>
-				<td>x1</td>
-				<td>5%</td>
-				<td>₦3,000.29</td>
-				<td></td>
-			</tr>
-
-			<tr class="modal_row_order">
-				<td>#123456789</td>
-				<td>Urban Shirt</td>
-				<td>₦999.29</td>
-				<td>x1</td>
-				<td>5%</td>
-				<td>₦3,000.29</td>
-				<td></td>
-			</tr>
-
-			<tr class="modal_row_order">
-				<td>#123456789</td>
-				<td>Urban Shirt</td>
-				<td>₦999.29</td>
-				<td>x1</td>
-				<td>5%</td>
-				<td>₦3,000.29</td>
-				<td></td>
-			</tr>
-
-			<tr class="modal_order_row_total">
-				<td></td>
-				<td></td>
-				<td></td>
-				<td class="indicate_style">Subtotal</td>
-				<td></td>
-				<td>₦9,000.29</td>
-				<td></td>
-			</tr>
-
-			<tr class="modal_ship_row_total">
-				<td></td>
-				<td></td>
-				<td></td>
-				<td class="indicate_style">Shipping</td>
-				<td></td>
-				<td>₦5.50</td>
-				<td></td>
-			</tr>
-
-			<tr class="modal_discount_row_total">
-				<td></td>
-				<td></td>
-				<td></td>
-				<td class="indicate_style">Discount</td>
-				<td></td>
-				<td id="color_style">₦150.50</td>
-				<td></td>
-			</tr>
-
-			<tr class="modal_total_row">
-				<td></td>
-				<td></td>
-				<td></td>
-				<td class="indicate_style">Total</td>
-				<td></td>
-				<td>₦9,647.32</td>
-				<td>Pending</td>
-			</tr>
-		</tbody>
-	`;
-	if (container.classList.contains("active_click")) return;
-	console.log(container);
-
-	container.insertAdjacentHTML("afterend", thead);
-	container.classList.add("active_click");
-};
-
-const subModalClassTask = function (container, str = "") {
-	const subHeaderCon = container.querySelector(".modal_order_header");
-	const subBodyCon = container.querySelector(".modal_order_body");
-
-	if (str === "") {
-		subBodyCon.classList.remove("hidden");
-		subHeaderCon.classList.remove("hidden");
-	} else if (str === "remove") {
-		subBodyCon.classList.add("hidden");
-		subHeaderCon.classList.add("hidden");
+	if (str === "pending") {
+		modalRenderTask(PendingObj, idKey, 1, 10);
+	} else if (str === "confirmed") {
+		modalRenderTask(confirmedObj, idKey, 1, 10);
+	} else if (str === "cancelled") {
+		modalRenderTask(cancelledObj, idKey, 1, 10);
+	} else {
+		modalRenderTask(allObj, idKey, 1, 10);
 	}
 };
 
-const clickModalOrderTask = function (ev) {
+const modalBtnTask = function (ev) {
 	ev.stopPropagation();
 	const targetEl = ev.target;
 	const targetTxt = targetEl.textContent.toLowerCase();
 	const targetDisplayContainer = document.getElementById(`${targetTxt}_`);
 	const allProgressCont = document.querySelectorAll("section.progress_");
+
+	targetRenderTask(targetTxt);
 
 	if (!targetDisplayContainer) return;
 
@@ -699,61 +633,8 @@ const clickModalOrderTask = function (ev) {
 	modalBtns.forEach((btn) => btn.classList.remove("active_modal_header"));
 	targetEl.classList.add("active_modal_header");
 
-	// targetEl.removeEventListener("click", clickModalOrderTask);
-	subModalTask(targetDisplayContainer);
+	// subModalTask(targetDisplayContainer);
 };
 modalBtns.forEach((el) => {
-	el.addEventListener("click", clickModalOrderTask.bind(this));
+	el.addEventListener("click", modalBtnTask.bind(this));
 });
-
-/*
-const subModalTask = function (container) {
-	const firstElementBtn = container.querySelector("button");
-	const containerId = firstElementBtn.getAttribute("data-container-id");
-	container.addEventListener("click", (ev) => {
-		ev.stopPropagation();
-		clickSubModalOrderTask(ev, containerId, container);
-	});
-};
-
-function clickSubModalOrderTask(ev, idTxt, container) {
-	const sectionCont = document.getElementById(idTxt);
-	if (ev.target.tagName.toLowerCase() === "button") {
-		console.log(sectionCont);
-		// console.log(ev.target);
-	} else if (ev.target.tagName.toLowerCase() === "i") {
-		if (ev.target.classList.contains("fa-angle-down")) {
-			console.log(sectionCont);
-		} else if (ev.target.classList.contains("fa-angle-up")) {
-			console.log(sectionCont);
-		}
-	}
-
-	removeEventListener("click", container);
-}
-
-const clickModalOrderTask = function (ev) {
-	ev.stopPropagation();
-	const targetEl = ev.target;
-	const targetTxt = targetEl.textContent.toLowerCase();
-	const targetDisplayContainer = document.getElementById(`${targetTxt}_`);
-	const allProgressCont = document.querySelectorAll("section.progress_");
-
-	allProgressCont.forEach((cont) => cont.classList.add("hidden"));
-	targetDisplayContainer.classList.remove("hidden");
-
-	const firstElementBtn = targetDisplayContainer.querySelector("button");
-	firstElementBtn.setAttribute("data-container-id", `${targetTxt}_`);
-
-	modalBtns.forEach((btn) => {
-		btn.classList.remove("active_modal_header");
-	});
-	targetEl.classList.add("active_modal_header");
-
-	subModalTask(targetDisplayContainer);
-};
-
-modalBtns.forEach((el) => {
-	el.addEventListener("click", clickModalOrderTask.bind(this));
-});
-*/
