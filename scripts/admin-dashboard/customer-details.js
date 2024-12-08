@@ -1,5 +1,19 @@
 "use strict";
 
+import { menuModalTask, defaultTask } from "../modules/menu-list-modal.js";
+
+const allOrderCon = document.querySelector("#all_Order");
+const completedCon = document.querySelector("#completed_order_progress");
+const cancelledCon = document.querySelector("#cancelled_order_progress");
+const pendingCon = document.querySelector("#pending_order_progress");
+const modalProBtns = document.querySelectorAll("#modal_header_btns ul button");
+
+const containers = document.querySelectorAll(".pending_order_container");
+const menuList = document.querySelector(".menu-list").children;
+
+menuModalTask();
+defaultTask(menuList, "Customers");
+
 const allOrderObj = [
 	{
 		order_id: "#123456789",
@@ -169,21 +183,10 @@ const checkStrTask = function (str) {
 	}
 };
 
-const allOrderCon = document.querySelector("#all_Order");
-const completedCon = document.querySelector("#completed_order_progress");
-const cancelledCon = document.querySelector("#cancelled_order_progress");
-const pendingCon = document.querySelector("#pending_order_progress");
-const modalProBtns = document.querySelectorAll("#modal_header_btns ul button");
-
-const containers = document.querySelectorAll(".pending_order_container");
-
 let pignationCounter = 10;
 let countRender = 1;
-
 let strCountNum = 10;
 const checkNumsTask = function (strNum) {
-	console.log(strNum);
-
 	if (strNum <= 9) {
 		console.log(strNum);
 	} else if (strNum === strCountNum) {

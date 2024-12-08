@@ -462,8 +462,8 @@ div.pagination_container {
 	padding-inline: 1.5rem;
 }
 
-div.pagination_container p:nth-child(1),
-div.pagination_container p:nth-child(1) span {
+div.pagination_container p,
+div.pagination_container div.num_pagi_container span {
 	color: var(--sec-color);
 	display: flex;
 	align-items: center;
@@ -474,14 +474,24 @@ div.pagination_container p:nth-child(1) span {
 	letter-spacing: 0.43px;
 }
 
-div.pagination_container p:nth-child(1) select {
+div.pagination_container p select {
 	border: none;
 	outline: none;
 	cursor: pointer;
 }
 
-p.num_pagi_container button,
-p.num_pagi_container span {
+div.num_pagi_container {
+	display: flex;
+	gap: 5px;
+}
+
+div.pignation_count {
+	display: flex;
+	gap: 5px;
+}
+
+div.num_pagi_container button,
+div.pignation_count div {
 	background-color: #f1f2f6;
 	color: var(--sec-color);
 	display: inline-block;
@@ -505,6 +515,11 @@ p.num_pagi_container span {
 
 .hidden {
 	display: none !important;
+}
+
+.active {
+	background-color: var(--active-bg-color) !important;
+	color: var(--main-color) !important;
 }
 
 /* 

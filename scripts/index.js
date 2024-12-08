@@ -4,6 +4,7 @@ import { navbarTask } from "./modules/nav_bar.js";
 import { imgDescriptionTask } from "./modules/imageDescription.js";
 import { queryAllElementTask, queryElementTask } from "./modules/varible.js";
 const container = queryElementTask(".arrivalList");
+const shopNowBtn = queryElementTask("#shop_now");
 navbarTask("Home");
 
 imgDescriptionTask(".category_images", "Home", "span.txt");
@@ -158,6 +159,10 @@ const createElementTask = (obj) => {
 
 	container.appendChild(li);
 };
+
+shopNowBtn.addEventListener("click", () => {
+	window.location.href = "/pages/unisex_category.html";
+});
 
 /*
 <li class="splide__slide arrivalSlide">

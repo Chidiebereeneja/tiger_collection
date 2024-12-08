@@ -1,5 +1,19 @@
 "use strict";
 
+import { menuModalTask, defaultTask } from "../modules/menu-list-modal.js";
+
+const notificationBell = document.getElementById("notify_bell");
+const menuList = document.querySelector(".menu-list").children;
+const prodProgressContainer = document.getElementById(
+	"product_progress_container"
+);
+const modalBtns = document.querySelectorAll("div#modal_header_btns li button");
+
+const allObj = [];
+
+menuModalTask();
+defaultTask(menuList, "Order Management");
+
 const PendingObj = [
 	{
 		order_id: "#123456789",
@@ -432,16 +446,6 @@ const subModalObj = [
 	},
 ];
 
-const notificationBell = document.getElementById("notify_bell");
-const menuList = document.querySelector(".menu-list").children;
-const prodProgressContainer = document.getElementById(
-	"product_progress_container"
-);
-
-const modalBtns = document.querySelectorAll("div#modal_header_btns li button");
-
-const allObj = [];
-
 PendingObj.forEach((obj, i) => {
 	allObj.push(obj);
 	allObj.push(confirmedObj[i]);
@@ -522,81 +526,89 @@ const modalRenderTask = function (
 };
 modalRenderTask(PendingObj, "pending_", 1, 10);
 
-const defaultTask = function (container) {
-	Array.from(container).map((ul) => {
-		const lists = ul.querySelectorAll("li");
+// const clickModalTask = function (ev) {
+// 	// console.log(ev.target);
 
-		lists.forEach((li) => {
-			const span = li.querySelector("span");
-			if (span.textContent.trim() === "Order Management") {
-				span.parentNode.classList.add("active");
-			}
-		});
-	});
-};
-defaultTask(menuList);
+// 	const arrContainer = Array.from(menuList);
 
-const clickModalTask = function (ev) {
-	console.log(ev.target);
+// 	arrContainer.map((ul) => {
+// 		const lists = ul.querySelectorAll("li");
 
-	const arrContainer = Array.from(menuList);
+// 		lists.forEach((li) => {
+// 			li.classList.remove("active");
+// 		});
+// 	});
 
-	arrContainer.map((ul) => {
-		const lists = ul.querySelectorAll("li");
+// 	let checkEl;
 
-		lists.forEach((li) => {
-			li.classList.remove("active");
-		});
-	});
+// 	if (ev.target.tagName === "LI") {
+// 		const spanStr = ev.target.querySelector("span").textContent;
 
-	if (ev.target.tagName === "LI") {
-		ev.target.classList.add("active");
-		const spanStr = ev.target.querySelector("span").textContent;
+// 		if (spanStr.split(" ").length === 1) {
+// 			checkEl = `/pages/admin-dashboard/${spanStr.toLowerCase()}.html`;
+// 		} else {
+// 			checkEl = `/pages/admin-dashboard/${spanStr
+// 				.split(" ")
+// 				.at(0)
+// 				.toLowerCase()}-${spanStr.at(1).toLowerCase()}.html`;
+// 		}
+// 	} else if (ev.target.tagName === "SPAN") {
+// 		// ev.target.parentNode.classList.add("active");
+// 		// window.location.href = `${ev.target.textContent.toLowerCase()}.html`;
 
-		window.location.href = `${spanStr.toLowerCase()}.html`;
-	} else if (ev.target.tagName === "SPAN") {
-		ev.target.parentNode.classList.add("active");
-		window.location.href = `${ev.target.textContent.toLowerCase()}.html`;
-	} else if (ev.target.tagName === "I") {
-		ev.target.parentNode.classList.add("active");
-		const spanStr = ev.target.parentNode.querySelector("span").textContent;
+// 		const spanStr = ev.target.textContent;
 
-		const checkEl =
-			spanStr.split(" ").length === 1
-				? `pages/admin-dashboard/${spanStr.toLowerCase()}.html`
-				: `pages/admin-dashboard/$order-manage.html`;
-		console.log(checkEl);
+// 		if (spanStr.split(" ").length === 1) {
+// 			checkEl = `/pages/admin-dashboard/${spanStr.toLowerCase()}.html`;
+// 		} else {
+// 			checkEl = `/pages/admin-dashboard/${spanStr
+// 				.split(" ")
+// 				.at(0)
+// 				.toLowerCase()}-${spanStr.at(0).toLowerCase()}.html`;
+// 		}
+// 	} else if (ev.target.tagName === "I") {
+// 		// ev.target.parentNode.classList.add("active");
+// 		const spanStr = ev.target.parentNode.querySelector("span").textContent;
 
-		window.location.href = checkEl;
-	}
+// 		if (spanStr.split(" ").length === 1) {
+// 			checkEl = `/pages/admin-dashboard/${spanStr.toLowerCase()}.html`;
+// 		} else {
+// 			checkEl = `/pages/admin-dashboard/${spanStr
+// 				.split(" ")
+// 				.at(0)
+// 				.toLowerCase()}-${spanStr.at(1).toLowerCase()}.html`;
+// 		}
 
-	// arrContainer.map((ul) => {
-	// 	arrContainer.map((ul) => {
-	// 		const lists = ul.querySelectorAll("li");
+// 		window.location.href = checkEl;
+// 	}
 
-	// 		lists.forEach((li) => {
-	// 			li.classList.remove("active");
-	// 		});
-	// 	});
+// 	// arrContainer.map((ul) => {
+// 	// 	arrContainer.map((ul) => {
+// 	// 		const lists = ul.querySelectorAll("li");
 
-	// 	ul.addEventListener("click", (e) => {
-	// 		if (e.target.tagName === "LI") {
-	// 			e.target.classList.add("active");
-	// 		} else if (e.target.tagName === "SPAN") {
-	// 			console.log(e.target);
-	// 		} else if (e.target.tagName === "I") {
-	// 			console.log(e.target);
-	// 		}
-	// 	});
-	// });
-};
+// 	// 		lists.forEach((li) => {
+// 	// 			li.classList.remove("active");
+// 	// 		});
+// 	// 	});
 
-const clickEventTask = function () {
-	Array.from(menuList).map((ul) => {
-		ul.addEventListener("click", clickModalTask.bind(this));
-	});
-};
-clickEventTask();
+// 	// 	ul.addEventListener("click", (e) => {
+// 	// 		if (e.target.tagName === "LI") {
+// 	// 			e.target.classList.add("active");
+// 	// 		} else if (e.target.tagName === "SPAN") {
+// 	// 			console.log(e.target);
+// 	// 		} else if (e.target.tagName === "I") {
+// 	// 			console.log(e.target);
+// 	// 		}
+// 	// 	});
+// 	// });
+// };
+
+// const clickEventTask = function () {
+// 	Array.from(menuList).map((ul) => {
+// 		ul.addEventListener("click", clickModalTask.bind(this));
+// 	});
+// };
+// clickEventTask();
 
 const targetRenderTask = function (str) {
 	const idKey = `${str}_`;

@@ -1,11 +1,16 @@
 "use strict";
 
+import { menuModalTask } from "../modules/menu-list-modal.js";
+
+menuModalTask();
+
 const notificationBell = document.getElementById("notify_bell");
 const menuList = document.querySelector(".menu-list");
 const notificationPopup = document.querySelector(".notification_popup");
 const cancel_notify = document.getElementById("cancel_notify");
 const logoutCon = document.getElementById("log_out_li");
 const logoutPopup = document.querySelector(".log_out_popup");
+const viewAllBtn = document.querySelector("#view_all_btn");
 
 const defaultStyleTask = function () {
 	const listEl = menuList.querySelector("li");
@@ -129,30 +134,6 @@ inventoryChartTask(
 	weekdaysArr
 );
 
-menuList.addEventListener("click", (ev) => {
-	const lis = menuList.querySelectorAll("li");
-	lis.forEach((li) => {
-		li.classList.remove("active");
-	});
-
-	if (ev.target.tagName === "LI") {
-		ev.target.classList.add("active");
-		const span = ev.target.querySelector("span").textContent.split(" ");
-
-		if (span.length >= 2) {
-			window.location.href = `${span.at(0).toLowerCase()}-manage.html`;
-		}
-	} else if (ev.target.tagName === "SPAN" || ev.target.tagName === "I") {
-		const parentEl = ev.target.parentNode;
-		parentEl.classList.add("active");
-		const span = parentEl.querySelector("span").textContent.split(" ");
-
-		if (span.length >= 2) {
-			window.location.href = `${span.at(0).toLowerCase()}-manage.html`;
-		}
-	}
-});
-
 notificationBell.addEventListener("click", () => {
 	const counterTag = document.querySelector(".bell_num_count");
 	counterTag.classList.add("hidden");
@@ -178,4 +159,8 @@ logoutPopup.addEventListener("click", (ev) => {
 	} else if (ev.target.id === "cancel") {
 		logoutPopup.classList.add("hidden");
 	}
+});
+
+viewAllBtn.addEventListener("click", () => {
+	window.location.href = "/pages/admin-dashboard/product-list.html";
 });

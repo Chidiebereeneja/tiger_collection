@@ -1,5 +1,7 @@
 "use strict";
 
+import { menuModalTask, defaultTask } from "../modules/menu-list-modal.js";
+
 const customerPro = [
 	{
 		name: "Jane Cooper",
@@ -73,12 +75,21 @@ const customerPro = [
 	},
 ];
 
+const container = document.getElementById("customer_pro_body");
+const menuList = document.querySelector(".menu-list").children;
+const pignationCounterCont = document.querySelector("div.pignation_count");
+
+menuModalTask();
+defaultTask(menuList, "Customers");
+
+let pignationCounter = 10;
+let countRender = 1;
 function objIteratorTask(arrOfObj) {
-	const container = document.getElementById("customer_pro_body");
+	const selectEl = document.querySelector("#nums_show");
+
+	const totalNumsCon = document.querySelector("#nums_show + span");
 
 	arrOfObj.map((obj) => {
-		console.log(obj);
-
 		container.innerHTML += `
             <tr>
                 <td>
@@ -97,15 +108,45 @@ function objIteratorTask(arrOfObj) {
                 <td>${obj.created}</td>
                 <td>
                 <button>
-                <img src="/assets/images/edit.png" alt="" />
+                <img src="/assets/images/edit.png" alt="" class="edit_action_btn"/>
                 </button>
 
                 <button>
-                <img src="/assets/images/bi_unlock.png" alt="" />
+                <img src="/assets/images/bi_lock.png" alt="" />
                 </button>
                 </td>
             </tr>
         `;
 	});
+
+	arrOfObj.map((_, i) => {
+		i++;
+
+		if (i === pignationCounter) {
+			const div = document.createElement("div");
+			const checkRender =
+				countRender === 1
+					? "nums_pagination  active_pagination"
+					: "nums_pagination";
+
+			div.setAttribute("class", checkRender);
+			div.textContent = countRender;
+			pignationCounterCont.appendChild(div);
+
+			selectEl.innerHTML += `
+			<option value="Showing">Showing ${i++}</option>
+		`;
+			countRender++;
+			pignationCounter += 10;
+		}
+	});
+
+	totalNumsCon.textContent = arrOfObj.length;
 }
 objIteratorTask(customerPro);
+
+container.addEventListener("click", (e) => {
+	if (e.target.classList.contains("edit_action_btn")) {
+		window.location.href = "/pages/admin-dashboard/customer_details.html";
+	}
+});

@@ -6,9 +6,13 @@
 		<title>Document</title>
 		<link
 			rel="stylesheet"
-			href="/assets/styles/admin-dashborad/customer_details.css"
+			href="/assets/styles/admin-dashborad/product_list.css"
 		/>
-		<script src="/scripts/admin-dashboard/product_list.js" defer></script>
+		<script
+			src="/scripts/admin-dashboard/product_list.js"
+			type="module"
+			defer
+		></script>
 
 		<script
 			src="https://kit.fontawesome.com/29a7ea893b.js"
@@ -170,66 +174,66 @@
 				</header>
 
 				<div class="modal_header" id="modal_header_btns">
-					<div class="customer_detailers_con">
-						<div class="customer_profile">
-							<h3>categories</h3>
+					<div class="Category_progress">
+						<h3>categories</h3>
+						<p>
+							<strong>5</strong>
+							<span>Last 7 days</span>
+						</p>
+					</div>
+
+					<article class="total_progress">
+						<h4>Total products</h4>
+
+						<div class="revenue_info">
+							<p>
+								<strong>868</strong>
+								<span>Last 7 days</span>
+							</p>
+
+							<p>
+								<strong>₦100,500</strong>
+								<span>Revenue</span>
+							</p>
+						</div>
+					</article>
+
+					<div class="customer_shipping_add">
+						<h3>top selling</h3>
+
+						<div class="customer_order_record">
 							<p>
 								<strong>5</strong>
 								<span>Last 7 days</span>
 							</p>
+
+							<p>
+								<strong>₦50,500</strong>
+								<span>Cost</span>
+							</p>
 						</div>
+					</div>
 
-						<article class="customer_personal_info">
-							<h4>Total products</h4>
+					<div class="stocks">
+						<h3>STOCKS</h3>
 
-							<div class="personal_info">
-								<p>
-									<strong>868</strong>
-									<span>Last 7 days</span>
-								</p>
-
-								<p>
-									<strong>₦100,500</strong>
-									<span>Revenue</span>
-								</p>
-							</div>
-						</article>
-
-						<div class="customer_shipping_add">
-							<h3>top selling</h3>
-
-							<div class="customer_order_record">
-								<p>
-									<strong>5</strong>
-									<span>Last 7 days</span>
-								</p>
-
-								<p>
-									<strong>₦50,500</strong>
-									<span>Cost</span>
-								</p>
-							</div>
-						</div>
-
-						<div class="stocks">
-							<h3>STOCKS</h3>
-
-							<div class="in_out_stocks">
+						<div class="in_out_stocks">
+							<div class="stock-count">
 								<p>
 									<strong>12</strong>
-									<span>Low stock</span>
+									<span class="low_color">Low stock</span>
 								</p>
 
 								<p>
 									<strong>35</strong>
-									<span>In-stock</span>
-								</p>
-
-								<p>
-									<strong>2</strong>
-									<span>Out of stock</span>
+									<span class="in-color">In-stock</span>
 								</p>
 							</div>
+
+							<p>
+								<strong>2</strong>
+								<span class="out-color">Out of stock</span>
+							</p>
 						</div>
 					</div>
 				</div>
@@ -240,8 +244,12 @@
 					</form>
 
 					<div class="add_product_category">
-						<button>Add Product</button>
-						<button>Add Category</button>
+						<button id="add-pro-create">
+							Add Product <i class="fa-solid fa-circle-plus"></i>
+						</button>
+						<button id="add-cate-create">
+							Add Category <i class="fa-solid fa-circle-plus"></i>
+						</button>
 
 						<select name="filter" id="filter_date">
 							<option value="Filter by date range">Filter by date range</option>
@@ -408,6 +416,98 @@
 						</div>
 					</section>
 				</article>
+
+				<div class="create-new-category-popup hidden">
+					<div class="create-new-header">
+						<figure>
+							<img
+								src="/assets/images/Vector-new.png"
+								width="15"
+								alt="Vector-new"
+							/>
+						</figure>
+
+						<p>
+							<strong>Create new category</strong>
+							<span
+								>Create a new category to organize your products and make them
+								easier to find.</span
+							>
+						</p>
+
+						<button id="hide-popup-btn">
+							<i class="fa-solid fa-xmark" id="popup-i"></i>
+						</button>
+					</div>
+
+					<form action="" class="new-cate-form">
+						<label for="category-name">Category Name</label>
+						<input
+							type="text"
+							placeholder="Enter category name"
+							id="category-name"
+						/>
+
+						<label for="category-des"> Category Description</label>
+						<input
+							type="text"
+							placeholder="Enter category description"
+							id="category-des"
+						/>
+					</form>
+
+					<div class="existing-category">
+						<h4>Existing Categories</h4>
+						<ul>
+							<li>
+								<p>Men</p>
+								<button id="remove-existing">
+									<i class="fa-solid fa-xmark"></i>
+								</button>
+							</li>
+
+							<li>
+								<p>Women</p>
+								<button id="remove-existing">
+									<i class="fa-solid fa-xmark"></i>
+								</button>
+							</li>
+
+							<li>
+								<p>Unisex</p>
+								<button id="remove-existing">
+									<i class="fa-solid fa-xmark"></i>
+								</button>
+							</li>
+
+							<li>
+								<p>Bags</p>
+								<button id="remove-existing">
+									<i class="fa-solid fa-xmark"></i>
+								</button>
+							</li>
+
+							<li>
+								<p>Accessories</p>
+								<button id="remove-existing">
+									<i class="fa-solid fa-xmark"></i>
+								</button>
+							</li>
+
+							<li>
+								<p>Footwears</p>
+								<button id="remove-existing">
+									<i class="fa-solid fa-xmark"></i>
+								</button>
+							</li>
+						</ul>
+					</div>
+
+					<div class="create-action-btns">
+						<button id="cancel-popup">Cancel</button>
+						<button id="add-new-popup">Add new category</button>
+					</div>
+				</div>
 			</aside>
 		</main>
 	</body>

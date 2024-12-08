@@ -792,23 +792,13 @@ aside.popular_product div.product_header p {
 	letter-spacing: 0.5px;
 }
 
-div.product_header div.line_con {
-	align-self: flex-start;
-	display: flex;
-	flex-direction: column;
-	gap: 3px;
-	height: fit-content;
-	width: fit-content;
+div.product_header button {
+	background-color: transparent;
+	color: #8a33fd;
+	font-weight: 600;
+	font-size: 14px;
+	border: none;
 	cursor: pointer;
-}
-
-div.line_con div {
-	background-color: #23272e;
-	align-self: flex-end;
-	justify-content: flex-end;
-	width: 4px;
-	height: 4px;
-	border-radius: 50%;
 }
 
 aside.popular_product ul {
