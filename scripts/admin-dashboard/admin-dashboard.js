@@ -144,22 +144,23 @@ cancel_notify.addEventListener("click", () => {
 	notificationPopup.classList.add("hidden");
 });
 
-logoutCon.addEventListener("click", () => {
-	logoutPopup.classList.remove("hidden");
-});
+// logoutCon.addEventListener("click", () => {
+// 	logoutPopup.classList.remove("hidden");
+// });
+// console.log(logoutCon);
 
-logoutPopup.addEventListener("click", (ev) => {
-	ev.stopPropagation();
+// logoutPopup.addEventListener("click", (ev) => {
+// 	ev.stopPropagation();
 
-	if (
-		ev.target.classList.contains("xmark-popup") ||
-		ev.target.classList.contains("fa-xmark")
-	) {
-		logoutPopup.classList.add("hidden");
-	} else if (ev.target.id === "cancel") {
-		logoutPopup.classList.add("hidden");
-	}
-});
+// 	if (
+// 		ev.target.classList.contains("xmark-popup") ||
+// 		ev.target.classList.contains("fa-xmark")
+// 	) {
+// 		logoutPopup.classList.add("hidden");
+// 	} else if (ev.target.id === "cancel") {
+// 		logoutPopup.classList.add("hidden");
+// 	}
+// });
 
 viewAllBtn.addEventListener("click", () => {
 	window.location.href = "/pages/admin-dashboard/product-list.html";

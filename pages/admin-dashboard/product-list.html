@@ -312,11 +312,12 @@
 						<table class="pending_order_progress" id="completed_order_progress">
 							<thead>
 								<tr class="no_border">
-									<th>Order id</th>
-									<th>Created</th>
-									<th>total</th>
-									<th>payment</th>
-									<th>Status</th>
+									<th>Products</th>
+									<th>buying price</th>
+									<th>quantity</th>
+									<th>threshold value</th>
+									<th>Category</th>
+									<th>availability</th>
 								</tr>
 							</thead>
 						</table>
@@ -349,21 +350,18 @@
 						<table class="pending_order_progress" id="cancelled_order_progress">
 							<thead>
 								<tr class="no_border">
-									<th>Order id</th>
-									<th>Created</th>
-									<th>total</th>
-									<th>payment</th>
-									<th>Status</th>
+									<th>Products</th>
+									<th>buying price</th>
+									<th>quantity</th>
+									<th>threshold value</th>
+									<th>Category</th>
+									<th>availability</th>
 								</tr>
 							</thead>
 						</table>
 
 						<div class="pagination_container">
-							<p>
-								<select name="showing_nums" id="nums_show"></select>
-								of
-								<span class="nums_total"> 50 </span>
-							</p>
+							<div class="pignation_show"></div>
 
 							<div class="num_pagi_container">
 								<button class="left_pagination_btn">
@@ -386,11 +384,12 @@
 						<table class="pending_order_progress" id="pending_order_progress">
 							<thead>
 								<tr class="no_border">
-									<th>Order id</th>
-									<th>Created</th>
-									<th>total</th>
-									<th>payment</th>
-									<th>Status</th>
+									<th>Products</th>
+									<th>buying price</th>
+									<th>quantity</th>
+									<th>threshold value</th>
+									<th>Category</th>
+									<th>availability</th>
 								</tr>
 							</thead>
 						</table>
@@ -459,7 +458,7 @@
 					<div class="existing-category">
 						<h4>Existing Categories</h4>
 						<ul>
-							<li>
+							<!-- <li>
 								<p>Men</p>
 								<button id="remove-existing">
 									<i class="fa-solid fa-xmark"></i>
@@ -499,13 +498,74 @@
 								<button id="remove-existing">
 									<i class="fa-solid fa-xmark"></i>
 								</button>
-							</li>
+							</li> -->
 						</ul>
 					</div>
 
 					<div class="create-action-btns">
 						<button id="cancel-popup">Cancel</button>
 						<button id="add-new-popup">Add new category</button>
+					</div>
+				</div>
+
+				<div class="sub-category-popup hidden">
+					<div class="sub-category-header">
+						<figure>
+							<img
+								src="/assets/images/Vector-new.png"
+								width="40"
+								alt="vector"
+							/>
+						</figure>
+
+						<div class="sub-cate-name">
+							<h3>Men</h3>
+							<p>
+								Your search for the coolest and most stylish
+								<mark>men’s</mark> clothing ends here
+							</p>
+						</div>
+
+						<button id="hide-sub-popup">
+							<i class="fa-solid fa-xmark" id="sub-popup-i"></i>
+						</button>
+					</div>
+
+					<form>
+						<label for="cate--1">Category Name</label>
+						<input type="text" placeholder="Men" id="cate--1" disabled />
+
+						<label for="cate--2">Category Description</label>
+						<textarea
+							name=""
+							id="cate--2"
+							placeholder="Your search for the coolest and most stylish men’s clothing ends here"
+							disabled
+						></textarea>
+
+						<label for="cate--3">Append Sub-category</label>
+						<input type="text" id="cate--3" placeholder="Sub-category name" />
+
+						<button id="add--btn">add sub-category</button>
+					</form>
+
+					<div class="sub-cate-list">
+						<h5>Existing sub-categories</h5>
+						<ul>
+							<!-- <li>
+								<span>Shirts</span>
+								<i class="fa-solid fa-xmark"></i>
+							</li>
+							<li>
+								<span>Jeans</span>
+								<i class="fa-solid fa-xmark"></i>
+							</li> -->
+						</ul>
+					</div>
+
+					<div class="action-cate-btn">
+						<button id="delete">Delete</button>
+						<button id="Save">Save changes</button>
 					</div>
 				</div>
 			</aside>

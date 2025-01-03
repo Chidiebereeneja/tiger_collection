@@ -922,16 +922,17 @@ div.existing-category ul {
 }
 
 div.existing-category ul li {
-	background-color: #ece9fe;
-	color: #8b909a;
+	background-color: #3fa43f;
+	color: #ffffff;
 	display: flex;
 	gap: 0.8rem;
 	padding: 8px;
-	border-radius: 18px;
+	border-radius: 5px;
 }
 
 div.existing-category ul li button {
-	color: #8a33fd;
+	background-color: transparent;
+	color: #ffffff;
 	border: none;
 	cursor: pointer;
 }
@@ -964,6 +965,203 @@ div.create-action-btns button:nth-child(2) {
 	border: none;
 }
 
+div.sub-category-popup {
+	background-color: #ffffff;
+	width: 549px;
+	height: fit-content;
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 1.9rem;
+	position: absolute;
+	top: 40%;
+	left: 20%;
+	padding: 1.7rem;
+	z-index: 20;
+	border-radius: 16px;
+	box-shadow: 0px 3px 20px var(--bd-color);
+}
+
+div.sub-category-header {
+	display: flex;
+	flex-direction: row;
+	gap: 1.5rem;
+}
+
+div.sub-category-header figure {
+	background-color: #ece9fe;
+	height: 51px;
+	width: 51px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	border-radius: 50%;
+}
+
+div.sub-category-header figure img {
+	width: 20px;
+	height: 20px;
+	object-fit: contain;
+	object-position: center;
+}
+
+div.sub-cate-name {
+	width: 80%;
+}
+
+div.sub-cate-name h3 {
+	color: #23272e;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 22px;
+}
+
+div.sub-cate-name p {
+	margin-top: 5px;
+}
+
+div.sub-cate-name p,
+div.sub-cate-name p mark {
+	background-color: transparent;
+	color: #85898e;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 17.63pxpx;
+}
+
+div.sub-cate-name + button {
+	align-self: flex-start;
+	background-color: transparent;
+	color: #00000066;
+	border: none;
+	cursor: pointer;
+}
+
+div.sub-category-header + form {
+	display: flex;
+	flex-direction: column;
+}
+
+div.sub-category-header + form label {
+	color: #48505e;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	margin-top: 1rem;
+	margin-bottom: 0.4rem;
+}
+
+div.sub-category-header + form input {
+	height: 40px;
+}
+
+div.sub-category-header + form input,
+div.sub-category-header + form textarea {
+	background-color: #f9f9fc;
+	color: #000000;
+	width: 100%;
+	padding: 4px 0.7rem;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	outline: none;
+	border: 1px solid #d0d5dd;
+	border-radius: 8px;
+}
+
+div.sub-category-header + form textarea {
+	max-height: 139px;
+	min-height: 139px;
+	min-width: 100%;
+	max-width: 100%;
+}
+
+div.sub-category-header + form input::placeholder,
+div.sub-category-header + form textarea::placeholder {
+	color: #000000;
+}
+
+button#add--btn {
+	align-self: flex-end;
+	background-color: transparent;
+	color: var(--active-bg-color);
+	margin-top: 0.5rem;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	border: none;
+	cursor: pointer;
+}
+
+div.sub-cate-list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.7rem;
+}
+
+div.sub-cate-list h5 {
+	display: block;
+	color: #23272e;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 17.63px;
+}
+
+div.sub-cate-list ul {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 1rem;
+	list-style-type: none;
+}
+
+div.sub-cate-list ul li {
+	background-color: #ece9fe;
+	color: #8b909a;
+	width: fit-content;
+	height: 34px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 0.5rem;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 17.63px;
+	border-radius: 20px;
+}
+
+div.sub-cate-list ul li i {
+	color: #d63737;
+	cursor: pointer;
+}
+
+div.action-cate-btn {
+	align-self: flex-end;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+div.action-cate-btn button {
+	width: 110px;
+	height: 39px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 18.8px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+div.action-cate-btn button:nth-child(1) {
+	border: 1px solid #d63737;
+	color: #d63737;
+}
+
+div.action-cate-btn button:nth-child(2) {
+	background-color: var(--active-bg-color);
+	color: var(--bd-color);
+	border: 1px solid transparent;
+}
+
 .hidden {
 	display: none !important;
 }
@@ -971,6 +1169,12 @@ div.create-action-btns button:nth-child(2) {
 .active {
 	background-color: var(--active-bg-color) !important;
 	color: var(--main-color) !important;
+}
+
+.active_pagination {
+	background-color: var(--active-bg-color) !important;
+	color: var(--main-color) !important;
+	box-shadow: 0px 2px 4px #a5a3ae4d;
 }
 
 .pending_sty {

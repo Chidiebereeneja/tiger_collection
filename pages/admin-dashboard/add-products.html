@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="/assets/styles/admin-dashborad/add-product.css"
+		/>
+		<script
+			src="/scripts/admin-dashboard/add-product.js"
+			type="module"
+			defer
+		></script>
+
+		<script
+			src="https://kit.fontawesome.com/29a7ea893b.js"
+			crossorigin="anonymous"
+			defer
+		></script>
+	</head>
+	<body>
+		<main>
+			<aside id="continer_aside-1">
+				<figure class="logo">
+					<img
+						src="/assets/images/tiger-logo.png"
+						width="100"
+						alt="tiger collection logo"
+					/>
+				</figure>
+
+				<section class="menu-list">
+					<ul>
+						<h2>MAIN MENU</h2>
+
+						<li>
+							<i class="fa-solid fa-shop"></i>
+							<span>Dashboard</span>
+						</li>
+
+						<li>
+							<i class="fa-solid fa-cart-shopping"></i>
+							<span>Order Management</span>
+						</li>
+
+						<li>
+							<i class="fa-solid fa-user-group"></i>
+							<span>Customers</span>
+						</li>
+
+						<li>
+							<i class="fa-solid fa-link"></i>
+							<span>Categories</span>
+						</li>
+
+						<li>
+							<i class="fa-solid fa-money-bill-transfer"></i>
+							<span>Transaction</span>
+						</li>
+					</ul>
+
+					<ul>
+						<h2>PRODUCTS</h2>
+
+						<li>
+							<i class="fa-solid fa-circle-plus"></i>
+							<span>Add Products</span>
+						</li>
+
+						<li>
+							<i class="fa-solid fa-dice-d6"></i>
+							<span>Product List</span>
+						</li>
+					</ul>
+
+					<ul>
+						<h2>OTHERS</h2>
+
+						<li>
+							<i class="fa-solid fa-circle-plus"></i>
+							<span>Log out</span>
+						</li>
+
+						<li>
+							<i class="fa-solid fa-dice-d6"></i>
+							<span>Setting</span>
+						</li>
+					</ul>
+				</section>
+			</aside>
+
+			<aside id="continer_aside-2">
+				<header class="aside2_container">
+					<h1>Add Product</h1>
+
+					<div class="actions">
+						<p id="notify_bell">
+							<i class="fa-regular fa-bell"></i>
+							<span class="bell_num_count">1</span>
+						</p>
+
+						<figure class="profile-img">
+							<img src="/assets/images/profile-admin.png" width="30" alt="" />
+							<figcaption class="green-active"></figcaption>
+						</figure>
+
+						<div class="notification_popup hidden">
+							<div class="xmark-popup">
+								<h2>NOTIFICATIONS</h2>
+								<button id="cancel_notify">
+									<i class="fa-solid fa-xmark"></i>
+								</button>
+							</div>
+
+							<ul class="notification_body">
+								<li>
+									<figure>
+										<img
+											src="/assets/images/Oversized-T-Shirts.jpeg"
+											width="34"
+											alt=""
+										/>
+
+										<figcaption>
+											<strong>Low Stock Alerts</strong>
+											<span>Urban Shirt has 12 units left. Restock soon.</span>
+
+											<span>3 hours ago</span>
+										</figcaption>
+									</figure>
+								</li>
+
+								<li>
+									<figure>
+										<img
+											src="/assets/images/Oversized-T-Shirts.jpeg"
+											width="34"
+											alt=""
+										/>
+
+										<figcaption>
+											<strong>Low Stock Alerts</strong>
+											<span>Urban Shirt has 12 units left. Restock soon.</span>
+
+											<span>3 hours ago</span>
+										</figcaption>
+									</figure>
+								</li>
+
+								<li>
+									<figure>
+										<img
+											src="/assets/images/Oversized-T-Shirts.jpeg"
+											width="34"
+											alt=""
+										/>
+
+										<figcaption>
+											<strong>Low Stock Alerts</strong>
+											<span>Urban Shirt has 12 units left. Restock soon.</span>
+
+											<span>3 hours ago</span>
+										</figcaption>
+									</figure>
+								</li>
+
+								<li>
+									<figure>
+										<img
+											src="/assets/images/Oversized-T-Shirts.jpeg"
+											width="34"
+											alt=""
+										/>
+
+										<figcaption>
+											<strong>Low Stock Alerts</strong>
+											<span>Urban Shirt has 12 units left. Restock soon.</span>
+
+											<span>3 hours ago</span>
+										</figcaption>
+									</figure>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</header>
+
+				<section class="add-product-action-btns">
+					<h3>Add Product</h3>
+
+					<div class="action-product-btns">
+						<button id="discard-btn">Discard</button>
+						<button id="add-btn">Add Product</button>
+					</div>
+				</section>
+
+				<section class="product-detail-pro-con">
+					<article class="product-details">
+						<h4>Product Details</h4>
+
+						<form class="add-product-1">
+							<label for="pro-name">Product Name</label>
+							<input
+								type="text"
+								id="pro-name"
+								placeholder="Enter product name"
+							/>
+
+							<label for="pro-id">Product ID</label>
+							<input type="text" id="pro-id" placeholder="Enter product ID" />
+
+							<label for="pro-cate">Category</label>
+							<select name="category" id="pro-cate">
+								<option value="color">Select product category</option>
+
+								<option value="men">Men</option>
+								<option value="women">Women</option>
+								<option value="unisex">Unisex</option>
+								<option value="bags">Bags</option>
+								<option value="accessories">Accessories</option>
+								<option value="footwears">Footwears</option>
+							</select>
+						</form>
+					</article>
+
+					<article class="inventry-details">
+						<h4>Inventory and Pricing</h4>
+
+						<form class="inventry-form">
+							<label for="selling-p"> Selling Price </label>
+							<input
+								type="text"
+								id="selling-p"
+								placeholder="Enter selling price"
+							/>
+
+							<label for="quantity">Quantity</label>
+							<input
+								type="text"
+								id="quantity"
+								placeholder="Enter product quantity"
+							/>
+
+							<label for="size">Size</label>
+							<input type="text" id="size" placeholder="Select product size" />
+
+							<label for="threshold">Threshold Value</label>
+							<input
+								type="text"
+								id="threshold"
+								placeholder="Enter threshold Value"
+							/>
+
+							<label for="color">Color</label>
+							<select name="color-pallete" id="color">
+								<option value="black-color"></option>
+							</select>
+						</form>
+					</article>
+
+					<article class="upload-product">
+						<figure class="upload-btn">
+							<div class="img_upload">
+								<label for="input_file--1">
+									<img
+										src="/assets/images/image-upload.png"
+										width="24px"
+										alt=""
+									/>
+								</label>
+								<input type="file" class="img-file" />
+							</div>
+
+							<figcaption>
+								<span>Upload your image here, or select</span>
+								<button class="upload">
+									Click to browse
+									<input type="file" />
+								</button>
+							</figcaption>
+						</figure>
+
+						<p>
+							<span>
+								You need to add at least 2 images. Pay attention to the quality
+								of the images you add
+							</span>
+						</p>
+
+						<div class="image-grid">
+							<figure id="grid-1"></figure>
+
+							<figure id="grid-2"></figure>
+
+							<figure id="grid-3"></figure>
+
+							<figure id="grid-4"></figure>
+
+							<figure id="grid-5"></figure>
+
+							<figure id="grid-6"></figure>
+						</div>
+					</article>
+				</section>
+			</aside>
+		</main>
+	</body>
+</html>
