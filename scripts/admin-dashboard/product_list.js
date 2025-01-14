@@ -11,6 +11,7 @@ const subCategoryPopup = document.querySelector(".sub-category-popup");
 const categoryListCon = popupContainer.querySelector(".existing-category ul");
 const addProduct = document.querySelector("button#add-pro-create");
 const pignationContainer = document.querySelector(".pagination_container");
+const selectElement = document.querySelector("select#nums_show");
 
 const listItemsObj = [
 	{
@@ -137,6 +138,158 @@ const listItemsObj = [
 		product: "Black Sweatshirt",
 		buyingPrice: "₦3,000",
 		quantity: 10,
+		thresholdValue: 12,
+		category: "Men's",
+		availability: "In Stock",
+	},
+	{
+		product: "Black Sweatshirt",
+		buyingPrice: "₦3,000",
+		quantity: 10,
+		thresholdValue: 15,
+		category: "Women's",
+		availability: "Out of Stock",
+	},
+	{
+		product: "Black Sweatshirt",
+		buyingPrice: "₦3,000",
+		quantity: 10,
+		thresholdValue: 20,
+		category: "Men's",
+		availability: "Low Stock",
+	},
+	{
+		product: "Timberland Boots",
+		buyingPrice: "₦3,000",
+		quantity: 10,
+		thresholdValue: 25,
+		category: "Footwears",
+		availability: "In Stock",
+	},
+	{
+		product: "Laptop Bag",
+		buyingPrice: "₦3,000",
+		quantity: 10,
+		thresholdValue: 30,
+		category: "Bags",
+		availability: "Low Stock",
+	},
+	{
+		product: "Black Sweatshirt",
+		buyingPrice: "₦3,000",
+		quantity: 10,
+		thresholdValue: 35,
+		category: "Unisex",
+		availability: "Low Stock",
+	},
+	{
+		product: "Pateek Philippi",
+		buyingPrice: "₦3,000",
+		quantity: 10,
+		thresholdValue: 40,
+		category: "Accessory",
+		availability: "Out of Stock",
+	},
+	{
+		product: "Black Sweatshirt",
+		buyingPrice: "₦3,000",
+		quantity: 10,
+		thresholdValue: 20,
+		category: "Men's",
+		availability: "In Stock",
+	},
+	{
+		product: "Black Sweatshirt",
+		buyingPrice: "₦3,000",
+		quantity: 10,
+		thresholdValue: 35,
+		category: "Unisex",
+		availability: "Low Stock",
+	},
+	{
+		product: "Pateek Philippi",
+		buyingPrice: "₦3,000",
+		quantity: 10,
+		thresholdValue: 40,
+		category: "Accessory",
+		availability: "Out of Stock",
+	},
+	{
+		product: "Black Sweatshirt",
+		buyingPrice: "₦3,000",
+		quantity: 10,
+		thresholdValue: 20,
+		category: "Men's",
+		availability: "In Stock",
+	},
+	{
+		product: "Black Sweatshirt",
+		buyingPrice: "₦3,000",
+		quantity: 10,
+		thresholdValue: 20,
+		category: "Men's",
+		availability: "In Stock",
+	},
+	{
+		product: "Black Sweatshirt",
+		buyingPrice: "₦3,000",
+		quantity: 10,
+		thresholdValue: 20,
+		category: "Men's",
+		availability: "In Stock",
+	},
+	{
+		product: "Pateek Philippi",
+		buyingPrice: "₦3,000",
+		quantity: 10,
+		thresholdValue: 40,
+		category: "Accessory",
+		availability: "Out of Stock",
+	},
+	{
+		product: "Black Sweatshirt",
+		buyingPrice: "₦3,000",
+		quantity: 10,
+		thresholdValue: 20,
+		category: "Men's",
+		availability: "In Stock",
+	},
+	{
+		product: "Black Sweatshirt",
+		buyingPrice: "₦3,000",
+		quantity: 10,
+		thresholdValue: 20,
+		category: "Men's",
+		availability: "In Stock",
+	},
+	{
+		product: "Black Sweatshirt",
+		buyingPrice: "₦3,000",
+		quantity: 10,
+		thresholdValue: 20,
+		category: "Men's",
+		availability: "In Stock",
+	},
+	{
+		product: "Black Sweatshirt",
+		buyingPrice: "₦3,000",
+		quantity: 10,
+		thresholdValue: 12,
+		category: "Men's",
+		availability: "In Stock",
+	},
+	{
+		product: "Black Sweatshirt",
+		buyingPrice: "₦3,000",
+		quantity: 10,
+		thresholdValue: 15,
+		category: "Women's",
+		availability: "Out of Stock",
+	},
+	{
+		product: "Black Sweatshirt",
+		buyingPrice: "₦3,000",
+		quantity: 10,
 		thresholdValue: 20,
 		category: "Men's",
 		availability: "Low Stock",
@@ -185,6 +338,16 @@ const listItemsObj = [
 
 defaultTask(menuList, "Product List");
 
+const colorCheckTask = function (txt) {
+	if (txt === "In Stock") {
+		return "#28c76f";
+	} else if (txt === "Out of Stock") {
+		return "#ea5455";
+	} else if (txt === "Low Stock") {
+		return "#ffc600";
+	}
+};
+
 const renderProductsTask = function () {
 	const container = document.querySelector("table#all_Order tbody");
 	const pignationContainer = document.querySelector(".pignation_count");
@@ -192,7 +355,7 @@ const renderProductsTask = function () {
 	let count = 10;
 	let pignationCount = 0;
 
-	const renderObj = listItemsObj.slice(0, 9);
+	const renderObj = listItemsObj.slice(0, 10);
 
 	renderObj.map((list) => {
 		container.innerHTML += `
@@ -202,7 +365,9 @@ const renderProductsTask = function () {
 				 <td>${list.quantity} Packs</td>
 				 <td>${list.thresholdValue}</td>
 				 <td>${list.category}</td>
-				 <td>${list.availability}</td>
+				 <td style="color:${colorCheckTask(list.availability)}">${
+			list.availability
+		}</td>
 			 </tr>
 		`;
 	});
@@ -213,7 +378,7 @@ const renderProductsTask = function () {
 			pignationCount++;
 			pignationContainer.innerHTML += `
                 <button id ="count__${pignationCount}" class = ${
-				count === 10 ? "active_pagination paginationNums" : ""
+				count === 10 ? "active_pagination" : ""
 			}>${pignationCount}</button>
             `;
 
@@ -237,7 +402,6 @@ addCategoryBtn.addEventListener("click", () => {
 
 	defaultRender.forEach((category) => {
 		categoryListCon.innerHTML += `
-
 		 <li>
 			<p>${category.name}</p>
 			<button id="remove-existing">
@@ -364,4 +528,157 @@ subCategoryPopup.addEventListener("click", (ev) => {
 		subCategoryPopup.classList.add("hidden");
 		popupContainer.classList.remove("hidden");
 	}
+});
+
+const container = document.querySelector("table#all_Order tbody");
+
+const renderTargetListTask = function (start, end) {
+	const renderObj = listItemsObj.slice(start, end);
+	renderObj.forEach((list) => {
+		container.innerHTML += `
+					<tr>
+						<td>${list.product}</td>
+						<td>${list.buyingPrice}</td>
+						<td>${list.quantity} Packs</td>
+						<td>${list.thresholdValue}</td>
+						<td>${list.category}</td>
+						<td style="color:${colorCheckTask(list.availability)}">${list.availability}</td>
+					</tr>
+				`;
+	});
+};
+
+const pagiCllassRemoveTask = function (paginationCountCon, target) {
+	Array.from(paginationCountCon).map((count) =>
+		count.classList.remove("active_pagination")
+	);
+
+	target.classList.add("active_pagination");
+};
+
+const removeChildTask = function (container) {
+	Array.from(container.children).map((child) => {
+		child.remove();
+	});
+};
+
+const selectElementTask = function (selectNum) {
+	const options = selectElement.options;
+
+	for (let i = 0; i < options.length; i++) {
+		if (Number(options[i].value) === selectNum) {
+			options[i].selected = true;
+		}
+	}
+};
+
+pignationContainer
+	.querySelector(".num_pagi_container")
+	.addEventListener("click", (e) => {
+		const num = e.target.textContent;
+		if (
+			e.target.classList.contains("left_pagination_btn") ||
+			e.target.classList.contains("fa-angle-left")
+		) {
+			const paginationCountCon = pignationContainer.querySelector(
+				"div.pignation_count"
+			).children;
+
+			const [activePagi] = Array.from(paginationCountCon).filter((count) =>
+				count.classList.contains("active_pagination")
+			);
+
+			const nextElement = activePagi.nextElementSibling;
+
+			if (nextElement === null) return;
+
+			removeChildTask(container);
+
+			const start = Number(`${activePagi.textContent}0`);
+			const end = Number(`${nextElement.textContent}0`);
+
+			renderTargetListTask(start, end);
+
+			pagiCllassRemoveTask(paginationCountCon, nextElement);
+			selectElementTask(start + 10);
+		} else if (
+			e.target.classList.contains("right_pagination_btn") ||
+			e.target.classList.contains("fa-angle-right")
+		) {
+			const paginationCountCon = pignationContainer.querySelector(
+				"div.pignation_count"
+			).children;
+
+			const [activePagi] = Array.from(paginationCountCon).filter((count) =>
+				count.classList.contains("active_pagination")
+			);
+
+			const previousElement = activePagi.previousElementSibling;
+
+			if (previousElement === null) return;
+
+			removeChildTask(container);
+
+			const start = Number(`${activePagi.textContent}0`);
+			const end = Number(`${previousElement.textContent}0`);
+
+			renderTargetListTask(end - 1, start - 1);
+
+			pagiCllassRemoveTask(paginationCountCon, previousElement);
+			selectElementTask(start - 10);
+		} else if (e.target.id === `count__${num}`) {
+			const previousSibling = e.target.previousElementSibling;
+
+			const paginationCountCon = pignationContainer.querySelector(
+				"div.pignation_count"
+			).children;
+			if (previousSibling === null) {
+				if (e.target.id === `count__${num}`) {
+					removeChildTask(container);
+					renderTargetListTask(0, 10);
+
+					pagiCllassRemoveTask(paginationCountCon, e.target);
+					const targetNum = Number(`${e.target.textContent}0`);
+					selectElementTask(targetNum);
+				}
+			} else {
+				const start = Number(`${previousSibling.textContent}0`);
+				const end = Number(`${e.target.textContent}0`);
+
+				removeChildTask(container);
+
+				renderTargetListTask(start - 1, end - 1);
+
+				pagiCllassRemoveTask(paginationCountCon, e.target);
+				const targetNum = Number(`${e.target.textContent}0`);
+
+				selectElementTask(targetNum);
+			}
+		}
+	});
+
+selectElement.addEventListener("change", (ev) => {
+	const options = selectElement.options;
+	const paginationCountCon = pignationContainer.querySelector(
+		"div.pignation_count"
+	).children;
+
+	const [selectedOption] = Array.from(options).filter(
+		(option) => option.selected
+	);
+	const selectNum = Number(selectedOption.value) - 10;
+	// console.log(selectedOption.value.slice(0, 1));
+
+	removeChildTask(container);
+	renderTargetListTask(selectNum, Number(selectedOption.value));
+
+	const [numTargetCoun] = Array.from(paginationCountCon).filter((count) => {
+		if (count.textContent === selectedOption.value.slice(0, 1)) {
+			return count;
+		}
+	});
+
+	// console.log(numTargetCoun);
+
+	pagiCllassRemoveTask(paginationCountCon, numTargetCoun);
 });

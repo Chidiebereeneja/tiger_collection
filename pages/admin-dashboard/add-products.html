@@ -244,7 +244,19 @@
 							/>
 
 							<label for="size">Size</label>
-							<input type="text" id="size" placeholder="Select product size" />
+							<!-- <input type="text" id="size" placeholder="Select product size" /> -->
+							<select name="text" id="size">
+								<option value="size">Select product size</option>
+								<option value="XXS">XXS</option>
+								<option value="XL">XL</option>
+								<option value="XS">XS</option>
+								<option value="S">S</option>
+								<option value="M">M</option>
+								<option value="L">L</option>
+								<option value="XXL">XXL</option>
+								<option value="3XL">3XL</option>
+								<option value="4XL">4XL</option>
+							</select>
 
 							<label for="threshold">Threshold Value</label>
 							<input
@@ -254,9 +266,17 @@
 							/>
 
 							<label for="color">Color</label>
-							<select name="color-pallete" id="color">
-								<option value="black-color"></option>
-							</select>
+							<div class="color_container">
+								<div class="modal_select_show">
+									<div class="selected_color"></div>
+									<button>
+										<i class="fa-solid fa-angle-down"></i>
+										<i class="fa-solid fa-angle-up hidden"></i>
+									</button>
+								</div>
+
+								<article class="modal_container hidden"></article>
+							</div>
 						</form>
 					</article>
 
