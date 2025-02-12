@@ -16,6 +16,14 @@
 			crossorigin="anonymous"
 			defer
 		></script>
+
+		<!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+		<!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+		<!-- <meta
+			name="google-signin-client_id"
+			content="125132724795-01j0o6fmrphte9nl3kp3bju4abkfjd0l.apps.googleusercontent.com"
+		/> -->
+		<script src="https://accounts.google.com/gsi/client" async defer></script>
 	</head>
 	<body>
 		<header>
@@ -30,7 +38,7 @@
 		</header>
 
 		<main>
-			<aside>
+			<aside id="image-show-container">
 				<figure>
 					<img src="/assets/images/sign-up-bg.png" width="300" alt="" />
 				</figure>
@@ -52,19 +60,29 @@
 					</div>
 
 					<div class="username_email_con">
-						<label for="username">User name or email address</label>
+						<div class="label_btns">
+							<label for="username" id="label_show_status">Username</label>
+							<div class="btns_container">
+								<button id="text" class="hidden">Username instead</button>
+								<button id="email">Email instead</button>
+							</div>
+						</div>
 						<input type="text" id="username" required />
 					</div>
 
 					<div class="password_con">
 						<label for="password">
 							<span>Password</span>
-							<span
-								><i class="fa-regular fa-eye-slash" data-eye-open="fa-eye"></i>
-								Hide</span
-							>
+							<button id="hide-btn">
+								<i class="fa-regular fa-eye-slash" data-eye-open="fa-eye"></i>
+								Hide
+							</button>
 						</label>
 						<input type="password" id="password" />
+
+						<p id="warningMsg" class="hidden">
+							Must start with uppercase and must be 9 characters!
+						</p>
 
 						<p>
 							<a href="/pages/reset_password.html">Forget your password</a>
@@ -72,13 +90,28 @@
 					</div>
 
 					<div class="save-continer">
-						<button type="submit">Sign In</button>
+						<button type="submit" id="sign_in">Sign In</button>
 						<p>
 							Don’t have an account? <a href="/pages/signUp.html">Sign up </a>
 						</p>
 					</div>
 				</form>
 			</aside>
+			<!-- <div
+				id="g_id_onload"
+				data-client_id="125132724795-01j0o6fmrphte9nl3kp3bju4abkfjd0l.apps.googleusercontent.com"
+				data-login_uri="https://cloud.appwrite.io/v1/account/sessions/oauth2/callback/google/67a09b7800319b111239"
+				data-callback="handleCredentialResponse"
+			></div> -->
+			<!-- <button id="google-login-button">Login with Google</button> -->
+
+			<!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+			<!-- <div id="gSignInWrapper">
+				<div id="customBtn" class="customGPlusSignIn">
+					<span class="icon"></span>
+					<span class="buttonText">Sign in with Google</span>
+				</div>
+			</div> -->
 		</main>
 	</body>
 </html>

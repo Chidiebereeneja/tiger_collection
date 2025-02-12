@@ -49,16 +49,6 @@
 							<i class="fa-solid fa-user-group"></i>
 							<span>Customers</span>
 						</li>
-
-						<li>
-							<i class="fa-solid fa-link"></i>
-							<span>Categories</span>
-						</li>
-
-						<li>
-							<i class="fa-solid fa-money-bill-transfer"></i>
-							<span>Transaction</span>
-						</li>
 					</ul>
 
 					<ul>
@@ -176,8 +166,8 @@
 				<div class="modal_header" id="modal_header_btns">
 					<ul>
 						<li>
-							<button>All</button>
-							<button class="active_modal_header">Pending</button>
+							<button class="active_modal_header">All</button>
+							<button>Pending</button>
 							<button>Cancelled</button>
 							<button>Confirmed</button>
 						</li>
@@ -196,7 +186,10 @@
 				</section>
 
 				<article id="product_progress_container">
-					<section class="pending_order_container progress_" id="pending_">
+					<section
+						class="pending_order_container progress_ hidden"
+						id="pending_"
+					>
 						<table class="pending_order_progress">
 							<thead>
 								<tr class="no_border">
@@ -531,7 +524,7 @@
 						</div>
 					</section>
 
-					<section class="all_order_container progress_ hidden" id="all_">
+					<section class="all_order_container progress_" id="all_">
 						<table class="pending_order_progress">
 							<thead>
 								<tr class="no_border">

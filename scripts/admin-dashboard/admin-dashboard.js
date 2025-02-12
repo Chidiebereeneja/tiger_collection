@@ -11,6 +11,7 @@ const cancel_notify = document.getElementById("cancel_notify");
 const logoutCon = document.getElementById("log_out_li");
 const logoutPopup = document.querySelector(".log_out_popup");
 const viewAllBtn = document.querySelector("#view_all_btn");
+const table = document.querySelector("table.transaction_body");
 
 const defaultStyleTask = function () {
 	const listEl = menuList.querySelector("li");
@@ -164,4 +165,13 @@ cancel_notify.addEventListener("click", () => {
 
 viewAllBtn.addEventListener("click", () => {
 	window.location.href = "/pages/admin-dashboard/product-list.html";
+});
+
+table.addEventListener("click", (ev) => {
+	if (
+		ev.target.tagName.toLowerCase() === "td" &&
+		ev.target.textContent.toLowerCase() === "view detail"
+	) {
+		window.location.href = "/pages/admin-dashboard/order-management.html";
+	}
 });

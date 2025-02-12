@@ -118,3 +118,21 @@ div.save-continer button {
 	border-radius: 8px;
 	cursor: pointer;
 }
+
+@media (max-width: 768px) {
+	main {
+		padding: 2rem;
+	}
+
+	aside#image-show-container {
+		display: none;
+	}
+
+	main aside:nth-child(2) {
+		width: 100%;
+	}
+
+	main aside:nth-child(2) form {
+		padding-inline: 1rem;
+	}
+}

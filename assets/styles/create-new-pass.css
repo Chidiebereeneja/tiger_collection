@@ -155,7 +155,7 @@ div.popupCon {
 	justify-content: space-evenly;
 	position: fixed;
 	top: 4.5rem;
-	right: 9rem;
+	right: 0;
 	z-index: 20;
 	transform: translateY(-18rem);
 	font-family: Montserrat, sans-serif;
@@ -248,4 +248,29 @@ div.popupCon span.borderStyle {
 
 .hidden {
 	display: none !important;
+}
+
+@media (max-width: 768px) {
+	/* main {
+		padding: 2rem;
+	} */
+
+	aside#image-show-container {
+		display: none;
+	}
+
+	main aside:nth-child(2) {
+		width: 100%;
+		margin-top: 0rem;
+	}
+
+	main aside:nth-child(2) form {
+		padding-inline: 1rem;
+	}
+
+	div.popupCon {
+		width: 95%;
+		right: 0.5rem;
+		transform: translate(-50%, -50%);
+	}
 }

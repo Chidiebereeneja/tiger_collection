@@ -125,16 +125,23 @@ form div.save-continer input {
 
 form div.username_email_con label,
 form div.password_con label,
-form div.save-continer label {
+form div.save-continer label,
+button#hide-btn,
+div.btns_container button {
 	color: #3c4242;
 	font-size: 18px;
 	font-weight: 400;
 	letter-spacing: 1px;
+	cursor: pointer;
 }
 
 form div.password_con label {
 	display: flex;
 	justify-content: space-between;
+}
+
+form div.password_con label span:nth-last-child(1) {
+	cursor: pointer;
 }
 
 form div.password_con p {
@@ -165,11 +172,70 @@ div.save-continer button {
 	margin-block: 0.5rem;
 	border: none;
 	border-radius: 8px;
-	cursor: jj;
+	cursor: pointer;
 }
 
 div.save-continer p {
 	color: #3c4242;
 	font-size: 16px;
 	font-weight: 400;
+}
+button#hide-btn {
+	background-color: transparent;
+	border: none;
+}
+
+p#warningMsg {
+	align-self: flex-start;
+	margin-bottom: 1rem;
+	font-weight: 500;
+	color: rgb(189, 125, 7) !important;
+}
+
+div.label_btns {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+div.btns_container button {
+	background-color: transparent;
+	text-decoration: underline;
+	border: none;
+}
+
+div.btns_container button:hover {
+	color: #8a33fd;
+}
+
+.matchStyle {
+	border: 1px solid rgb(4, 177, 4) !important;
+	border-bottom: 4px solid rgb(4, 177, 4) !important;
+}
+
+.noMatchStyle {
+	border: 1px solid rgb(225, 16, 12) !important;
+	border-bottom: 4px solid rgb(225, 16, 12) !important;
+}
+
+.hidden {
+	display: none !important;
+}
+
+@media (max-width: 768px) {
+	main {
+		padding: 2rem;
+	}
+
+	aside#image-show-container {
+		display: none;
+	}
+
+	main aside:nth-child(2) {
+		width: 100%;
+	}
+
+	main aside:nth-child(2) form {
+		padding-inline: 0;
+	}
 }

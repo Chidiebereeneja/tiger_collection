@@ -46,7 +46,6 @@ fileInput.forEach((input) => {
 
 		imageReader.addEventListener("load", (ev) => {
 			const check = renderImageTask(ev.target.result, counter);
-			console.log(check);
 
 			if (check === false) {
 				const classCheck = Array.from(figureContainer).filter((figure) =>
@@ -67,7 +66,8 @@ function renderImageTask(srcFile, counter) {
 	let track;
 
 	figureContainer.forEach((fig, i) => {
-		// const dataAttr = fig.getAttribute("data-track");
+		const dataAttr = fig.getAttribute("data-track");
+
 		if (dataAttr && dataAttr === "true") {
 			if (i === counter) {
 				fig.innerHTML = `

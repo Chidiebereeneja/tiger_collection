@@ -115,6 +115,7 @@ form div.save-continer input {
 	height: 45px;
 	width: 100%;
 	margin-top: 8px;
+	padding-left: 1rem;
 	outline: none;
 	border: 1px solid #3c4242;
 	border-radius: 8px;
@@ -166,14 +167,54 @@ div.save-continer button {
 	margin-block: 0.5rem;
 	border: none;
 	border-radius: 8px;
+	cursor: pointer;
 }
 
 input[type="checkbox"] {
-	accent-color: #3C4242;
+	accent-color: #3c4242;
 }
 
 div.save-continer p {
 	color: #3c4242;
 	font-size: 16px;
 	font-weight: 400;
+}
+
+p#warningMsg {
+	/* align-self: flex-start; */
+	margin-bottom: 1rem;
+	font-weight: 500;
+	color: rgb(189, 125, 7) !important;
+}
+
+.matchStyle {
+	border: 1px solid rgb(4, 177, 4) !important;
+	border-bottom: 4px solid rgb(4, 177, 4) !important;
+}
+
+.noMatchStyle {
+	border: 1px solid rgb(225, 16, 12) !important;
+	border-bottom: 4px solid rgb(225, 16, 12) !important;
+}
+
+.hidden {
+	display: none !important;
+}
+
+@media (max-width: 768px) {
+	main {
+		padding: 2rem;
+	}
+
+	aside#image-show-container {
+		display: none;
+	}
+
+	main aside:nth-child(2) {
+		width: 100%;
+	}
+
+	main aside:nth-child(2) form {
+		padding-inline: 0;
+	}
 }

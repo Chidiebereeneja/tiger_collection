@@ -32,4 +32,14 @@ const fitlterProductTask = function (productSearchCon) {
 	});
 };
 
-export { navbarTask, fitlterProductTask };
+function anchorActiveTasks(str) {
+	const anchorLinks = document.querySelectorAll("header div a");
+
+	anchorLinks.forEach((link) => {
+		if (link.textContent === str) {
+			link.classList.add("active-btn");
+		}
+	});
+}
+
+export { navbarTask, fitlterProductTask, anchorActiveTasks };
