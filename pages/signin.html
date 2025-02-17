@@ -7,6 +7,17 @@
 			Join the Tiger Collection: Exclusive Access to Premium Fashion & Deals |
 			Sign In Today
 		</title>
+
+		<script
+			src="https://accounts.google.com/gsi/client" defer
+			onload="console.log('TODO: add onload function')"
+		></script>
+
+		<!-- <script src="https://apis.google.com/js/platform.js" async defer></script>
+		<meta
+			name="google-signin-client_id"
+			content="125132724795-01j0o6fmrphte9nl3kp3bju4abkfjd0l.apps.googleusercontent.com.apps.googleusercontent.com"
+		/> -->
 		<link rel="stylesheet" href="/assets/styles/authpage.css" />
 		<link rel="stylesheet" href="/assets/styles/signin.css" />
 		<link rel="icon" href="/assets/images/Tiger_favicon.png" />
@@ -95,6 +106,8 @@
 							Don’t have an account? <a href="/pages/signUp.html">Sign up </a>
 						</p>
 					</div>
+
+					<div class="g-signin2" data-onsuccess="onSignIn"></div>
 				</form>
 			</aside>
 			<!-- <div
@@ -113,5 +126,13 @@
 				</div>
 			</div> -->
 		</main>
+
+		<script>
+			function onSignIn(googleUser) {
+				var id_token = googleUser.getAuthResponse().id_token;
+				console.log("ID Token: " + id_token);
+				// You can now use the id_token to make authenticated requests to your backend server
+			}
+		</script>
 	</body>
 </html>

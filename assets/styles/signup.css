@@ -121,18 +121,34 @@ form div.save-continer input {
 	border-radius: 8px;
 }
 
+form div.username_email_con input,
+form div.password_con input {
+	font-size: 17px;
+}
+
+input[type="checkbox"] {
+	cursor: pointer;
+}
+
 form div.username_email_con label,
 form div.password_con label,
-form div.save-continer label {
+form div.save-continer label,
+button#hide-btn {
 	color: #3c4242;
 	font-size: 18px;
 	font-weight: 400;
 	letter-spacing: 1px;
+	cursor: pointer;
 }
 
 form div.password_con label {
 	display: flex;
 	justify-content: space-between;
+}
+
+button#hide-btn {
+	background-color: transparent;
+	border: none;
 }
 
 form div.checkbox_con {
@@ -195,6 +211,12 @@ p#warningMsg {
 .noMatchStyle {
 	border: 1px solid rgb(225, 16, 12) !important;
 	border-bottom: 4px solid rgb(225, 16, 12) !important;
+}
+
+.error {
+	color: rgb(225, 16, 12) !important;
+	font-weight: 500;
+	font-size: 17px;
 }
 
 .hidden {

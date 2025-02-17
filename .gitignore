@@ -1,0 +1,35 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+
+# Build outputs
+dist/
+build/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE configuration files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporary files
+*.tmp
+*.temp
+
+# Ignore specific files or directories
+path/to/file
+path/to/directory/

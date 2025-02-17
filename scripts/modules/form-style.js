@@ -1,5 +1,6 @@
 "use strict";
 const regexTest = /^[A-Z][\w\d]{8}$/g;
+const regexEmailTest = /^[\w._%+-]+@[a-z]+\.[a-z]{2,4}$/g;
 
 const addStyle = (targetEl, str) => {
 	targetEl.classList.add(str);
@@ -25,4 +26,30 @@ function inputStyleMatch(e) {
 	}
 }
 
-export { addStyle, removeStyle, inputStyleMatch };
+let hidePasswordCheck = false;
+
+function eyePasswordTask(e, hideBtn) {
+	e.preventDefault();
+	const iTag = hideBtn.querySelector("i");
+	const attr = iTag.getAttribute("data-eye-open");
+	const classTxt = `${iTag.classList.value.slice(0, 10).trim()} ${attr}`;
+	iTag.setAttribute("data-eye-open", iTag.classList.value.slice(10));
+	iTag.className = classTxt;
+
+	if (!hidePasswordCheck) {
+		password.setAttribute("type", "text");
+		hidePasswordCheck = true;
+	} else {
+		password.setAttribute("type", "password");
+		hidePasswordCheck = false;
+	}
+}
+
+export {
+	addStyle,
+	removeStyle,
+	inputStyleMatch,
+	regexEmailTest,
+	regexTest,
+	eyePasswordTask,
+};

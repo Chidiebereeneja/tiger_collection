@@ -4,6 +4,8 @@ import {
 	addStyle,
 	removeStyle,
 	inputStyleMatch,
+	regexEmailTest,
+	eyePasswordTask,
 } from "./modules/form-style.js";
 
 const hideBtn = document.querySelector("button#hide-btn");
@@ -12,7 +14,7 @@ const emailOrUsername = document.getElementById("username");
 const actionFormBtn = document.querySelectorAll("div.btns_container button");
 const signInBtn = document.querySelector("button#sign_in");
 // const regexTest = /^[A-Z][\w\d]{8}$/g;
-const regexEmailTest = /^[\w._%+-]+@[a-z]+\.[a-z]{2,4}$/g;
+// const regexEmailTest = /^[\w._%+-]+@[a-z]+\.[a-z]{2,4}$/g;
 const regexUsernameTest = /^[\w._]{2,}$/g;
 
 const formDataObj = {};
@@ -125,8 +127,6 @@ function handleCredentialResponse(response) {
       */
 }
 
-let hidePasswordCheck = false;
-
 // const addStyle = (targetEl, str) => {
 // 	targetEl.classList.add(str);
 // };
@@ -176,20 +176,21 @@ actionFormBtn.forEach((btn) => {
 let hasAtSymbol = false; // Track if @ symbol has been entered
 
 hideBtn.addEventListener("click", (e) => {
-	e.preventDefault();
-	const iTag = hideBtn.querySelector("i");
-	const attr = iTag.getAttribute("data-eye-open");
-	const classTxt = `${iTag.classList.value.slice(0, 10).trim()} ${attr}`;
-	iTag.setAttribute("data-eye-open", iTag.classList.value.slice(10));
-	iTag.className = classTxt;
+	eyePasswordTask(e, hideBtn);
+	// e.preventDefault();
+	// const iTag = hideBtn.querySelector("i");
+	// const attr = iTag.getAttribute("data-eye-open");
+	// const classTxt = `${iTag.classList.value.slice(0, 10).trim()} ${attr}`;
+	// iTag.setAttribute("data-eye-open", iTag.classList.value.slice(10));
+	// iTag.className = classTxt;
 
-	if (!hidePasswordCheck) {
-		password.setAttribute("type", "text");
-		hidePasswordCheck = true;
-	} else {
-		password.setAttribute("type", "password");
-		hidePasswordCheck = false;
-	}
+	// if (!hidePasswordCheck) {
+	// 	password.setAttribute("type", "text");
+	// 	hidePasswordCheck = true;
+	// } else {
+	// 	password.setAttribute("type", "password");
+	// 	hidePasswordCheck = false;
+	// }
 });
 
 const inputs = document.querySelectorAll("input");
